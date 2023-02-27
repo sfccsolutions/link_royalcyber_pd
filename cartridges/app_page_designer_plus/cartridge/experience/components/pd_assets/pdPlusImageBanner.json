@@ -1,0 +1,134 @@
+{
+    "name": "PD Plus Image Banner",
+    "description": "Tile with alignment Options",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "customImageAttributes",
+            "name": "Custom Tile Configurations",
+            "description": "This component will display image with subtitle positions.",
+            "attribute_definitions": [
+                {
+                    "id": "className",
+                    "name": "CSS Class Name",
+                    "description": "Provide the CSS Class name of Component.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "tileLink",
+                    "name": "Link of Tile",
+                    "description": "Provide the Link URL of Tile.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "imgScaleHover",
+                    "name": "Scale Image on Hover",
+                    "description": "Scale the image on hover",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "imageYPos",
+                    "name": "Position of Card along y-axis",
+                    "description": "Position of Card along vertical direction",
+                    "type": "enum",
+                    "values": [
+                        "flex-start",
+                        "center",
+                        "flex-end"
+                    ],
+                    "default_value": "center",
+                    "required": true
+                },
+                {
+                    "id": "imageXPos",
+                    "name": "Position of Card along x-axis",
+                    "description": "Position of Card along horizontal direction",
+                    "type": "enum",
+                    "values": [
+                        "flex-start",
+                        "center",
+                        "flex-end"
+                    ],
+                    "default_value": "center",
+                    "required": true
+                },
+                {
+                    "id": "imgFile",
+                    "name": "Tile Image",
+                    "description": "Select a photo to be displayed",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Alternate Text of Image",
+                    "description": "The image alt text shown by the component.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "imgTitle",
+                    "name": "Title Text",
+                    "description": "Title on overlay image",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "imgTitleColor",
+                    "name": "Title Text Color",
+                    "description": "The text color.",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "imgBannerCaptionColor",
+                    "name": "Tile Card Caption background color",
+                    "description": "Set the background color of banner.",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "imgBannerColorAlpha",
+                    "name": "Tile Card Caption background color opacity",
+                    "description": "Set the alpha property of background color of banner.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "imgSubTitle",
+                    "name": "Sub Text",
+                    "description": "Sub Text on overlay image after title",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "imgSubTitleColor",
+                    "name": "Color Sub Text",
+                    "description": "Color of Sub Text on overlay image after title",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

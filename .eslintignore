@@ -1,0 +1,11 @@
+cartridges/app_page_designer_plus/cartridge/static/
+cartridges/app_storefront_base/cartridge/static/
+cartridges/module_pagedesigner/cartridge/
+cartridges/bm_app_storefront_base/cartridge/
+cartridges/bm_pagedesigner/cartridge/
+cartridges/modules/
+coverage/
+doc/
+bin/
+codecept.conf.js
+webpack.config.js
