@@ -1,7 +1,5 @@
 @import "./patterns";
 
-header ~ #maincontent .container a .btn-danger { color: #fff !important; }
-
 .html-markup-outer {
     padding: 1.457rem 1.5rem;
 
@@ -35,5 +33,10 @@ header ~ #maincontent .container a .btn-danger { color: #fff !important; }
             margin-left: auto;
             p:last-child { margin-bottom: 0; }
         }
+    }
+
+    .btn-wrap {
+        .btn-success,
+        .btn-danger { color: #fff !important; }
     }
 }

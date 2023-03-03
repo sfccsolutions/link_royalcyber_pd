@@ -25,7 +25,7 @@ module.exports.render = function (context) {
     if (content.tileLink) {
         model.tileLink = content.tileLink;
     } else {
-        model.tileLink = '#';
+        model.tileLink = 'javascript:void(0)';
     }
 
     model.tileNewtab = content.tileNewtab;

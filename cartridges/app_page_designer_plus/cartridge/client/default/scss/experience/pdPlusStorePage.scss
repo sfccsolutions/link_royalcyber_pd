@@ -35,6 +35,8 @@ h3 { text-align: unset; }
         > div,
         > figure { height: 100%; }
 
+        .carousel-item { position: absolute; }
+
         .carousel-inner {
             margin-left: 0;
             margin-right: 0;

@@ -1,7 +1,11 @@
 @import "~base/components/hero";
 
 .carousel.slide .carousel-inner {
-    @include media-breakpoint-up(md) { height: 25rem; }
+    @include media-breakpoint-up(md) {
+        height: 25rem;
+        display: flex;
+        align-items: center;
+    }
 
     .container & {
         @include media-breakpoint-up(md) { height: 18rem; }
