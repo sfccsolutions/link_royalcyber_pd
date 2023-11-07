@@ -1,0 +1,69 @@
+{
+    "name": "PD Plus Accordion",
+    "description": "Display Content Accordion",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "accordionComponent",
+            "name": "Accordion Configurations",
+            "description": "This component will display Accordion.",
+            "attribute_definitions": [
+                {
+                    "id": "accodionItem",
+                    "name": "Accordion Item",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "accordionDetail",
+                    "name": "Accordion Item Detail",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                  "id": "bgHeadingColor",
+                  "name": "Item Heading Background Color",
+                  "description":"Use hexcode for color in the format #RRGGBB",
+                  "type": "string",
+                  "required": false
+                },
+                {
+                  "id": "bgHeadingOpacity",
+                  "name": "Item Heading Background Color Opacity",
+                  "type": "enum",
+                  "values": ["10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"],
+                  "required": false
+                },
+                {
+                  "id": "itemHeadingTextColor",
+                  "name": "Item Heading Text Color",
+                  "description":"Use hexcode for color in the format #RRGGBB",
+                  "type": "string",
+                  "default_value": "#000",
+                  "required": false
+                },
+                {
+                  "id": "itemHeadingBorderColor",
+                  "name": "item Heading Border Color",
+                  "description":"Use hexcode for color in the format #RRGGBB",
+                  "type": "string",
+                  "default_value": "#000",
+                  "required": false
+                },
+                {
+                  "id": "accrBorderRadius",
+                  "name": "Please select the border type of accordion item",
+                  "description": "Border radius type e.g (Square/Rounded/circled)",
+                  "type": "enum",
+                  "values": [
+                      "square",
+                      "rounded",
+                      "circled"
+                  ],
+                  "required": false
+              }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
