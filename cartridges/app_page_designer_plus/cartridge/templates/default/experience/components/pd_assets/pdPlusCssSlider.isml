@@ -16,5 +16,5 @@
 
     <div class="slide" style="background-image: url('${pdict.imgFile}')"> 
 
-   <div class="detail"> <isprint value="${pdict.cssSliderSlide}" encoding="off" /> </div>
+   <div class="detail"  <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif> > <isprint value="${pdict.cssSliderSlide}" encoding="off" /> </div>
    </div>

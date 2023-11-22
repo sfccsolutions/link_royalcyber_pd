@@ -16,7 +16,7 @@
                 },
                 {
                     "id": "cssSliderSlide",
-                    "name": "css Slider Slide",
+                    "name": "css Slider Slide text",
                     "type": "markup",
                     "required": true
                 },

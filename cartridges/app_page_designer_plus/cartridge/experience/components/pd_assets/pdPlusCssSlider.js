@@ -33,9 +33,12 @@ module.exports.render = function (context) {
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
     }
+
     if (content.sliderTextColor) {
         model.bgComponentColor += 'color: ' + content.sliderTextColor.value + '; ';
     }
+
+    
     model.bgComponentColor += '"';
 
     /* Get image from the user for slide */
