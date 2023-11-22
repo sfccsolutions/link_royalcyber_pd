@@ -30,21 +30,14 @@
                     "required": false
                 },
                 {
-                    "id": "imgScaleHover",
-                    "name": "Scale Image on Hover",
-                    "description": "Scale the image on hover",
-                    "type": "boolean",
-                    "required": false
-                },
-                {
                     "id": "imageYPos",
                     "name": "Position of Card along y-axis",
                     "description": "Position of Card along vertical direction",
                     "type": "enum",
                     "values": [
-                        "flex-start",
+                        "top",
                         "center",
-                        "flex-end"
+                        "bottom"
                     ],
                     "default_value": "center",
                     "required": true
@@ -55,9 +48,9 @@
                     "description": "Position of Card along horizontal direction",
                     "type": "enum",
                     "values": [
-                        "flex-start",
+                        "right",
                         "center",
-                        "flex-end"
+                        "left"
                     ],
                     "default_value": "center",
                     "required": true
@@ -65,7 +58,7 @@
                 {
                     "id": "imgFile",
                     "name": "Tile Image",
-                    "description": "Select a photo to be displayed",
+                    "description": "Banner image should be banner width ",
                     "type": "image",
                     "required": true
                 },
@@ -85,8 +78,8 @@
                 },
                 {
                     "id": "imgTitleColor",
-                    "name": "Title Text Color",
-                    "description": "The text color.",
+                    "name": "Title Text Color 123 del",
+                    "description": "The text color. 123 del",
                     "type": "custom",
                     "required": false,
                     "editor_definition": {
@@ -111,21 +104,185 @@
                     "required": false
                 },
                 {
-                    "id": "imgSubTitle",
-                    "name": "Sub Text",
+                    "id": "buttontext",
+                    "name": "butonn Text",
                     "description": "Sub Text on overlay image after title",
                     "type": "string",
-                    "required": true
+                    "required": false
                 },
                 {
-                    "id": "imgSubTitleColor",
-                    "name": "Color Sub Text",
-                    "description": "Color of Sub Text on overlay image after title",
+                    "id": "btnFontSize",
+                    "name": "button Font Size",   
+                    "description": "Button Font Size",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "btnBgColor",
+                    "name": "Button background color",
+                    "description": "Set the background color of banner.",
                     "type": "custom",
                     "required": false,
                     "editor_definition": {
                         "type": "themer.colorpicker"
                     }
+                },
+                {
+                    "id": "tabTextColor",
+                    "name": "Button Text color 1324",
+                    "description": "Set the background color of banner.",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "buttonBorderColor",
+                    "name": "Button border color 13245",
+                    "description": "Set the background color of banner.",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "accrBorderRadius",
+                    "name": "Please select the border type  banner text",
+                    "description": "Border radius type e.g (Square/Rounded/circled)",
+                    "type": "enum",
+                    "values": [
+                        "square",
+                        "rounded",
+                        "circled"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "btnBorderRadius",
+                    "name": "Please select the border of button",
+                    "description": "Border radius type e.g (Square/Rounded/circled)",
+                    "type": "enum",
+                    "values": [
+                        "square",
+                        "rounded",
+                        "circled"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "btnBackgroundColor",
+                    "name": "Select the button background ",
+                    "description": "Button Background Color",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btnTextColor",
+                    "name": "Select the button Text color",
+                    "description": "Button Text Color",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btnsize",
+                    "name": "Please select button width",
+                    "description": "Button width type e.g (small/full width)",
+                    "type": "enum",
+                    "values": [
+                        "small",
+                        "medium",
+                        "large"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "imgBannerDetail",
+                    "name": "Image Banner Detail",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "aspectRation",
+                    "name": "Please select image Aspect Ration",
+                    "description": "Aspect Ration e.g (Banner/Vertical width)",
+                    "type": "enum",
+                    "values": [
+                        "auto",
+                        "landscape",
+                        "vertical"
+                    ],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "layoutSettings",
+            "name": "UI Layout Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "setPaddingTop",
+                    "name": "Padding Top i.e. 20px / 1.25rem",
+                    "description": "Provide padding-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingRight",
+                    "name": "Padding-Right i.e. 5px / .3125rem",
+                    "description": "Provide padding-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingBottom",
+                    "name": "Padding-Bottom i.e. 15px / 0.9375rem",
+                    "description": "Provide padding-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingLeft",
+                    "name": "Padding Left i.e. 10px / 0.625rem",
+                    "description": "Provide padding-left value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginTop",
+                    "name": "Margin Top i.e. 20px / 1.25rem",
+                    "description": "Provide margin-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginRight",
+                    "name": "Margin Right i.e. 15px / 0.9375rem",
+                    "description": "Provide margin-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginBottom",
+                    "name": "Margin Bottom  i.e. 30px / 1.875rem",
+                    "description": "Provide margin-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginLeft",
+                    "name": "Margin Left i.e. -15px / -0.9375rem",
+                    "description": "Provide margin-left value applied outside the container",
+                    "type": "string",
+                    "required": false
                 }
             ]
         }
