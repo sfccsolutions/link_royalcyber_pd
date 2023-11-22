@@ -37,40 +37,16 @@
         color: $white;
       }
 
-      .text-align-left {
+      &.text-align-left {
         text-align: left;
       }
 
-      .text-align-right {
+      &.text-align-right {
         text-align: right;
       }
 
-      .text-align-center {
+      &.text-align-center {
         text-align: center;
       }
 
   }
-  
-  .text-align-left {
-    text-align: left;
-  }
-
-  .text-align-right {
-    text-align: right;
-  }
-
-  .text-align-center {
-    text-align: center;
-  }
-  
-  
-  .section-auto {
-      display:block
-  }
-
-  .parallax-inner {
-    display: flex;
-    flex-direction: column;
-
-  }
-  
