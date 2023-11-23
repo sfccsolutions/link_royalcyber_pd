@@ -3,19 +3,11 @@
     assets.addCss('/css/experience/components/pd_assets/pdPlusCssSlider.css');
 </isscript>
 
-<iscomment> PD Plus css Skider Component  </iscomment>
+<iscomment> PD Plus css only Slider Component  </iscomment>
 
-    <iscomment> <isprint value="${pdict.cssSliderSlide}" encoding="off" /> </iscomment>
-    <iscomment> <div class="slide slide_1" id="slide1" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off"/></isif>> </iscomment>
-<div class="pdPluscssSlider">
    <input type="radio" id="${pdict.cssSliderNo}" name="slider">
-   <label for="${pdict.cssSliderNo}"><span class="sr-only"> Slide 1 of 5. A photo of a mountain pass with a winding path along the river and a view of distant mountains hiding in the mist.</span></label>
-   <iscomment> <div class="slide" style="background-image: url('https://c2.staticflickr.com/4/3743/8760292213_501dea0d6d_b.jpg')">  </iscomment>
-   <iscomment> <div class="img" style="background-image: url(${pdict.slideimage}); height : 200px"> </div> </iscomment>
-   <iscomment> <img src="https://c2.staticflickr.com/4/3743/8760292213_501dea0d6d_b.jpg" /> </iscomment>
-
+   <label for="${pdict.cssSliderNo}"><span class="sr-only"></span></label>
     <div class="slide" style="background-image: url('${pdict.imgFile}')"> 
-
-   <div class="detail"> <isprint value="${pdict.cssSliderSlide}" encoding="off" /> </div>
+    <div class="detail" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off"/></isif> > <isprint value="${pdict.cssSliderSlide}" encoding="off" /> </div>
    </div>
-</div>
+

@@ -21,30 +21,16 @@ module.exports.render = function (context) {
     var model = new HashMap();
 
 
-    model.cssSliderNo += 'trigger' + content.cssSliderNo;
+    model.cssSliderNo = 'trigger' + content.cssSliderNo;
     model.cssSliderSlide = content.cssSliderSlide ? content.cssSliderSlide : '';
     model.imgFile = content.imgFile ? content.imgFile.file.url : null;
     
-
     model.bgComponentColor = 'style="';
-    if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
-    }
-    if (content.backgroundColorAlpha) {
-        model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
-    }
     if (content.sliderTextColor) {
         model.bgComponentColor += 'color: ' + content.sliderTextColor.value + '; ';
     }
-    if (content.tabBorderColor) {
-        model.bgComponentColor += 'border-bottom-color: ' + content.tabBorderColor.value + '; ';
-    }
-
     model.bgComponentColor += '"';
 
     /* Get image from the user for slide */
-
-    
-
     return new Template('experience/components/pd_assets/pdPlusCssSlider').render(model).text;
 };
