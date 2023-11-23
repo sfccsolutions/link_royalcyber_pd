@@ -85,8 +85,8 @@ module.exports.render = function (context) {
         model.imageBannerStyles += 'background-color: ' + content.imgBannerCaptionColor.value + '; ';
     }
 
-    if (content.imgBannerColorAlpha) {
-        model.imageBannerStyles += 'opacity: ' + content.imgBannerColorAlpha + '; ';
+    if (content.imgBannerCaptionColorAlpha) {
+        model.imageBannerStyles += 'opacity: ' + content.imgBannerCaptionColorAlpha + '%;';
     }
 
     model.imageBannerStyles += '"';
@@ -98,8 +98,8 @@ module.exports.render = function (context) {
         model.btnBgStyles += 'background-color: ' + content.btnBgColor.value + '; ';
     }
 
-    if (content.tabTextColor) {
-        model.btnBgStyles += 'color: ' + content.tabTextColor.value + '; ';
+    if (content.btnText) {
+        model.btnBgStyles += 'color: ' + content.btnText.value + '; ';
     }
 
     if (content.btnFontSize) {
@@ -112,15 +112,6 @@ module.exports.render = function (context) {
     }
 
     model.btnBgStyles += '"';
-
-    /* Border Radius for text */
-    if (content.accrBorderRadius === 'square') {
-        model.accrBorderRadius = 'square-bordered';
-    } else if (content.accrBorderRadius === 'rounded') {
-        model.accrBorderRadius = 'rounded-bordered';
-    } else if (content.accrBorderRadius === 'circled') {
-        model.accrBorderRadius = 'circled-bordered';
-    }
 
     /* Button Border Radiuse */
     if (content.btnBorderRadius === 'square') {
@@ -147,8 +138,10 @@ module.exports.render = function (context) {
     if (content.btnsize === 'small') {
         model.btnwidthsize = 'btn-sm';
     } else if (content.btnsize === 'medium') {
-        model.btnwidthsize = 'btn-lg';
+        model.btnwidthsize = 'btn-medium';
     } else if (content.btnsize === 'large') {
+        model.btnwidthsize = 'btn-large';
+    } else if (content.btnsize === 'full') {
         model.btnwidthsize = 'btn-block';
     }
 
@@ -160,20 +153,9 @@ module.exports.render = function (context) {
         model.imgAspectRatio = 'vertical ';
     }
 
-
-     /* Margin | Padding Settings */
-     model.UILayout = 'style="';
-     model.UILayout += 'padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
-     model.UILayout += '; padding-right: ' + (content.setPaddingRight ? content.setPaddingRight : '0');
-     model.UILayout += '; padding-bottom: ' + (content.setPaddingBottom ? content.setPaddingBottom : '0');
-     model.UILayout += '; padding-left: ' + (content.setPaddingLeft ? content.setPaddingLeft : '0');
-     model.UILayout += '; margin-top: ' + (content.setMarginTop ? content.setMarginTop : '0');
-     model.UILayout += '; margin-right: ' + (content.setMarginRight ? content.setMarginRight : '0');
-     model.UILayout += '; margin-bottom: ' + (content.setMarginBottom ? content.setMarginBottom : '0');
-     model.UILayout += '; margin-left: ' + (content.setMarginLeft ? content.setMarginLeft : '0');
-
-
     model.imgBannerDetail = content.imgBannerDetail ? content.imgBannerDetail : '';
+    model.bannerFigureHeight = content.bannerFigureHeight ? content.bannerFigureHeight : '';
+    
 
     return new Template('experience/components/pd_assets/pdPlusImageBanner').render(model).text;
 };

@@ -11,11 +11,11 @@
     color: $white;
 }
 
-  .parallaxScrollingSction {
+.parallaxScrollingSction {
     height: 500px;
-    background-color: rgba(255,255,255, 0.3);;
+    background-color: rgba(255, 255, 255, 0.3);
 
-    & .section-background {
+    &.section-background {
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
@@ -24,9 +24,9 @@
         justify-content: center;
         align-items: center;
         color: $white;
-      }
+    }
 
-      &.sectionFixed  {
+    &.sectionFixed {
         background-attachment: inherit;
         background-position: center;
         background-size: cover;
@@ -35,18 +35,42 @@
         justify-content: center;
         align-items: center;
         color: $white;
-      }
+    }
 
-      &.text-align-left {
+    &.text-align-left {
         text-align: left;
-      }
+    }
 
-      &.text-align-right {
+    &.text-align-right {
         text-align: right;
-      }
+    }
 
-      &.text-align-center {
+    &.text-align-center {
         text-align: center;
-      }
+    }
 
-  }
+    .parallexSection {
+        max-width: 100%;
+
+        @include media-breakpoint-up(sm) {
+            max-width: 50%;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+
+            span {
+                color: inherit !important;
+            }
+        }
+
+        .btn {
+            min-height: 50px;
+            padding: 0 20px;
+            border-radius: 8px;
+            text-transform: capitalize;
+        }
+    }
+}

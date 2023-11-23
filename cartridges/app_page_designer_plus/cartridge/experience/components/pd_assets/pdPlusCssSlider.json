@@ -10,7 +10,7 @@
             "attribute_definitions": [
                 {
                     "id": "cssSliderNo",
-                    "name": "css Slider No. with out space (i.e. 1,2,3..) Don't Duplicate",
+                    "name": "CSS Slider No.(i.e. 1,2,3..) Don't Duplicate",
                     "type": "string",
                     "required": true
                 },
@@ -59,18 +59,8 @@
                 },
                 {
                     "id": "sliderTextColor",
-                    "name": "Specify tab text color",
+                    "name": "Specify Slide Caption text color",
                     "description": "Set tab text color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "tabBorderColor",
-                    "name": "Specify tab border bottom color",
-                    "description": "Set active tab border bottom color",
                     "required": false,
                     "type": "custom",
                     "editor_definition": {

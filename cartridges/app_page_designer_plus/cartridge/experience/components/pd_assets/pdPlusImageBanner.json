@@ -30,6 +30,75 @@
                     "required": false
                 },
                 {
+                    "id": "imgFile",
+                    "name": "Tile Image",
+                    "description": "Banner image should be banner width ",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Alternate Text of Image",
+                    "description": "The image alt text shown by the component.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "bannerFigureHeight",
+                    "name": "Figure Section Height",
+                    "description": "Please enter the minimum height of banner",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "aspectRation",
+                    "name": "Please select image Aspect Ration",
+                    "description": "Aspect Ration e.g (Banner/Vertical width)",
+                    "type": "enum",
+                    "values": [
+                        "auto",
+                        "landscape",
+                        "vertical"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "imgBannerDetail",
+                    "name": "Image Banner Detail",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "imgBannerCaptionColor",
+                    "name": "Tile Card Caption background color",
+                    "description": "Set the background color of Caption.",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "imgBannerCaptionColorAlpha",
+                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
+                    "description": "Set Background Color alpha between 0 and 1",
+                    "type": "enum",
+                    "default_value": 100,
+                    "values": [
+                        10,
+                        20,
+                        30,
+                        40,
+                        50,
+                        60,
+                        70,
+                        80,
+                        90,
+                        100
+                    ],
+                    "required": false
+                },
+                {
                     "id": "imageYPos",
                     "name": "Position of Card along y-axis",
                     "description": "Position of Card along vertical direction",
@@ -56,81 +125,29 @@
                     "required": true
                 },
                 {
-                    "id": "imgFile",
-                    "name": "Tile Image",
-                    "description": "Banner image should be banner width ",
-                    "type": "image",
-                    "required": true
-                },
-                {
-                    "id": "imgAlt",
-                    "name": "Alternate Text of Image",
-                    "description": "The image alt text shown by the component.",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "imgTitle",
-                    "name": "Title Text",
-                    "description": "Title on overlay image",
-                    "type": "string",
-                    "required": true
-                },
-                {
-                    "id": "imgTitleColor",
-                    "name": "Title Text Color 123 del",
-                    "description": "The text color. 123 del",
-                    "type": "custom",
-                    "required": false,
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "imgBannerCaptionColor",
-                    "name": "Tile Card Caption background color",
-                    "description": "Set the background color of banner.",
-                    "type": "custom",
-                    "required": false,
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "imgBannerColorAlpha",
-                    "name": "Tile Card Caption background color opacity",
-                    "description": "Set the alpha property of background color of banner.",
-                    "type": "string",
+                    "id": "btnsize",
+                    "name": "Please select button Size",
+                    "description": "Button Size e.g (Small/Medium/Large(Full width))",
+                    "type": "enum",
+                    "values": [
+                        "small",
+                        "medium",
+                        "large",
+                        "full"
+                    ],
                     "required": false
                 },
                 {
                     "id": "buttontext",
-                    "name": "butonn Text",
-                    "description": "Sub Text on overlay image after title",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "btnFontSize",
-                    "name": "button Font Size",   
-                    "description": "Button Font Size",
+                    "name": "Button text on card",
+                    "description": "Button text for card",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "btnBgColor",
                     "name": "Button background color",
-                    "description": "Set the background color of banner.",
-                    "type": "custom",
-                    "required": false,
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "tabTextColor",
-                    "name": "Button Text color 1324",
-                    "description": "Set the background color of banner.",
+                    "description": "Set the background color of button.",
                     "type": "custom",
                     "required": false,
                     "editor_definition": {
@@ -139,7 +156,7 @@
                 },
                 {
                     "id": "buttonBorderColor",
-                    "name": "Button border color 13245",
+                    "name": "Button border color",
                     "description": "Set the background color of banner.",
                     "type": "custom",
                     "required": false,
@@ -148,16 +165,14 @@
                     }
                 },
                 {
-                    "id": "accrBorderRadius",
-                    "name": "Please select the border type  banner text",
-                    "description": "Border radius type e.g (Square/Rounded/circled)",
-                    "type": "enum",
-                    "values": [
-                        "square",
-                        "rounded",
-                        "circled"
-                    ],
-                    "required": false
+                    "id": "btnText",
+                    "name": "Button Text color",
+                    "description": "Set the background color of button.",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
                 },
                 {
                     "id": "btnBorderRadius",
@@ -169,119 +184,6 @@
                         "rounded",
                         "circled"
                     ],
-                    "required": false
-                },
-                {
-                    "id": "btnBackgroundColor",
-                    "name": "Select the button background ",
-                    "description": "Button Background Color",
-                    "type": "custom",
-                    "required": false,
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "btnTextColor",
-                    "name": "Select the button Text color",
-                    "description": "Button Text Color",
-                    "type": "custom",
-                    "required": false,
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "btnsize",
-                    "name": "Please select button width",
-                    "description": "Button width type e.g (small/full width)",
-                    "type": "enum",
-                    "values": [
-                        "small",
-                        "medium",
-                        "large"
-                    ],
-                    "required": false
-                },
-                {
-                    "id": "imgBannerDetail",
-                    "name": "Image Banner Detail",
-                    "type": "markup",
-                    "required": true
-                },
-                {
-                    "id": "aspectRation",
-                    "name": "Please select image Aspect Ration",
-                    "description": "Aspect Ration e.g (Banner/Vertical width)",
-                    "type": "enum",
-                    "values": [
-                        "auto",
-                        "landscape",
-                        "vertical"
-                    ],
-                    "required": false
-                }
-            ]
-        },
-        {
-            "id": "layoutSettings",
-            "name": "UI Layout Settings",
-            "description": "The visual display of the container.",
-            "attribute_definitions": [
-                {
-                    "id": "setPaddingTop",
-                    "name": "Padding Top i.e. 20px / 1.25rem",
-                    "description": "Provide padding-top value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setPaddingRight",
-                    "name": "Padding-Right i.e. 5px / .3125rem",
-                    "description": "Provide padding-right value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setPaddingBottom",
-                    "name": "Padding-Bottom i.e. 15px / 0.9375rem",
-                    "description": "Provide padding-bottom value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setPaddingLeft",
-                    "name": "Padding Left i.e. 10px / 0.625rem",
-                    "description": "Provide padding-left value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginTop",
-                    "name": "Margin Top i.e. 20px / 1.25rem",
-                    "description": "Provide margin-top value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginRight",
-                    "name": "Margin Right i.e. 15px / 0.9375rem",
-                    "description": "Provide margin-right value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginBottom",
-                    "name": "Margin Bottom  i.e. 30px / 1.875rem",
-                    "description": "Provide margin-bottom value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginLeft",
-                    "name": "Margin Left i.e. -15px / -0.9375rem",
-                    "description": "Provide margin-left value applied outside the container",
-                    "type": "string",
                     "required": false
                 }
             ]

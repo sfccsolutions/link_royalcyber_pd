@@ -36,11 +36,11 @@ module.exports.render = function (context) {
 
     /* parallax text Alignment  */
     if (content.textAlignment === 'left') {
-        model.textAlignment = 'text-align-left';
+        model.textAlignment = 'justify-content-start';
     } else if (content.textAlignment === 'right') {
-        model.textAlignment = 'text-align-right';
+        model.textAlignment = 'justify-content-end';
     } else if (content.textAlignment === 'center') {
-        model.textAlignment = 'text-align-center';
+        model.textAlignment = 'justify-content-center';
     }
 
     /* parallax Section Background Color  */
@@ -56,8 +56,21 @@ module.exports.render = function (context) {
     if (content.btntextColor) {
         model.bgComponentColor += 'color: ' + content.btntextColor.value + '; ';
     }
+    
+    if (content.textColor) {
+        model.bgComponentColor += 'color: ' + content.textColor.value + '; ';
+    }
 
     model.bgComponentColor += '"';
+
+    /* parallax Section Text Color  */
+    model.textContentColor = 'style="';
+    
+    if (content.textColor) {
+        model.textContentColor += 'color: ' + content.textColor.value + '; ';
+    }
+
+    model.textContentColor += '"';
 
  /* Margin | Padding Settings */
     model.UILayout = 'style="';
