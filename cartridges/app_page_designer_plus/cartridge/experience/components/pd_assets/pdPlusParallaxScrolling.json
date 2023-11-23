@@ -23,7 +23,7 @@
                 },
                 {
                   "id": "ParallaxScroolingSectionbtn",
-                  "name": "Parallax Scrooling Section btn",
+                  "name": "Parallax Scrooling Section button",
                   "type": "string",
                   "required": false
                 },
@@ -46,9 +46,9 @@
                     "required": false
                 },
               {
-                "id": "backgroundColor",
-                "name": "Specify Background Color",
-                "description": "Set Background Color",
+                "id": "btnbackgroundColor",
+                "name": "Specify Button Background Color",
+                "description": "Set Button Background Color",
                 "required": false,
                 "type": "custom",
                 "editor_definition": {
@@ -57,7 +57,7 @@
             },
             {
               "id": "backgroundColorAlpha",
-              "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
+              "name": "Specify Buton Background Color Alpha between 0 and 1 i.e 0.2",
               "description": "Set Background Color alpha between 0 and 1",
               "type": "enum",
               "default_value": 100,

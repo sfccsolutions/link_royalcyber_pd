@@ -5,12 +5,17 @@
     assets.addJs('/js/tabsComponent.js');
 </isscript>
 <div>
-    <div class="parallaxScrollingSction   ${pdict.parallaxSection} ${pdict.textAlignment}" style="background-image: url(${pdict.ParallaxScroolingSectionimage}); height : ${pdict.sectionHeight}">
-         <div class="parallexSection"  
+    <div class="parallaxScrollingSction ${pdict.parallaxSection} ${pdict.textAlignment}" style="background-image: url(${pdict.ParallaxScroolingSectionimage}); height : ${pdict.sectionHeight}">
+         <div class="parallexSection "  
          <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+
         <isif condition="${pdict.ParallaxScroolingSection}">
              <isprint value="${pdict.ParallaxScroolingSection}" encoding="off" />
-        <button class="btn" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>${pdict.ParallaxScroolingSectionbtn}</button>
+                <isif condition="${!empty(pdict.ParallaxScroolingSectionbtn)}">
+                    <button class="btn"  <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif> >
+                        <isprint value="${pdict.ParallaxScroolingSectionbtn}" encoding="off" />
+                    </button>
+            </isif>
         </isif>
     </div>
     </div>

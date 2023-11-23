@@ -43,14 +43,16 @@ module.exports.render = function (context) {
         model.textAlignment = 'text-align-center';
     }
 
-    /* parallax Section Background Color  */
+    /* parallax Button Background Color  */
 
     model.bgComponentColor = 'style="';
-    if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
-    }
+    
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
+    }
+
+    if (content.btnbackgroundColor) {
+        model.bgComponentColor += 'background-color: ' + content.btnbackgroundColor.value + '; ';
     }
 
     if (content.btntextColor) {
@@ -74,10 +76,10 @@ module.exports.render = function (context) {
 
     /* Button detail */
 
-    model.bgHeadingColor = content.bgHeadingColor ? content.bgHeadingColor : '';
-    model.bgHeadingOpacity = content.bgHeadingOpacity ? content.bgHeadingOpacity : '';
-    model.itemHeadingTextColor = content.itemHeadingTextColor ? content.itemHeadingTextColor : '';
-    model.itemHeadingBorderColor = content.itemHeadingBorderColor ? content.itemHeadingBorderColor : '';
+    // model.bgHeadingColor = content.bgHeadingColor ? content.bgHeadingColor : '';
+    // model.bgHeadingOpacity = content.bgHeadingOpacity ? content.bgHeadingOpacity : '';
+    // model.itemHeadingTextColor = content.itemHeadingTextColor ? content.itemHeadingTextColor : '';
+    // model.itemHeadingBorderColor = content.itemHeadingBorderColor ? content.itemHeadingBorderColor : '';
 
     return new Template('experience/components/pd_assets/pdPlusParallaxScrolling').render(model).text;
 };
