@@ -43,7 +43,7 @@ module.exports.render = function (context) {
         model.textAlignment = 'text-align-center';
     }
 
-    /* parallax Button Background Color  */
+    /* parallax Button  Color  */
 
     model.bgComponentColor = 'style="';
     
@@ -62,8 +62,10 @@ module.exports.render = function (context) {
     model.bgComponentColor += '"';
 
  /* Margin | Padding Settings */
+    
     model.UILayout = 'style="';
-    model.UILayout += 'padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
+    model.UILayout += 'color: ' + content.textColor.value;
+    model.UILayout += '; padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
     model.UILayout += '; padding-right: ' + (content.setPaddingRight ? content.setPaddingRight : '0');
     model.UILayout += '; padding-bottom: ' + (content.setPaddingBottom ? content.setPaddingBottom : '0');
     model.UILayout += '; padding-left: ' + (content.setPaddingLeft ? content.setPaddingLeft : '0');
@@ -72,14 +74,6 @@ module.exports.render = function (context) {
     model.UILayout += '; margin-bottom: ' + (content.setMarginBottom ? content.setMarginBottom : '0');
     model.UILayout += '; margin-left: ' + (content.setMarginLeft ? content.setMarginLeft : '0');
     model.UILayout += ';"';
-
-
-    /* Button detail */
-
-    // model.bgHeadingColor = content.bgHeadingColor ? content.bgHeadingColor : '';
-    // model.bgHeadingOpacity = content.bgHeadingOpacity ? content.bgHeadingOpacity : '';
-    // model.itemHeadingTextColor = content.itemHeadingTextColor ? content.itemHeadingTextColor : '';
-    // model.itemHeadingBorderColor = content.itemHeadingBorderColor ? content.itemHeadingBorderColor : '';
 
     return new Template('experience/components/pd_assets/pdPlusParallaxScrolling').render(model).text;
 };
