@@ -6,7 +6,6 @@
     assets.addCss('/css/experience/components/third-party/tinySliderOverrides.css');
     assets.addCss('/css/experience/components/pd_assets/pdPlusCampaignBanner.css');
 
-    assets.addJs('/js/third-party/tiny-slider.js');
     assets.addJs('/js/pdPlusCampaignBanner.js');
 </isscript>
 

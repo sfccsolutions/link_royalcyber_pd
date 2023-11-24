@@ -3,6 +3,8 @@
 var processInclude = require('base/util');
 
 $(document).ready(function () {
+    processInclude(require('./third-party/tiny-slider'));
+
     var { tns } = require("tiny-slider");
 
     //Anonymous Function used in the Page Designer Slider Blog Component
