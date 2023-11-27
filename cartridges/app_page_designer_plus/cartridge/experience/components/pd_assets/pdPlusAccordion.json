@@ -1,22 +1,22 @@
 {
-    "name": "PD Plus Accordion",
-    "description": "Display Content Accordion",
+    "name": "PD Plus Collapsible",
+    "description": "Display Content Collapsible",
     "group": "pd_assets",
     "attribute_definition_groups": [
         {
             "id": "accordionComponent",
-            "name": "Accordion Configurations",
-            "description": "This component will display Accordion.",
+            "name": "Collapsible Configurations",
+            "description": "This component will display Collapsible.",
             "attribute_definitions": [
                 {
                     "id": "accodionItem",
-                    "name": "Accordion Item",
+                    "name": "Collapsible Item",
                     "type": "string",
                     "required": true
                 },
                 {
                     "id": "accordionDetail",
-                    "name": "Accordion Item Detail",
+                    "name": "Collapsible Item Detail",
                     "type": "markup",
                     "required": true
                 },
@@ -74,7 +74,7 @@
             },
               {
                   "id": "accrBorderRadius",
-                  "name": "Please select the border type of accordion item",
+                  "name": "Please select the border type of Collapsible item",
                   "description": "Border radius type e.g (Square/Rounded/circled)",
                   "type": "enum",
                   "values": [

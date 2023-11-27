@@ -1,5 +1,5 @@
 {
-    "name": "PD Plus Accordion",
+    "name": "PD Plus Collapsible",
     "group": "pd_layouts",
     "attribute_definition_groups": [
         {
@@ -113,7 +113,7 @@
     "region_definitions": [
         {
             "id": "accordionlayout",
-            "name": "PD Plus accordion Component",
+            "name": "PD Plus Collapsible Component",
             "component_type_exclusions": []
         }
     ]
