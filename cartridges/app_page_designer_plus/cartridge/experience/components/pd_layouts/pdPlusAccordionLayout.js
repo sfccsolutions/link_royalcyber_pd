@@ -20,11 +20,19 @@ module.exports.render = function (context) {
     model.isContainer = content.isContainer ? 'container-fluid' : 'container';
 
     model.bgComponentColor = 'style="';
-    if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
-    }
+    
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
+    }
+    if (content.itemHeadingTextColor) {
+        model.bgComponentColor += 'color: ' + content.itemHeadingTextColor.value + '; ';
+    }
+    if (content.itemHeadingBorderColor) {
+        model.bgComponentColor += 'bordercolor: ' + content.itemHeadingBorderColor.value + '; ';
+    }
+
+    if (content.HeadingbgColor) {
+        model.bgComponentColor += 'background-color: ' + content.HeadingbgColor.value + '; ';
     }
     model.bgComponentColor += '"';
 

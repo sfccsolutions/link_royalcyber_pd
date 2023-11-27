@@ -21,36 +21,58 @@
                     "required": true
                 },
                 {
-                  "id": "bgHeadingColor",
-                  "name": "Item Heading Background Color",
-                  "description":"Use hexcode for color in the format #RRGGBB",
-                  "type": "string",
-                  "required": false
-                },
-                {
-                  "id": "bgHeadingOpacity",
-                  "name": "Item Heading Background Color Opacity",
+                  "id": "itemHeadingbgColor",
+                  "name": "Item Heading background Color",
+                  "description": "Set Background Color",
+                  "required": false,
+                  "type": "custom",
+                  "editor_definition": {
+                      "type": "themer.colorpicker"
+                  }
+              },
+              
+              {
+                  "id": "HeadingbgColorAlpha",
+                  "name": "Specify Background Color Alpha between 10 and 100",
+                  "description": "Set Background Color alpha between 10 and 100",
                   "type": "enum",
-                  "values": ["10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"],
+                  "default_value": 100,
+                  "values": [
+                      10,
+                      20,
+                      30,
+                      40,
+                      50,
+                      60,
+                      70,
+                      80,
+                      90,
+                      100
+                  ],
                   "required": false
-                },
-                {
-                  "id": "itemHeadingTextColor",
-                  "name": "Item Heading Text Color",
-                  "description":"Use hexcode for color in the format #RRGGBB",
-                  "type": "string",
-                  "default_value": "#000",
-                  "required": false
-                },
-                {
-                  "id": "itemHeadingBorderColor",
-                  "name": "item Heading Border Color",
-                  "description":"Use hexcode for color in the format #RRGGBB",
-                  "type": "string",
-                  "default_value": "#000",
-                  "required": false
-                },
-                {
+              },
+              
+              {
+                "id": "itemHeadingTextColor",
+                "name": "Item Heading Text Color",
+                "description": "Set Background Color",
+                "required": false,
+                "type": "custom",
+                "editor_definition": {
+                    "type": "themer.colorpicker"
+                }
+            },
+            {
+              "id": "itemHeadingBorderColor",
+              "name": "item Heading Border Color",
+              "description": "Set Background Color",
+              "required": false,
+              "type": "custom",
+              "editor_definition": {
+                  "type": "themer.colorpicker"
+              }
+            },
+              {
                   "id": "accrBorderRadius",
                   "name": "Please select the border type of accordion item",
                   "description": "Border radius type e.g (Square/Rounded/circled)",
