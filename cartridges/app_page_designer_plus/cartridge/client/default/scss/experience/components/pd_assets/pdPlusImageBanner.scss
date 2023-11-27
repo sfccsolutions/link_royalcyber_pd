@@ -68,7 +68,7 @@
 
     &.bnr--ystart .bnr-caption-bg {
         margin-left: auto;
-        max-width: 60%;
+        max-width: 50%;
 
         @include media-breakpoint-down(sm) { 
             max-width: 100%;
