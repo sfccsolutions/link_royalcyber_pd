@@ -7,5 +7,4 @@ $(document).ready(function () {
       $(this).toggleClass("active").next(".inner").slideToggle().parent().siblings().find(".inner").slideUp().prev().removeClass("active");
 	  $(".inner").not($(this).next()).slideUp(500);
     });
-
 });
