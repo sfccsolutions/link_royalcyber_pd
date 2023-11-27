@@ -23,10 +23,26 @@ module.exports.render = function (context) {
     model.accordionDetail = content.accordionDetail ? content.accordionDetail : '';
     model.hideBorder = content.hideBorder ? content.hideBorder : false;
     model.hideBorderdetail = content.hideBorderdetail ? content.hideBorderdetail : false;
-    model.bgHeadingColor = content.bgHeadingColor ? content.bgHeadingColor : '';
-    model.bgHeadingOpacity = content.bgHeadingOpacity ? content.bgHeadingOpacity : '';
     model.itemHeadingTextColor = content.itemHeadingTextColor ? content.itemHeadingTextColor : '';
     model.itemHeadingBorderColor = content.itemHeadingBorderColor ? content.itemHeadingBorderColor : '';
+
+    model.bgComponentColor = 'style="';
+
+    if (content.HeadingbgColorAlpha) {
+        model.bgComponentColor += 'opacity: ' + content.HeadingbgColorAlpha + '%;';
+    }
+
+    if (content.itemHeadingTextColor) {
+        model.bgComponentColor += 'color: ' + content.itemHeadingTextColor.value + '; ';
+    }
+    if (content.itemHeadingBorderColor) {
+        model.bgComponentColor += 'border-color: ' + content.itemHeadingBorderColor.value + '; ';
+    }
+
+    if (content.itemHeadingbgColor) {
+        model.bgComponentColor += 'background-color: ' + content.itemHeadingbgColor.value + '; ';
+    }
+    model.bgComponentColor += '"';
 
     /* Border Radius of Buttons if found then concatenate its class name */
     if (content.accrBorderRadius === 'square') {
@@ -36,6 +52,8 @@ module.exports.render = function (context) {
     } else if (content.accrBorderRadius === 'circled') {
         model.accrBorderRadius = 'circled-bordered';
     }
+
+    
 
     return new Template('experience/components/pd_assets/pdPlusAccordion').render(model).text;
 };
