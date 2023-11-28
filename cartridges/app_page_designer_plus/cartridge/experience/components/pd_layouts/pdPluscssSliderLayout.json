@@ -26,8 +26,8 @@
                 },
                 {
                     "id": "backgroundColorAlpha",
-                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
-                    "description": "Set Background Color alpha between 0 and 1",
+                    "name": "Specify Background Color Alpha between 10 and 100",
+                    "description": "Set Background Color alpha between 10 and 100",
                     "type": "enum",
                     "default_value": 100,
                     "values": [
@@ -41,6 +41,17 @@
                         80,
                         90,
                         100
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "slidercontols",
+                    "name": "Please select slider contols",
+                    "description": "slider contols e.g (arrows/arrows & pagination)",
+                    "type": "enum",
+                    "values": [
+                        "only pagination",
+                        "arrows & pagination Both"
                     ],
                     "required": false
                 }

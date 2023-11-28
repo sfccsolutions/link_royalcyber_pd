@@ -21,7 +21,7 @@ module.exports.render = function (context) {
     var model = new HashMap();
 
 
-    model.cssSliderNo += 'trigger' + content.cssSliderNo;
+    model.cssSliderNo = 'trigger' + content.cssSliderNo;
     model.cssSliderSlide = content.cssSliderSlide ? content.cssSliderSlide : '';
     model.imgFile = content.imgFile ? content.imgFile.file.url : null;
     

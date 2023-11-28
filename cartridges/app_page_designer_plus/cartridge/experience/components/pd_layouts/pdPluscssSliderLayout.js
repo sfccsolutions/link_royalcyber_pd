@@ -26,7 +26,16 @@ module.exports.render = function (context) {
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
     }
+
     model.bgComponentColor += '"';
+
+    /* Slider Controls */
+
+    if (content.slidercontols === 'only pagination') {
+        model.slidercontols = 'only-arrows';
+    } else if (content.slidercontols === 'arrows & pagination Both') {
+        model.slidercontols = 'arrows-pagination';
+    }
 
     /* Margin | Padding Settings */
     model.UILayout = 'style="';
