@@ -10,7 +10,9 @@
             <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
             <isif condition="${pdict.ParallaxScroolingSection}">
                 <div class="parrallax-content" <isif condition="${pdict.textContentColor}"><isprint value="${pdict.textContentColor}" encoding="off" /></isif>><isprint value="${pdict.ParallaxScroolingSection}" encoding="off" /></div>
-                <button class="btn" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>${pdict.ParallaxScroolingSectionbtn}</button>
+                <button class="btn" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>
+                    <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>  ${pdict.ParallaxScroolingSectionbtn}</a>
+                </button>
             </isif>
         </div>
     </div>

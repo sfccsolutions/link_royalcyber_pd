@@ -197,3 +197,12 @@
             display: inline-block;
     }
 }
+
+.imageBanner {
+    .category-link {
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}

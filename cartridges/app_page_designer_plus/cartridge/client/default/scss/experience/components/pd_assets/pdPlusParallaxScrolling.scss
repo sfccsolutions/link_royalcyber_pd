@@ -41,6 +41,11 @@
         color: $white;
     }
 
+    .tile-link {
+        color: inherit;
+        text-decoration: none;
+    }
+
     &.text-align-left {
         text-align: left;
     }

@@ -56,9 +56,33 @@
                     }
                 },
                 {
-                    "id": "backgroundColor",
-                    "name": "Specify Button Background Color",
-                    "description": "Set Button Background Color",
+                    "id": "tileLink",
+                    "name": "Link of Tile",
+                    "description": "Provide the Link URL of Tile.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "btnbgColor",
+                    "name": "Specify Button background Color",
+                    "description": "Set Button background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btntextColor",
+                    "name": "Specify Button Color",
+                    "description": "Set Button  Color",
                     "required": false,
                     "type": "custom",
                     "editor_definition": {
@@ -84,16 +108,6 @@
                         100
                     ],
                     "required": true
-                },
-                {
-                    "id": "btntextColor",
-                    "name": "Specify Button Text Color",
-                    "description": "Set Button Text Color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
                 },
                 {
                     "id": "parallaxSection",

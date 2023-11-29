@@ -3,7 +3,7 @@
     assets.addCss('/css/experience/components/pd_assets/pdPlusImageBanner.css');
 </isscript>
 
-<a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
+<div class="tile-link imageBanner ${pdict.className}" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
   <figure class="bnr custom-caption  <isif condition=" ${pdict.imgFile == null}">nulled-image-container</isif>
     ${pdict.imageYPos} ${pdict.imageXPos}" ${pdict.bannerFigureHeight}>
     <isif condition="${pdict.imgFile == null}">
@@ -28,9 +28,9 @@
             <isprint value="${pdict.imgBannerDetail}" encoding="off" />
         </div>
       
-         <button class="btn btn-primary banner-btn ${pdict.btnwidthsize} ${pdict.borderRadiusBtn}"
+         <button class="btn btn-primary category-link banner-btn ${pdict.btnwidthsize} ${pdict.borderRadiusBtn}"
          <isif condition="${pdict.btnBgStyles}"><isprint value="${pdict.btnBgStyles}" encoding="off" /></isif>>
-          ${pdict.buttontext}
+            <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>> ${pdict.buttontext} </a>
         </button>
 
          <isif condition="${pdict.imgTitle !== 'undefined' && pdict.imgSubTitle !== 'undefined'}">
@@ -39,4 +39,4 @@
       </div>
     </figcaption>
   </figure>
-</a>
+</div>

@@ -23,10 +23,20 @@ module.exports.render = function (context) {
     model.ParallaxScroolingSectionbtn = content.ParallaxScroolingSectionbtn ? content.ParallaxScroolingSectionbtn : '';
     model.ParallaxScroolingSectionimage = content.ParallaxScroolingSectionimage ? content.ParallaxScroolingSectionimage.file.url : null;
 
+    if (content.tileLink) {
+        model.tileLink = content.tileLink;
+    } else {
+        model.tileLink = 'javascript:void(0)';
+    }
+
+    model.tileNewtab = content.tileNewtab;
+    model.buttontext = content.buttontext;
+
+
     /* parallax SectionHeight  */
     model.sectionHeight = content.sectionHeight ? content.sectionHeight : '';
 
-     /* parallax SectionHeight  */
+     /* parallax Section Type  */
 
     if (content.parallaxSection === 'sectionParallax') {
         model.parallaxSection = 'section-background';
@@ -46,23 +56,19 @@ module.exports.render = function (context) {
     /* parallax Button  Color  */
 
     model.bgComponentColor = 'style="';
+
+    if (content.btnbgColor) {
+        model.bgComponentColor += 'background-color: ' + content.btnbgColor.value + '; ';
+    }
     
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
     }
 
-    if (content.btnbackgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.btnbackgroundColor.value + '; ';
-    }
 
     if (content.btntextColor) {
         model.bgComponentColor += 'color: ' + content.btntextColor.value + '; ';
     }
-    
-    if (content.textColor) {
-        model.bgComponentColor += 'color: ' + content.textColor.value + '; ';
-    }
-
     model.bgComponentColor += '"';
 
     /* parallax Section Text Color  */
