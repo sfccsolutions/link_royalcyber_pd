@@ -23,10 +23,20 @@ module.exports.render = function (context) {
     model.ParallaxScroolingSectionbtn = content.ParallaxScroolingSectionbtn ? content.ParallaxScroolingSectionbtn : '';
     model.ParallaxScroolingSectionimage = content.ParallaxScroolingSectionimage ? content.ParallaxScroolingSectionimage.file.url : null;
 
+    if (content.tileLink) {
+        model.tileLink = content.tileLink;
+    } else {
+        model.tileLink = 'javascript:void(0)';
+    }
+
+    model.tileNewtab = content.tileNewtab;
+    model.buttontext = content.buttontext;
+
+
     /* parallax SectionHeight  */
     model.sectionHeight = content.sectionHeight ? content.sectionHeight : '';
 
-     /* parallax SectionHeight  */
+     /* parallax Section Type  */
 
     if (content.parallaxSection === 'sectionParallax') {
         model.parallaxSection = 'section-background';
@@ -43,24 +53,22 @@ module.exports.render = function (context) {
         model.textAlignment = 'justify-content-center';
     }
 
-    /* parallax Section Background Color  */
+    /* parallax Button  Color  */
 
     model.bgComponentColor = 'style="';
-    if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
+
+    if (content.btnbgColor) {
+        model.bgComponentColor += 'background-color: ' + content.btnbgColor.value + '; ';
     }
+    
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
     }
 
+
     if (content.btntextColor) {
         model.bgComponentColor += 'color: ' + content.btntextColor.value + '; ';
     }
-    
-    if (content.textColor) {
-        model.bgComponentColor += 'color: ' + content.textColor.value + '; ';
-    }
-
     model.bgComponentColor += '"';
 
     /* parallax Section Text Color  */
@@ -73,8 +81,10 @@ module.exports.render = function (context) {
     model.textContentColor += '"';
 
  /* Margin | Padding Settings */
+    
     model.UILayout = 'style="';
-    model.UILayout += 'padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
+    model.UILayout += 'color: ' + content.textColor.value;
+    model.UILayout += '; padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
     model.UILayout += '; padding-right: ' + (content.setPaddingRight ? content.setPaddingRight : '0');
     model.UILayout += '; padding-bottom: ' + (content.setPaddingBottom ? content.setPaddingBottom : '0');
     model.UILayout += '; padding-left: ' + (content.setPaddingLeft ? content.setPaddingLeft : '0');
@@ -83,14 +93,6 @@ module.exports.render = function (context) {
     model.UILayout += '; margin-bottom: ' + (content.setMarginBottom ? content.setMarginBottom : '0');
     model.UILayout += '; margin-left: ' + (content.setMarginLeft ? content.setMarginLeft : '0');
     model.UILayout += ';"';
-
-
-    /* Button detail */
-
-    model.bgHeadingColor = content.bgHeadingColor ? content.bgHeadingColor : '';
-    model.bgHeadingOpacity = content.bgHeadingOpacity ? content.bgHeadingOpacity : '';
-    model.itemHeadingTextColor = content.itemHeadingTextColor ? content.itemHeadingTextColor : '';
-    model.itemHeadingBorderColor = content.itemHeadingBorderColor ? content.itemHeadingBorderColor : '';
 
     return new Template('experience/components/pd_assets/pdPlusParallaxScrolling').render(model).text;
 };
