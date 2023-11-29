@@ -98,8 +98,8 @@ module.exports.render = function (context) {
         model.btnBgStyles += 'background-color: ' + content.btnBgColor.value + '; ';
     }
 
-    if (content.btnText) {
-        model.btnBgStyles += 'color: ' + content.btnText.value + '; ';
+    if (content.btnTextColor) {
+        model.btnBgStyles += 'color: ' + content.btnTextColor.value + '; ';
     }
 
     if (content.btnFontSize) {
@@ -146,11 +146,15 @@ module.exports.render = function (context) {
     }
 
     if (content.aspectRation === 'auto') {
-        model.imgAspectRatio = 'auto ';
-    } else if (content.aspectRation === 'landscape') {
-        model.imgAspectRatio = 'landscape ';
-    } else if (content.aspectRation === 'vertical') {
-        model.imgAspectRatio = 'vertical ';
+        model.imgAspectRatio = 'auto';
+    } else if (content.aspectRation === 'HD Images and Videos') {
+        model.imgAspectRatio = 'hd-images-and-videos'; /*HD Images & Video Aspect Ration*/
+    } else if (content.aspectRation === 'Standard Monitors') {
+        model.imgAspectRatio = 'standard-monitor';     /*Standard Monitor Aspect Ration*/
+    } else if (content.aspectRation === 'Classic Films') {
+        model.imgAspectRatio = 'classic-films';  /*Classic Films Aspect Ration*/
+    } else if (content.aspectRation === 'Cenimascope') {
+        model.imgAspectRatio = 'cenimascope';  /*Cenimascope Aspect Ration*/
     }
 
     model.imgBannerDetail = content.imgBannerDetail ? content.imgBannerDetail : '';

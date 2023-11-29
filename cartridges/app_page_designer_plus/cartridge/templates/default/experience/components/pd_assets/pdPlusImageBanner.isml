@@ -17,7 +17,7 @@
         <iscomment> Image coming from BM </iscomment>
         <picture class="bnr-img image-container">
           <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 768px)" />
-          <img class="image-test ${pdict.imgAspectRatio} " src="${pdict.imgFile.src.mobile}" alt="${pdict.imgAlt}" title="${pdict.imgAlt}" />
+          <img class="img-fluid ${pdict.imgAspectRatio}" src="${pdict.imgFile.src.mobile}" alt="${pdict.imgAlt}" title="${pdict.imgAlt}" />
         </picture>
     </isif>
 

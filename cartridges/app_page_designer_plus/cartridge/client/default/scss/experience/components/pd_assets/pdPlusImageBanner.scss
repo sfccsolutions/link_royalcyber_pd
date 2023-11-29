@@ -12,23 +12,32 @@
     overflow: hidden;
 
          .image-container {
+            display: block;
+
+            img {
                 display: block;
-                img {
-                    display: block;
-                    width: 100%;
-                }
-                
+                width: 100%;
+            }
+
             .auto {
-                aspect-ratio: auto;
+                aspect-ratio: 1/1;
             }
 
-            .landscape {
-                aspect-ratio: 16 / 9; 
-            }
-            .vertical {
-                aspect-ratio: 0.5;
+            .hd-images-and-videos {
+                aspect-ratio: 16/9; 
             }
 
+            .standard-monitors {
+                aspect-ratio: 3/2;
+            }
+
+            .classic-films {
+                aspect-ratio: 3/2;
+            }
+
+            .cenimascope {
+                aspect-ratio: 21/9;
+            }
          }
         
 
@@ -90,7 +99,7 @@
 
     &.bnr--yright .bnr-caption-bg { 
         margin-right: auto; 
-        max-width: 60%;
+        max-width: 50%;
 
         @include media-breakpoint-down(sm) { 
             max-width: 100%;  
@@ -130,7 +139,7 @@
     
     @include media-breakpoint-down(sm) {
         padding: 20px;
-        margin: 20px;
+        margin: 0;
     }
 
     .bnr-text3 {

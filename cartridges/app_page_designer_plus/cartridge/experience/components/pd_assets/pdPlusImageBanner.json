@@ -16,20 +16,6 @@
                     "required": false
                 },
                 {
-                    "id": "tileLink",
-                    "name": "Link of Tile",
-                    "description": "Provide the Link URL of Tile.",
-                    "type": "url",
-                    "required": false
-                },
-                {
-                    "id": "tileNewtab",
-                    "name": "New Tab",
-                    "description": "Open Link in New Tab",
-                    "type": "boolean",
-                    "required": false
-                },
-                {
                     "id": "imgFile",
                     "name": "Tile Image",
                     "description": "Banner image should be banner width ",
@@ -56,9 +42,11 @@
                     "description": "Aspect Ration e.g (Banner/Vertical width)",
                     "type": "enum",
                     "values": [
-                        "auto",
-                        "landscape",
-                        "vertical"
+                        "Auto - 1:1",
+                        "HD Images and Videos - 16:9",
+                        "Standard Monitor - 4:3",
+                        "Classic Films - 3:2",
+                        "Cenimascope - 21:9"
                     ],
                     "required": false
                 },
@@ -145,6 +133,20 @@
                     "required": false
                 },
                 {
+                    "id": "tileLink",
+                    "name": "Link of Tile",
+                    "description": "Provide the Link URL of Tile.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
                     "id": "btnBgColor",
                     "name": "Button background color",
                     "description": "Set the background color of button.",
@@ -165,7 +167,7 @@
                     }
                 },
                 {
-                    "id": "btnText",
+                    "id": "btnTextColor",
                     "name": "Button Text color",
                     "description": "Set the background color of button.",
                     "type": "custom",

@@ -158,7 +158,8 @@
             padding: 4%;
 
             @include media-breakpoint-down(sm) {
-                padding: 2%;
+                padding: 4%;
+                max-width: 100%;
             }
 
             .slideContent {
