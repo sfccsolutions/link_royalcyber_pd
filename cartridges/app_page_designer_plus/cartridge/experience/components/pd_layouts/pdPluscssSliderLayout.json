@@ -20,8 +20,8 @@
                     "description": "slider contols e.g (arrows/arrows & pagination)",
                     "type": "enum",
                     "values": [
-                        "only pagination",
-                        "arrows & pagination Both"
+                        "pagination",
+                        "arrows & pagination"
                     ],
                     "required": false
                 }

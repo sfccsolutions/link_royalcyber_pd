@@ -3,9 +3,9 @@
     assets.addCss('/css/experience/components/pd_assets/pdPlusCssSlider.css');
 </isscript>
 
-<iscomment> PD Plus css Skider Component  </iscomment>
-<input type="radio" id="${pdict.cssSliderNo}" name="slider"/>
-<label for="${pdict.cssSliderNo}"><span class="sr-only"> Slide 1 of 5. A photo of a mountain pass with a winding path along the river and a view of distant mountains hiding in the mist.</span></label>
+<iscomment> PD Plus css Slider Component  </iscomment>
+<input type="radio" id="${pdict.cssSliderNo}" name="slider" ${pdict.cssSliderNo === 'trigger1' ? 'checked' : ''} />
+<label for="${pdict.cssSliderNo}"><span class="sr-only"> CSS Slider.</span></label>
 
 <div class="slide" style="background-image: url('${pdict.imgFile}')">
     <div class="slide-wrapper <isif condition="${pdict.imageYPos}">${pdict.imageYPos}</isif> <isif condition="${pdict.imageXPos}">${pdict.imageXPos}</isif>">

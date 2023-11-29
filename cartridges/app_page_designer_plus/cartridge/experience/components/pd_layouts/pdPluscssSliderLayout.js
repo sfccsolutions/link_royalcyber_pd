@@ -31,9 +31,9 @@ module.exports.render = function (context) {
 
     /* Slider Controls */
 
-    if (content.slidercontols === 'only pagination') {
-        model.slidercontols = 'only-arrows';
-    } else if (content.slidercontols === 'arrows & pagination Both') {
+    if (content.slidercontols === 'pagination') {
+        model.slidercontols = 'only-pagination';
+    } else if (content.slidercontols === 'arrows & pagination') {
         model.slidercontols = 'arrows-pagination';
     }
 
