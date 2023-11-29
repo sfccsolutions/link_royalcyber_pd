@@ -1,29 +1,17 @@
 'use strict';
 
-var processInclude = require('base/util');
-
 $(document).ready(function () {
-    var { tns } = require("tiny-slider");
+    if (window.resetCampaignBannerSessionToken) {
+        window.sessionStorage.removeItem('hide_campaign_banner');
+    }
 
-    //Anonymous Function used in the Page Designer Slider Blog Component
-    tns({
-        container: '.top-banner-bar',
-        items: 1,
-        slideBy: 1,
-        axis: 'horizontal',
-        swipeAngle: true,
-        speed: 400,
-        autoplayTimeout: 3000,
-        mouseDrag: true,
-        autoplay: false,
-        nav:false,
-        arrows:true,
-        controls:true,
-        autoplayButton: false,
-        rewind: false,
-        gutter: 0,
-        autoHeight: false,
-        autoplayButtonOutput: false
+    var campaignBannerStatus = window.sessionStorage.getItem('hide_campaign_banner');
+    $('.promo_campaign_wrapper .close').on('click', function () {
+        $('.promo_campaign_wrapper').addClass('d-none');
+        window.sessionStorage.setItem('hide_campaign_banner', '1');
     });
-});
 
+    if (!campaignBannerStatus || campaignBannerStatus < 0) {
+        $('.promo_campaign_wrapper').removeClass('d-none');
+    }
+});

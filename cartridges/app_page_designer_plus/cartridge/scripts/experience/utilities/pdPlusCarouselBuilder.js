@@ -79,6 +79,24 @@ function init(model, context) {
 
     model.title = context.content.textHeadline ? context.content.textHeadline : null;
 
+    model.bgComponentColor = 'style="';
+    if (context.content.backgroundColor) {
+        model.bgComponentColor += 'background-color: ' + context.content.backgroundColor.value + '; ';
+    }
+    if (context.content.backgroundColorAlpha) {
+        model.bgComponentColor += 'opacity: ' + context.content.backgroundColorAlpha + '%;';
+    }
+    if (context.content.promoTextColor) {
+        model.bgComponentColor += 'color: ' + context.content.promoTextColor.value + '; ';
+    }
+    if (context.content.promoBorderColor) {
+        model.bgComponentColor += 'border-color: ' + context.content.promoBorderColor.value + '; ';
+    }
+
+    model.bgComponentColor += '"';
+
+    model.isHideCarouselArrow = context.content.isHideCarouselArrow ? 'd-none' : 'd-flex';
+
     return model;
 }
 

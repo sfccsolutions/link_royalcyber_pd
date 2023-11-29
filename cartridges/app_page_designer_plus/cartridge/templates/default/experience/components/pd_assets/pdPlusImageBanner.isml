@@ -5,8 +5,7 @@
 
 <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
   <figure class="bnr custom-caption  <isif condition=" ${pdict.imgFile == null}">nulled-image-container</isif>
-    ${pdict.imageYPos} ${pdict.imageXPos}">
-
+    ${pdict.imageYPos} ${pdict.imageXPos}" ${pdict.bannerFigureHeight}>
     <isif condition="${pdict.imgFile == null}">
       <iscomment> If image not selected from BM then default image will be shown. </iscomment>
        <picture class="bnr-img image-container">
@@ -24,32 +23,19 @@
 
     <iscomment> Banner Caption in Overlay </iscomment>
     <figcaption class="bnr-caption">
-      <div class="bnr-caption-bg">
-
-      <div class="image-banner-detail">
-          <isprint value="${pdict.imgBannerDetail}" encoding="off" />
-      </div>
+      <div class="bnr-caption-bg" <isprint value="${pdict.imageBannerStyles}" encoding="off" />>
+        <div class="image-banner-detail">
+            <isprint value="${pdict.imgBannerDetail}" encoding="off" />
+        </div>
       
-
          <button class="btn btn-primary banner-btn ${pdict.btnwidthsize} ${pdict.borderRadiusBtn}"
          <isif condition="${pdict.btnBgStyles}"><isprint value="${pdict.btnBgStyles}" encoding="off" /></isif>>
           ${pdict.buttontext}
         </button>
 
-          
-
          <isif condition="${pdict.imgTitle !== 'undefined' && pdict.imgSubTitle !== 'undefined'}">
                     <span class="bnr-caption-bg-color ${pdict.accrBorderRadius}" <isif condition="${pdict.imageBannerStyles}"><isprint value="${pdict.imageBannerStyles}" encoding="off" /></isif>></span>
         </isif>
-        <iscomment> 
-        <button class="btn btn-primary banner-btn  ${pdict.borderRadiusBtn;}" 
-            <isif condition="${pdict.backgroundColorbtn}"><isprint value="${pdict.backgroundColorbtn}" encoding="off" /></isif> <isif condition="${pdict.styleSubTitleColor}"><isprint value="${pdict.styleSubTitleColor}" encoding="off" /></isif>
-            >${pdict.buttontext}
-        </button> 
-        </iscomment>
-        <iscomment> Box Background on Overlay </iscomment>
-       
-
       </div>
     </figcaption>
   </figure>

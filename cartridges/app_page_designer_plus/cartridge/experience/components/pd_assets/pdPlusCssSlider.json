@@ -1,23 +1,17 @@
 {
     "name": "PD Plus Css Slider",
-    "description": "Display Content Accordion",
+    "description": "Display Slider Content",
     "group": "pd_assets",
     "attribute_definition_groups": [
         {
-            "id": "accordionComponent",
+            "id": "cssSliderComponent",
             "name": "Css Slider Configurations",
             "description": "This component will display Css Slider.",
             "attribute_definitions": [
                 {
                     "id": "cssSliderNo",
-                    "name": "css Slider No. with out space (i.e. 1,2,3..) Don't Duplicate",
+                    "name": "CSS Slider No.(i.e. 1,2,3..) Don't Duplicate",
                     "type": "string",
-                    "required": true
-                },
-                {
-                    "id": "cssSliderSlide",
-                    "name": "css Slider Slide",
-                    "type": "markup",
                     "required": true
                 },
                 {
@@ -28,8 +22,41 @@
                     "required": true
                 },
                 {
+                    "id": "imageYPos",
+                    "name": "Position of Card along y-axis",
+                    "description": "Position of Card along vertical direction",
+                    "type": "enum",
+                    "values": [
+                        "top",
+                        "center",
+                        "bottom"
+                    ],
+                    "default_value": "center",
+                    "required": true
+                },
+                {
+                    "id": "imageXPos",
+                    "name": "Position of Card along x-axis",
+                    "description": "Position of Card along horizontal direction",
+                    "type": "enum",
+                    "values": [
+                        "right",
+                        "center",
+                        "left"
+                    ],
+                    "default_value": "center",
+                    "required": true
+                },
+                {
+                    "id": "slideContent",
+                    "name": "Spacify slider content in editor",
+                    "description": "Spacify slider content",
+                    "type": "markup",
+                    "required": false
+                },
+                {
                     "id": "backgroundColor",
-                    "name": "Specify Background Color",
+                    "name": "Specify slide background color",
                     "description": "Set Background Color",
                     "required": false,
                     "type": "custom",
@@ -38,7 +65,7 @@
                     }
                 },
                 {
-                    "id": "backgroundColorAlpha",
+                    "id": "imgBannerCaptionColorAlpha",
                     "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
                     "description": "Set Background Color alpha between 0 and 1",
                     "type": "enum",
@@ -59,8 +86,8 @@
                 },
                 {
                     "id": "sliderTextColor",
-                    "name": "Specify tab text color",
-                    "description": "Set tab text color",
+                    "name": "Specify slide text color",
+                    "description": "Set slide caption text color",
                     "required": false,
                     "type": "custom",
                     "editor_definition": {
@@ -68,11 +95,52 @@
                     }
                 },
                 {
-                    "id": "tabBorderColor",
-                    "name": "Specify tab border bottom color",
-                    "description": "Set active tab border bottom color",
-                    "required": false,
+                    "id": "buttontext",
+                    "name": "Button text",
+                    "description": "Button text for card",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "tileLink",
+                    "name": "Link of Tile",
+                    "description": "Provide the Link URL of Tile.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "btnBgColor",
+                    "name": "Button background color",
+                    "description": "Set the background color of button.",
                     "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btnTextColor",
+                    "name": "Button Text color",
+                    "description": "Set the button color",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "buttonBorderColor",
+                    "name": "Button border color",
+                    "description": "Set the background color of banner.",
+                    "type": "custom",
+                    "required": false,
                     "editor_definition": {
                         "type": "themer.colorpicker"
                     }

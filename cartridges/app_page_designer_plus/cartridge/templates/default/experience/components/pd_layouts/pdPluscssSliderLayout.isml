@@ -3,18 +3,9 @@ var assets = require('*/cartridge/scripts/assets.js');
 assets.addCss('/css/experience/components/pd_assets/pdPlusAccordion.css');
 </isscript>
 
-<iscomment> <div class="pdplus-component" 
-    <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>
-    <div class="accordion-inner cssSliderinner"<isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
-        
-        <div class="${pdict.isContainer}">
-            <div class="pdPlusAccordion">
-                <isprint value="${pdict.regions.cssSliderLayout.render()}" encoding="off" />
-            </div>
-        </div>
-    <div>
-</div> </iscomment>
-
-<div class="pdPluscssSlider">
-    <isprint value="${pdict.regions.cssSliderLayout.render()}" encoding="off" />
+<iscomment> <div class="pdPluscssSlider only-arrows only-pagination arrows-pagination"> </iscomment>
+<div class="pdPluscssSlider ${pdict.slidercontols}">
+    <div class="${pdict.isContainer}">
+        <isprint value="${pdict.regions.cssSliderLayout.render()}" encoding="off" />
+    </div>
 </div>

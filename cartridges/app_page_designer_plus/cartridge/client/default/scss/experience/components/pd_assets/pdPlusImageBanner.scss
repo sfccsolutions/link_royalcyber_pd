@@ -11,9 +11,6 @@
     margin-bottom: 0;
     overflow: hidden;
 
-  
-        //  padding-bottom: 85.318%;
-
          .image-container {
                 display: block;
                 img {
@@ -71,7 +68,7 @@
 
     &.bnr--ystart .bnr-caption-bg {
         margin-left: auto;
-        max-width: 60%;
+        max-width: 50%;
 
         @include media-breakpoint-down(sm) { 
             max-width: 100%;
@@ -84,7 +81,7 @@
     &.bnr--ycenter .bnr-caption-bg {
         margin-right: auto;
         margin-left: auto;
-        max-width: 60%;
+        max-width: 50%;
 
         @include media-breakpoint-down(sm) { 
             max-width: 100%;
@@ -178,6 +175,13 @@
 
 .banner-btn {
     margin: 10px 0;
+    display: inline-block;
+    min-height: 48px;
+    max-width: 250px;
+
+    &.btn-block {
+        display: block;
+    }
 
     &.square {
         border-radius: 0;
