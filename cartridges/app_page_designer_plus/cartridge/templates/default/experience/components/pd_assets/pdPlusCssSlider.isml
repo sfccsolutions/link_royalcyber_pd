@@ -8,5 +8,15 @@
 <label for="${pdict.cssSliderNo}"><span class="sr-only"> Slide 1 of 5. A photo of a mountain pass with a winding path along the river and a view of distant mountains hiding in the mist.</span></label>
 
 <div class="slide" style="background-image: url('${pdict.imgFile}')">
-    <div class="detail"> <isprint value="${pdict.cssSliderSlide}" encoding="off" /></div>
+    <div class="slide-wrapper <isif condition="${pdict.imageYPos}">${pdict.imageYPos}</isif> <isif condition="${pdict.imageXPos}">${pdict.imageXPos}</isif>">
+        <div class="slideCaption" <isprint value="${pdict.bgComponentColor}" encoding="off" />>
+            <div class="slideContent"><isif condition="${pdict.slideContent}"><isprint value="${pdict.slideContent}" encoding="off" /></isif></div>
+            <button class="btn" <isif condition="${pdict.btnBgStyles}"> <isprint value="${pdict.btnBgStyles}" encoding="off" /></isif>>
+                <a href="<isif condition="${pdict.tileLink}">${pdict.tileLink}</isif>"
+                    <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
+                    <isif condition="${pdict.buttontext}"><isprint value="${pdict.buttontext}" encoding="off" /></isif>
+                </a>
+            </button>
+        </div>
+    </div>
 </div>
