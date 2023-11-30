@@ -89,6 +89,11 @@
             .accordion-detail {
                 p {
                     margin-bottom: 0;
+                    color: inherit;
+
+                    span {
+                        color: inherit;
+                    }
                 }
             }
         }

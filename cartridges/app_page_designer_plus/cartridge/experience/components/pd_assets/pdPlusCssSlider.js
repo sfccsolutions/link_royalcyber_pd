@@ -53,22 +53,6 @@ module.exports.render = function (context) {
     /* Get image from the user for slide */
     model.imgFile = content.imgFile ? content.imgFile.file.url : null;
     
-
-    model.bgComponentColor = 'style="';
-    if (content.backgroundColor) {
-        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
-    }
-
-    if (content.sliderTextColor) {
-        model.bgComponentColor += 'color: ' + content.sliderTextColor.value + '; ';
-    }
-
-    if (content.imgBannerCaptionColorAlpha) {
-        model.bgComponentColor += 'opacity: ' + content.imgBannerCaptionColorAlpha + '%;';
-    }
-
-    model.bgComponentColor += '"';
-
     /* Button Bakcground Style */
 
     model.btnBgStyles = 'style="';

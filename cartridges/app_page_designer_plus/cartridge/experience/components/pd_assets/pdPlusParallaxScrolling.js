@@ -19,9 +19,9 @@ module.exports.render = function (context) {
     var content = context.content;
     var model = new HashMap();
 
-    model.ParallaxScroolingSection = content.ParallaxScroolingSection ? content.ParallaxScroolingSection : '';
-    model.ParallaxScroolingSectionbtn = content.ParallaxScroolingSectionbtn ? content.ParallaxScroolingSectionbtn : '';
-    model.ParallaxScroolingSectionimage = content.ParallaxScroolingSectionimage ? content.ParallaxScroolingSectionimage.file.url : null;
+    model.ParallaxScrTextSection = content.ParallaxScrTextSection ? content.ParallaxScrTextSection : '';
+    model.ParallaxScrbtn = content.ParallaxScrbtn? content.ParallaxScrbtn : '';
+    model.ParallaxScrimg= content.ParallaxScrimg ? content.ParallaxScrimg.file.url : null;
 
     if (content.tileLink) {
         model.tileLink = content.tileLink;
@@ -38,9 +38,9 @@ module.exports.render = function (context) {
 
      /* parallax Section Type  */
 
-    if (content.parallaxSection === 'sectionParallax') {
+    if (content.parallaxSection === 'Parallax') {
         model.parallaxSection = 'section-background';
-    } else if (content.parallaxSection === 'noParallax') {
+    } else if (content.parallaxSection === 'Normal') {
         model.parallaxSection = 'sectionFixed';
     }
 
@@ -61,11 +61,6 @@ module.exports.render = function (context) {
         model.bgComponentColor += 'background-color: ' + content.btnbgColor.value + '; ';
     }
     
-    if (content.backgroundColorAlpha) {
-        model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
-    }
-
-
     if (content.btntextColor) {
         model.bgComponentColor += 'color: ' + content.btntextColor.value + '; ';
     }

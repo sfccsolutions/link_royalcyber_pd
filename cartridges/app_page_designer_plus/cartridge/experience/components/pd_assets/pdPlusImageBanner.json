@@ -134,8 +134,8 @@
                 },
                 {
                     "id": "tileLink",
-                    "name": "Link of Tile",
-                    "description": "Provide the Link URL of Tile.",
+                    "name": "Link on Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button.",
                     "type": "url",
                     "required": false
                 },
