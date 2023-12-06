@@ -52,6 +52,15 @@ module.exports.render = function (context) {
 
     /* Get image from the user for slide */
     model.imgFile = content.imgFile ? content.imgFile.file.url : null;
+
+    /* Slider text Style */
+
+    model.sliderTextStyles = 'style="';
+    if (content.sliderTextColor) {
+        model.sliderTextStyles += 'color: ' + content.sliderTextColor.value + '; ';
+    }
+
+    model.sliderTextStyles += '"';
     
     /* Button Bakcground Style */
 

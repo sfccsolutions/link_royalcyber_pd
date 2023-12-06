@@ -30,13 +30,6 @@
                     "required": false
                 },
                 {
-                    "id": "bannerFigureHeight",
-                    "name": "Figure Section Height",
-                    "description": "Please enter the minimum height of banner",
-                    "type": "string",
-                    "required": false
-                },
-                {
                     "id": "aspectRation",
                     "name": "Please select image Aspect Ration",
                     "description": "Aspect Ration e.g (Banner/Vertical width)",
@@ -57,7 +50,7 @@
                     "required": true
                 },
                 {
-                    "id": "imgBannerCaptionColor",
+                    "id": "imgBannerCaptionBgColor",
                     "name": "Tile Card Caption background color",
                     "description": "Set the background color of Caption.",
                     "type": "custom",
@@ -67,8 +60,8 @@
                     }
                 },
                 {
-                    "id": "imgBannerCaptionColorAlpha",
-                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
+                    "id": "imgBannerCaptionColorBgAlpha",
+                    "name": "Specify Background Color Alpha between 10 and 100",
                     "description": "Set Background Color alpha between 0 and 1",
                     "type": "enum",
                     "default_value": 100,
@@ -85,6 +78,16 @@
                         100
                     ],
                     "required": false
+                },
+                {
+                    "id": "imgBannerTextColor",
+                    "name": "Tile Card Caption Text color",
+                    "description": "Set the color of Caption.",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
                 },
                 {
                     "id": "imageYPos",

@@ -5,7 +5,7 @@
 
 <div class="tile-link imageBanner ${pdict.className}" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
   <figure class="bnr custom-caption  <isif condition=" ${pdict.imgFile == null}">nulled-image-container</isif>
-    ${pdict.imageYPos} ${pdict.imageXPos}" ${pdict.bannerFigureHeight}>
+    ${pdict.imageYPos} ${pdict.imageXPos}">
     <isif condition="${pdict.imgFile == null}">
       <iscomment> If image not selected from BM then default image will be shown. </iscomment>
        <picture class="bnr-img image-container">

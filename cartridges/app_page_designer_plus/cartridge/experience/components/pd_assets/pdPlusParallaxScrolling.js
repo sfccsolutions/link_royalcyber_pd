@@ -32,9 +32,8 @@ module.exports.render = function (context) {
     model.tileNewtab = content.tileNewtab;
     model.buttontext = content.buttontext;
 
-
     /* parallax SectionHeight  */
-    model.sectionHeight = content.sectionHeight ? content.sectionHeight : '';
+        model.sectionHeight = content.sectionHeight ? content.sectionHeight : '';
 
      /* parallax Section Type  */
 
@@ -63,6 +62,10 @@ module.exports.render = function (context) {
     
     if (content.btntextColor) {
         model.bgComponentColor += 'color: ' + content.btntextColor.value + '; ';
+    }
+
+    if (content.btnBorderColor) {
+        model.bgComponentColor += 'border-color: ' + content.btnBorderColor.value + '; ';
     }
     model.bgComponentColor += '"';
 

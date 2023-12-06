@@ -9,12 +9,12 @@
             "description": "This component will display Parallax Scrolling.",
             "attribute_definitions": [
                 {
-                  "id": "sectionHeight",
-                  "name": "parallax Section Height i.e. 20px / 1.25rem",
-                  "description": "Provide height value applied Parallax section Height",
-                  "type": "string",
-                  "required": false
-              },
+                    "id": "sectionHeight",
+                    "name": "parallax Section Height i.e. 20px / 1.25rem",
+                    "description": "Provide height value applied Parallax section Height",
+                    "type": "string",
+                    "required": false
+                },
                 {
                     "id": "ParallaxScrTextSection",
                     "name": "Parallax Scrolling Text Section",
@@ -82,6 +82,16 @@
                 {
                     "id": "btntextColor",
                     "name": "Specify Button Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btnBorderColor",
+                    "name": "Specify Button Border Color",
                     "description": "Set Button  Color",
                     "required": false,
                     "type": "custom",
