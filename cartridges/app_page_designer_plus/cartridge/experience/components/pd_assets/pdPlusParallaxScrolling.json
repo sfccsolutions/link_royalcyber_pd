@@ -4,32 +4,32 @@
     "group": "pd_assets",
     "attribute_definition_groups": [
         {
-            "id": "ParallaxScroolingComponent",
-            "name": "Parallax Scrooling Configurations",
-            "description": "This component will display Parallax Scrooling.",
+            "id": "ParallaxScrollingComponent",
+            "name": "Parallax Scrolling Configurations",
+            "description": "This component will display Parallax Scrolling.",
             "attribute_definitions": [
                 {
-                  "id": "sectionHeight",
-                  "name": "parallax Section Height i.e. 20px / 1.25rem",
-                  "description": "Provide height value applied Parallax section Height",
-                  "type": "string",
-                  "required": false
-              },
+                    "id": "sectionHeight",
+                    "name": "parallax Section Height i.e. 20px / 1.25rem",
+                    "description": "Provide height value applied Parallax section Height",
+                    "type": "string",
+                    "required": false
+                },
                 {
-                    "id": "ParallaxScroolingSection",
-                    "name": "Parallax Scrooling Section",
+                    "id": "ParallaxScrTextSection",
+                    "name": "Parallax Scrolling Text Section",
                     "type": "markup",
                     "required": true
                 },
                 {
-                  "id": "ParallaxScroolingSectionbtn",
-                  "name": "Parallax Scrooling Section button",
+                  "id": "ParallaxScrbtn",
+                  "name": "Text on Anchor Button",
                   "type": "string",
                   "required": false
                 },
                 {
-                  "id": "ParallaxScroolingSectionimage",
-                  "name": "Parallax Scrooling Section background Image",
+                  "id": "ParallaxScrimg",
+                  "name": "Parallax Scrolling Section background Image",
                   "type": "image",
                   "required": false
                 },
@@ -57,8 +57,8 @@
                 },
                 {
                     "id": "tileLink",
-                    "name": "Link of Tile",
-                    "description": "Provide the Link URL of Tile.",
+                    "name": "Link the Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button",
                     "type": "url",
                     "required": false
                 },
@@ -90,24 +90,14 @@
                     }
                 },
                 {
-                    "id": "backgroundColorAlpha",
-                    "name": "Specify Button Background Color Alpha between 0 and 1 i.e 0.2",
-                    "description": "Set Button Background Color alpha between 0 and 1",
-                    "type": "enum",
-                    "default_value": 100,
-                    "values": [
-                        10,
-                        20,
-                        30,
-                        40,
-                        50,
-                        60,
-                        70,
-                        80,
-                        90,
-                        100
-                    ],
-                    "required": true
+                    "id": "btnBorderColor",
+                    "name": "Specify Button Border Color",
+                    "description": "Set Button  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
                 },
                 {
                     "id": "parallaxSection",
@@ -115,8 +105,8 @@
                     "description": "Background type e.g (Parallax/Fixed)",
                     "type": "enum",
                     "values": [
-                        "sectionParallax",
-                        "noParallax"
+                        "Parallax",
+                        "Normal"
                     ],
                     "required": false
                 }

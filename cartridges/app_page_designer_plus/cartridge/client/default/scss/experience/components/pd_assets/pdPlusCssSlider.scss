@@ -61,6 +61,7 @@
         }
 
         display: inline-block;
+        width: auto;
     }
 
     input {
@@ -170,6 +171,8 @@
 
             .btn {
                 margin-top: 20px;
+                height: 48px;
+                min-width: 150px;
 
                 a {
                     color: inherit !important;

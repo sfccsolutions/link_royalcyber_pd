@@ -21,6 +21,9 @@ module.exports.render = function (context) {
 
     model.bgComponentColor = 'style="';
     
+    if (content.backgroundColor) {
+        model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
+    }
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
     }

@@ -26,7 +26,22 @@ module.exports.render = function (context) {
     model.itemHeadingTextColor = content.itemHeadingTextColor ? content.itemHeadingTextColor : '';
     model.itemHeadingBorderColor = content.itemHeadingBorderColor ? content.itemHeadingBorderColor : '';
 
+    /* Collapisble detail Styling */
+    model.itemDetailStyles = 'style="';
+
+        if (content.itemdetailColor) {
+            model.itemDetailStyles += 'color: ' + content.itemdetailColor.value + '; ';
+        }
+
+    model.itemDetailStyles += '"';
+
+    /* Collapisble detail Styling */
+
     model.bgComponentColor = 'style="';
+
+    if (content.itemHeadingbgColor) {
+        model.bgComponentColor += 'background-color: ' + content.itemHeadingbgColor.value + '; ';
+    }
 
     if (content.HeadingbgColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.HeadingbgColorAlpha + '%;';
@@ -35,13 +50,11 @@ module.exports.render = function (context) {
     if (content.itemHeadingTextColor) {
         model.bgComponentColor += 'color: ' + content.itemHeadingTextColor.value + '; ';
     }
+
     if (content.itemHeadingBorderColor) {
         model.bgComponentColor += 'border-color: ' + content.itemHeadingBorderColor.value + '; ';
     }
 
-    if (content.itemHeadingbgColor) {
-        model.bgComponentColor += 'background-color: ' + content.itemHeadingbgColor.value + '; ';
-    }
     model.bgComponentColor += '"';
 
     /* Border Radius of Buttons if found then concatenate its class name */

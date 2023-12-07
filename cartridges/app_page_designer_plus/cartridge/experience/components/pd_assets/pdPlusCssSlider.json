@@ -1,11 +1,11 @@
 {
-    "name": "PD Plus Css Slider",
+    "name": "PD Plus CSS Slider",
     "description": "Display Slider Content",
     "group": "pd_assets",
     "attribute_definition_groups": [
         {
             "id": "cssSliderComponent",
-            "name": "Css Slider Configurations",
+            "name": "CSS Slider Configurations",
             "description": "This component will display Css Slider.",
             "attribute_definitions": [
                 {
@@ -16,7 +16,7 @@
                 },
                 {
                     "id": "imgFile",
-                    "name": "slide Image",
+                    "name": "Slide Image",
                     "description": "Select a photo to be displayed",
                     "type": "image",
                     "required": true
@@ -55,36 +55,6 @@
                     "required": false
                 },
                 {
-                    "id": "backgroundColor",
-                    "name": "Specify slide background color",
-                    "description": "Set Background Color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "imgBannerCaptionColorAlpha",
-                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
-                    "description": "Set Background Color alpha between 0 and 1",
-                    "type": "enum",
-                    "default_value": 100,
-                    "values": [
-                        10,
-                        20,
-                        30,
-                        40,
-                        50,
-                        60,
-                        70,
-                        80,
-                        90,
-                        100
-                    ],
-                    "required": false
-                },
-                {
                     "id": "sliderTextColor",
                     "name": "Specify slide text color",
                     "description": "Set slide caption text color",
@@ -96,15 +66,15 @@
                 },
                 {
                     "id": "buttontext",
-                    "name": "Button text",
-                    "description": "Button text for card",
+                    "name": "Anchor Button Text",
+                    "description": "Anchor Button Text for card",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "tileLink",
-                    "name": "Link of Tile",
-                    "description": "Provide the Link URL of Tile.",
+                    "name": "Link on Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button.",
                     "type": "url",
                     "required": false
                 },

@@ -81,12 +81,16 @@ module.exports.render = function (context) {
 
     /* imgBanner Caption Color and Alpha Property*/
     model.imageBannerStyles = 'style="';
-    if (content.imgBannerCaptionColor) {
-        model.imageBannerStyles += 'background-color: ' + content.imgBannerCaptionColor.value + '; ';
+    if (content.imgBannerCaptionBgColor) {
+        model.imageBannerStyles += 'background-color: ' + content.imgBannerCaptionBgColor.value + '; ';
     }
 
-    if (content.imgBannerCaptionColorAlpha) {
-        model.imageBannerStyles += 'opacity: ' + content.imgBannerCaptionColorAlpha + '%;';
+    if (content.imgBannerCaptionColorBgAlpha) {
+        model.imageBannerStyles += 'opacity: ' + content.imgBannerCaptionColorBgAlpha + '%;';
+    }
+
+    if (content.imgBannerTextColor) {
+        model.imageBannerStyles += 'color: ' + content.imgBannerTextColor.value + '; ';
     }
 
     model.imageBannerStyles += '"';
@@ -138,9 +142,9 @@ module.exports.render = function (context) {
     if (content.btnsize === 'small') {
         model.btnwidthsize = 'btn-sm';
     } else if (content.btnsize === 'medium') {
-        model.btnwidthsize = 'btn-medium';
+        model.btnwidthsize = 'btn-md';
     } else if (content.btnsize === 'large') {
-        model.btnwidthsize = 'btn-large';
+        model.btnwidthsize = 'btn-lg';
     } else if (content.btnsize === 'full') {
         model.btnwidthsize = 'btn-block';
     }
@@ -158,7 +162,6 @@ module.exports.render = function (context) {
     }
 
     model.imgBannerDetail = content.imgBannerDetail ? content.imgBannerDetail : '';
-    model.bannerFigureHeight = content.bannerFigureHeight ? content.bannerFigureHeight : '';
     
 
     return new Template('experience/components/pd_assets/pdPlusImageBanner').render(model).text;
