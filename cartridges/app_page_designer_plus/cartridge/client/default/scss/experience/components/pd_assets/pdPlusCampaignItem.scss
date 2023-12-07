@@ -68,6 +68,10 @@
                 p {
                     margin-bottom: 0;
                     margin-right: 10px;
+                    
+                    span {
+                        color: inherit !important;
+                    }
 
                     @include media-breakpoint-down(sm) {
                         font-size: 14px;

@@ -39,6 +39,14 @@ module.exports.render = function (context, modelIn) {
         model.richText = content.richText;
     }
 
+    if (content.tileLink) {
+        model.tileLink = content.tileLink;
+    } else {
+        model.tileLink = 'javascript:void(0)';
+    }
+
+    model.tileNewtab = content.tileNewtab;
+
     if(content.buttonText) {
         model.buttonText = content.buttonText;
     }
@@ -75,12 +83,12 @@ module.exports.render = function (context, modelIn) {
 
     /* Horizontal Position of text Container if found then concatenate its Class Name */
 
-    if (content.textAlignmentVertical === 'flex-start') {
-        model.textAlignmentVertical = 'flex-start';
+    if (content.textAlignmentVertical === 'top') {
+        model.textAlignmentVertical = 'start';
     } else if (content.textAlignmentVertical === 'center') {
         model.textAlignmentVertical = 'center';
-    } else if (content.textAlignmentVertical === 'flex-end') {
-        model.textAlignmentVertical = 'flex-end';
+    } else if (content.textAlignmentVertical === 'bottom') {
+        model.textAlignmentVertical = 'end';
     }
 
     return new Template('experience/components/pd_assets/pdPlusTextWithImage').render(model).text;
