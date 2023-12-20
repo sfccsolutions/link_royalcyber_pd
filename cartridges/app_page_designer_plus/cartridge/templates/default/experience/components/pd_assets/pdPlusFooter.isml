@@ -1,0 +1,301 @@
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_assets/pdPlusFooter.css');
+    assets.addJs('/js/tabsComponent.js');
+</isscript>
+
+<div class="pdPlusFooter">
+    <div class="row">
+        <div class="footer-item col-sm-3">
+            <div class="footer-logo">
+                <img src="${pdict.footerLogo}" alt="logo" />
+            </div>
+            <iscomment> <isif condition="${pdict.showCol1Discription}"> </iscomment>
+                <p class="logo-discription">
+                    <isprint value="${pdict.companyDiscription}" encoding="off" />
+                </p>
+            <iscomment> </isif> </iscomment>
+           
+                <ul class="list-inline socialLinks_list direction-row">
+                    <li><a href="" > Link 1 </a></li>
+                    <li><a href="" > Link 2 </a></li>
+                    <li><a href="" > Link 3 </a></li>
+                </ul>
+         
+        </div>
+        <div class="footer-item col-sm-3">
+            <h4 <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>${pdict.footerHeading1}</h4>
+
+            <isif condition="${pdict.showCol2Links}">
+                <div class="col2-links">
+                    <ul class="col2-links__list list-inline">
+                        <isif condition="${pdict.col2Item1}">
+                            <li class="col2-links_item">
+                                <a href="${pdict.col2Link1}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>  
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item1} </span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item2}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link2}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item2}</span>
+                                </a>
+                            </li>
+                        </isif>
+                        
+                        <isif condition="${pdict.col2Item3}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link3}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item3}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item4}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link4}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>>  ${pdict.col2Item4}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item5}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link5}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>> 
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item5}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item6}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link6}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item6}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item7}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link7}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item7}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item8}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link8}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item8}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item9}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link9}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item9}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                        <isif condition="${pdict.col2Item10}">
+                            <li class="col2-links__item">
+                                <a href="${pdict.col2Link10}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                    <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col2Item10}</span>
+                                </a>
+                            </li>
+                        </isif>
+
+                    </ul>
+                </div>
+            </isif>
+        </div>
+
+        <div class="footer-item col-sm-3">
+            <h4 <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>${pdict.footerHeading2}</h4>
+            <ul class="col2-links__list list-inline">
+                <div class="col3-links">
+                    <isif condition="${pdict.col3Item1}">
+                        <li class="col3-links_item">
+                            <a href="${pdict.col3Link1}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col3Item1}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item2}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link2}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col3Item2}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item3}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link3}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>>  ${pdict.col3Item3}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item4}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link4}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col3Item4}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item5}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link5}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col3Item5}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item6}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link6}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col3Item6}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item7}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link7}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col3Item7}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item8}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link8}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col3Item8}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item9}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link9}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>>${pdict.col3Item9}</span>
+                            </a>
+                        </li>
+                    </isif>
+
+                    <isif condition="${pdict.col3Item10}">
+                        <li class="col3-links__item">
+                            <a href="${pdict.col3Link10}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                                <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> 
+                                    ${pdict.col3Item10} 
+                                </span>
+                            </a>
+                        </li>
+                    </isif>
+
+                </div>
+            </ul>
+        </div>
+
+        <div class="footer-item col-sm-3">
+            <h4 <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>${pdict.footerHeading4}</h4>
+
+            <ul class="col3-links__list list-inline">
+                <isif condition="${pdict.col4Item1}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link1}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item1} </span>
+                    </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item2}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link2}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item2} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item3}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link3}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item3} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item4}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link4}"<isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item4} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item5}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link5}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item5} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item6}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link6}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item6} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item7}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link7}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item7} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item8}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link8}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item8} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item9}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link9}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item9} </span>
+                        </a>
+                    </li>
+                </isif>
+
+                <isif condition="${pdict.col4Item10}">
+                    <li class="col3-links_item">
+                        <a href="${pdict.col4Link10}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+                            <span  <isif condition="${pdict.setTextColor}"><isprint value="${pdict.setTextColor}" encoding="off" /></isif>> ${pdict.col4Item10} </span>
+                        </a>
+                    </li>
+                </isif>
+
+            </ul>
+        </div>
+
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12"> <isprint value="${pdict.copyRight}" encoding="off" /></div>
+    </div>
+</div>

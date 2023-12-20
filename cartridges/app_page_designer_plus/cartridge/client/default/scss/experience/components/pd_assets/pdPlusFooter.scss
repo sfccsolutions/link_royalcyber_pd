@@ -1,0 +1,48 @@
+@import "../../../variables";
+
+.pdPlusFooter {
+    .footer-logo {
+        img {
+            max-width: 200px;
+        } 
+    }
+    ul {
+        li {
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
+.socialLinks_list{
+    display: flex;
+
+    &.direction-column {
+        flex-flow: column;
+    }
+
+    &.direction-row {
+        flex-flow: row;
+            li {
+                padding: 0 5px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+    }
+
+    ul {
+        li {
+            a {
+                display: inline-block;
+            }
+        }
+    }
+
+}
+
+@include media-breakpoint-down(sm) {
+       
+    }

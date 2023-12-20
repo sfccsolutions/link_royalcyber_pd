@@ -1,0 +1,597 @@
+{
+    "name": "PD Plus Footer",
+    "description": "Display Content Footer",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "pdPlusFooterComponent",
+            "name": "Footer Configurations",
+            "description": "This component will display Footer.",
+            "attribute_definitions": [
+                {
+                    "id": "footerLogo",
+                    "name": "Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "companyDiscription",
+                    "name": "Enter the company description for footer",
+                    "description": "Provide company description for foote",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "footerHeading1",
+                    "name": "Enter the Heading For Second Coloumn",
+                    "description": "Provide Heading For Second Coloumn",
+                    "type": "string",
+                    "required": true
+                },
+
+                {
+                    "id": "headingtextColor",
+                    "name": "Specify Heading Color",
+                    "description": "Set Heading  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+
+                {
+                    "id": "linktextColor",
+                    "name": "Specify links Color",
+                    "description": "Set linksm  Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+               
+                {
+                    "id": "showCol2Links",  
+                    "name": "Show URL Col1 links?",
+                    "description": "Show or hide Col2 URL links",
+                    "type": "boolean",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item1",
+                    "name": "Col2 First Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link1",
+                    "name": "Col2 Redirect Link for First Item",
+                    "description":"Col2 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item2",
+                    "name": "Col2 Second Item",
+                    "type": "string",
+                    "required": false
+                },
+                
+                {
+                    "id": "col2Link2",
+                    "name": "Col2 Redirect Link for Second Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "col2Item3",
+                    "name": "Col2 Third Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link3",
+                    "name": "Col2 Redirect Link for Third Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item4",
+                    "name": "Col2 Four Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link4",
+                    "name": "Col2 Redirect Link for Four Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item5",
+                    "name": "Col2 Five Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link5",
+                    "name": "Col2 Redirect Link for Five Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item6",
+                    "name": "Col2 Six Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link6",
+                    "name": "Col2 Redirect Link for Six Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item7",
+                    "name": "Col2 Seven Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link7",
+                    "name": "Col2 Redirect Link for Seven Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item8",
+                    "name": "Col2 Eight Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link8",
+                    "name": "Col2 Redirect Link for Eight Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item9",
+                    "name": "Col2 Nine Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link9",
+                    "name": "Col2 Redirect Link for Nine Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col2Item10",
+                    "name": "Col2 Ten Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col2Link10",
+                    "name": "Col2 Redirect Link for Ten Item",
+                    "description":"Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "footerHeading2",
+                    "name": "Enter the Heading For third Coloumn",
+                    "description": "Provide Heading For third Coloumn",
+                    "type": "string",
+                    "required": true
+                },
+
+                {
+                    "id": "showCol3Links",  
+                    "name": "Show URL Col3 links?",
+                    "description": "Show or hide Col2 URL links",
+                    "type": "boolean",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item1",
+                    "name": "Col3 First Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link1",
+                    "name": "Col3 Redirect Link for First Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item2",
+                    "name": "Col3 two Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link2",
+                    "name": "Col3 Redirect Link for two Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item3",
+                    "name": "Col3 Three Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link3",
+                    "name": "Col3 Redirect Link for Three Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item4",
+                    "name": "Col3 Four Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link4",
+                    "name": "Col3 Redirect Link for Four Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item5",
+                    "name": "Col3 Five Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link5",
+                    "name": "Col3 Redirect Link for Five Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item6",
+                    "name": "Col3 Six Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link6",
+                    "name": "Col3 Redirect Link for Six Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item7",
+                    "name": "Col3 Seven Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link7",
+                    "name": "Col3 Redirect Link for Seven Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item8",
+                    "name": "Col3 Eight Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link8",
+                    "name": "Col3 Redirect Link for Eight Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item9",
+                    "name": "Col3 Nine Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link9",
+                    "name": "Col3 Redirect Link for Nine Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col3Item10",
+                    "name": "Col3 Ten Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col3Link10",
+                    "name": "Col3 Redirect Link for Ten Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "showCol4Links",  
+                    "name": "Show URL Col4 links?",
+                    "description": "Show or hide Col4 URL links",
+                    "type": "boolean",
+                    "required": false
+                },
+
+                {
+                    "id": "footerHeading4",
+                    "name": "Enter the Heading For Fourth Coloumn",
+                    "description": "Provide Heading For Fourth Coloumn",
+                    "type": "string",
+                    "required": true
+                },
+
+                {
+                    "id": "col4Item1",
+                    "name": "Col4 First Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link1",
+                    "name": "Col4 Redirect Link for First Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item2",
+                    "name": "Col4 two Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link2",
+                    "name": "Col4 Redirect Link for two Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item3",
+                    "name": "Col4 Three Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link3",
+                    "name": "Col4 Redirect Link for Three Item",
+                    "description":"Col3 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item4",
+                    "name": "Col4 Four Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link4",
+                    "name": "Col4 Redirect Link for Four Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item5",
+                    "name": "Col4 Five Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link5",
+                    "name": "Col4 Redirect Link for Five Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item6",
+                    "name": "Col4 Six Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link6",
+                    "name": "Col4 Redirect Link for Six Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item7",
+                    "name": "Col4 Seven Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link7",
+                    "name": "Col3 Redirect Link for Seven Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item8",
+                    "name": "Col4 Eight Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link8",
+                    "name": "Col4 Redirect Link for Eight Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item9",
+                    "name": "Col4 Nine Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link9",
+                    "name": "Col4 Redirect Link for Nine Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                {
+                    "id": "col4Item10",
+                    "name": "Col4 Ten Item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "col4Link10",
+                    "name": "Col4 Redirect Link for Ten Item",
+                    "description":"Col4 Breadcrumb URL",
+                    "type": "url",
+                    "required": false
+                },
+
+                
+                {
+                    "id": "copyRight",
+                    "name": "Enter the Copy Right Text",
+                    "description": "Provide Copy Right Text",
+                    "type": "markup",
+                    "required": true
+                }
+                
+            ]
+        },
+        {
+            "id": "layoutSettings",
+            "name": "Text Layout Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "setPaddingTop",
+                    "name": "Padding Top i.e. 20px / 1.25rem",
+                    "description": "Provide padding-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingRight",
+                    "name": "Padding-Right i.e. 5px / .3125rem",
+                    "description": "Provide padding-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingBottom",
+                    "name": "Padding-Bottom i.e. 15px / 0.9375rem",
+                    "description": "Provide padding-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setPaddingLeft",
+                    "name": "Padding Left i.e. 10px / 0.625rem",
+                    "description": "Provide padding-left value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginTop",
+                    "name": "Margin Top i.e. 20px / 1.25rem",
+                    "description": "Provide margin-top value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginRight",
+                    "name": "Margin Right i.e. 15px / 0.9375rem",
+                    "description": "Provide margin-right value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginBottom",
+                    "name": "Margin Bottom  i.e. 30px / 1.875rem",
+                    "description": "Provide margin-bottom value applied outside the container",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "setMarginLeft",
+                    "name": "Margin Left i.e. -15px / -0.9375rem",
+                    "description": "Provide margin-left value applied outside the container",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
