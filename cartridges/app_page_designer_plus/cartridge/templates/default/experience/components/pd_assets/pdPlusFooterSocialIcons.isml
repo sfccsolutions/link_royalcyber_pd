@@ -1,0 +1,18 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addCss('/css/experience/components/pd_assets/pdPlusSocialIcons.css');
+</isscript>
+ <iscomment> <ul class="list-inline socialLinks_list direction-row"> </iscomment>
+  <div class="icons">              
+      <ul class="list-inline socialLinks_list">
+          <li><a href="${pdict.socialIcon1Link}" class="${pdict.socialIconsize}"> <img src="${pdict.socialIcon1Image}" alt="logo" /> </a></li>
+
+          <li><a href="${pdict.socialIcon2Link}" class="${pdict.socialIconsize}"> <img src="${pdict.socialIcon2Image}" alt="logo2" /> </a></li>
+
+          <li><a href="${pdict.socialIcon3Link}" class="${pdict.socialIconsize}"> <img src="${pdict.socialIcon3Image}" alt="logo3" /> </a></li>
+
+          <li><a href="${pdict.socialIcon4Link}" class="${pdict.socialIconsize}"> <img src="${pdict.socialIcon4Image}" alt="logo45" /> </a></li>
+
+          <li><a href="${pdict.socialIcon5Link}" class="${pdict.socialIconsize}"> <img src="${pdict.socialIcon5Image}" alt="logo5" /> </a></li>
+      </ul>
+</div>

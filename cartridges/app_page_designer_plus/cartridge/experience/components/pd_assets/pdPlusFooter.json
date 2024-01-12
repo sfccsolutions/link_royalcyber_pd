@@ -1,0 +1,21 @@
+{
+    "name": "PD Plus Footer Assset",
+    "description": "Display Content Footer",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "accordionComponent",
+            "name": "Footer Configurations",
+            "description": "This component will display Collapsible.",
+            "attribute_definitions": [
+                {
+                    "id": "accordionDetail",
+                    "name": "Footer link detail",
+                    "type": "markup",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

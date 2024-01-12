@@ -1,0 +1,93 @@
+{
+    "name": "PD Plus Social Icons",
+    "description": "Display Content Footer",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "socialIconsComponent",
+            "name": "Footer Configurations",
+            "description": "This component will display Collapsible.",
+            "attribute_definitions": [
+                {
+                    "id": "socialIconsize",
+                      "name": "Please Select The Soical Icon Size",
+                      "description": "Soical Icon Size e.g (Small/Medium/Large)",
+                      "type": "enum",
+                      "values": [
+                          "small",
+                          "medium",
+                          "large"
+                      ],
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon1Image",
+                      "name": "Upload the Icon1 Image",
+                      "type": "image",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon1Link",
+                      "name": "socialIcon1 Link",
+                      "description": "Tile container URL",
+                      "type": "url",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon2Image",
+                      "name": "Upload the Icon2 Image",
+                      "type": "image",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon2Link",
+                      "name": "socialIcon2 Link",
+                      "description": "Tile container URL",
+                      "type": "url",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon3Image",
+                      "name": "Upload the Icon3 Image",
+                      "type": "image",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon3Link",
+                      "name": "socialIcon3 Link",
+                      "description": "Tile container URL",
+                      "type": "url",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon4Image",
+                      "name": "Upload the Icon4 Image",
+                      "type": "image",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon4Link",
+                      "name": "socialIcon4 Link",
+                      "description": "Tile container URL",
+                      "type": "url",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon5Image",
+                      "name": "Upload the Icon5 Image",
+                      "type": "image",
+                      "required": false
+                  },
+                  {
+                      "id": "socialIcon5Link",
+                      "name": "socialIcon5 Link",
+                      "description": "Tile container URL",
+                      "type": "url",
+                      "required": false
+                  }
+
+            ]
+        }
+    ],
+    "region_definitions": []
+}

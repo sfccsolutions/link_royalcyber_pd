@@ -1,0 +1,51 @@
+@import "../../../variables";
+
+.pdplus-component.pdplus-2r-1c [class*="experience-pd_"], 
+.pdplus-component.pdplus-3r-1c [class*="experience-pd_"] {
+  height: auto;
+}
+
+.socialLinks_list{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 5px );
+    margin-left: -5px;
+
+    &.direction-column {
+        flex-flow: column;
+    }
+    li {
+        padding: 0 5px;
+        display: inline-block;
+
+        &:first-child {
+            // padding-left: 0;
+        }
+
+        a {
+            display: inline-block;
+            &.small-size{
+                width: 32px;
+                height: 32px;
+            }
+
+            &.medium-size{
+                width: 34px;
+                height: 34px;
+            }
+
+            &.large-size{
+                width: 36px;
+                height: 36px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+       
+    }

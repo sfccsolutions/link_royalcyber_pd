@@ -1,0 +1,10 @@
+<iscomment> PD Plus Footer  </iscomment>
+
+   
+        <div class="Footerbody">
+            <iscomment> Accordion item Detail</iscomment>
+            <div class="Footer-detail">
+                <isprint value="${pdict.accordionDetail}" encoding="off" />
+            </div>
+        </div>
+   
