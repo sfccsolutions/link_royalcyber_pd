@@ -5,13 +5,13 @@
     assets.addCss('/css/experience/components/pd_assets/pdPlusFooter.css');
 </isscript>
 
-<div class="pdplus-component" 
+<div class="pdplus-component ${pdict.isContainer}" 
     <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>
 
-    <div class="pdplus-component pdplus-3r-1c pdplusFooter" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+    <div class=" pdplus-3r-1c pdplusFooter" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
         
         <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
-        <div class="${pdict.isContainer}">
+        <div class="pdplusInner">
             
             <iscomment> Background Image and Overlay Color Settings </iscomment>
             <isif condition="${pdict.backgroundImage !== null}">        
