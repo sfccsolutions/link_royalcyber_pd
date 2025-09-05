@@ -1,0 +1,316 @@
+@import "~base/variables";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "./mixins/";
+@import "../../variables";
+
+.module-feature {
+    font-family: $oswald;
+    padding: 20px 0;
+
+    .module-title {
+        font-family: $oswald;
+        color: #000;
+        margin: 0 0 5px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        text-transform: capitalize;
+    }
+
+    .module-description {
+        font-family: "Arial", "Helvetica", sans-serif;
+        font-size: 16px;
+        color: #000;
+        line-height: 26px;
+        margin: 0 0 5px;
+
+        p:empty {
+            display: none;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding: 0 20px;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 20px;
+            font-family: $oswald;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 600%;
+            line-height: 100%;
+        }
+
+        h2 {
+            font-size: 500%;
+            line-height: 100%;
+        }
+
+        h3 {
+            font-size: 400%;
+            line-height: 100%;
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: 250%;
+            line-height: 100%;
+        }
+    }
+
+    .module-icon {
+        width: 32px;
+        height: 32px;
+
+        img {
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+    }
+
+    .module-content {
+        flex: 1;
+    }
+
+    .assetBtn-block {
+        max-width: 100%;
+        flex-basis: 100%;
+        padding: 20px 0;
+
+        .assetBtn {
+            cursor: pointer;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            line-height: 20px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            min-width: 170px;
+            min-height: 44px;
+
+            .btn-off-hover,
+            .btn-on-hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: inline-block;
+                vertical-align: top;
+                z-index: 2;
+                border: 0;
+                padding: 10px 20px;
+            }
+
+            .btn-on-hover {
+                z-index: 1;
+            }
+
+            &:hover {
+                text-decoration: none;
+
+                .btn-off-hover {
+                    z-index: 1;
+                }
+
+                .btn-on-hover {
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    &--link {
+        cursor: pointer;
+        font-family: 'Montserrat';
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: rem-calc(12);
+        border-radius: 0;
+        width: rem-calc(225);
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+
+        .btn-off-hover,
+        .btn-on-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            z-index: 2;
+            border-width: rem-calc(1);
+            border-style: solid;
+        }
+
+        .btn-on-hover { z-index: 1; }
+
+        &:hover {
+            .btn-off-hover { z-index: 1; }
+
+            .btn-on-hover { z-index: 2; }
+        }
+    }
+
+    .module-tile {
+        margin: 0 auto 20px;
+        flex-basis: 100%;
+
+        img {
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.module-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.horizontal-center {
+        text-align: center;
+        justify-content: center;
+
+        .module-icon { margin: 0 auto 20px; }
+
+        .module-content {
+            text-align: center;
+            flex-basis: 100%;
+        }
+    }
+
+    &.horizontal-left {
+        text-align: left;
+        justify-content: flex-start;
+
+        .module-icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &.horizontal-right {
+        text-align: right;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+
+        .module-icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &.vertical-top {
+        align-items: flex-start;
+
+        .module-icon { align-items: flex-start; }
+    }
+
+    &.vertical-center {
+        align-items: center;
+
+        .module-icon { align-items: center; }
+    }
+
+    &.vertical-bottom {
+        align-items: flex-end;
+
+        .module-icon { align-items: flex-end; }
+    }
+
+    .module-bottom-description {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0 0 20px;
+            font-family: $oswald;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 600%;
+            line-height: 100%;
+        }
+
+        h2 {
+            font-size: 500%;
+            line-height: 100%;
+        }
+
+        h3 {
+            font-size: 400%;
+            line-height: 100%;
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: 100%;
+            line-height: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .module-feature {
+        padding: 0 !important;
+        margin: 0 !important;
+
+        .module-description {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+}
+
+.module-feature__Space-logo-order {
+    .module-content { order: 1; }
+
+    .module-tile { order: 0; }
+
+    .assetBtn-block { order: 2; }
+}
+
+.module_lineHeight_fix {
+    .module-feature {
+        .module-wrapper {
+            .module-title {
+                h3 { line-height: 120%; }
+            }
+        }
+    }
+}

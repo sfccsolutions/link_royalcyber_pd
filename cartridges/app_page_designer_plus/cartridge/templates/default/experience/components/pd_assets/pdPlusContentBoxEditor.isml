@@ -1,0 +1,22 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+<div class="editorialRichText-component-container" >
+    <div class="text-container" style="max-width: ${pdict.maxWidthText};">
+        <div class="text-editor ${pdict.textShadow}" <isprint value="${pdict.boxContentTxtColor}" encoding="off" />>
+            <h1 <isprint value="${pdict.customShadowHeading}" encoding="off" />><isprint value="${pdict.headingText}" encoding="off"/></h1>
+            <div class="animation-css"  data-aos="${pdict.animationType}" data-aos-duration="${pdict.animationDuration}">
+                <div class="custom-shadow" <isprint value="${pdict.customShadowParagraph}" encoding="off" />>
+                    <isprint value="${pdict.richText}" encoding="off"/>
+                </div>
+            </div>
+        </div>
+        <isif condition="${pdict.buttonText !== null}">
+            <div class="btn-wrapper">
+                <div class="btn" <isif condition="${pdict.btnBgComponentColor}"><isprint value="${pdict.btnBgComponentColor}" encoding="off" /></isif>>
+                    <a class="tile-link" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>${pdict.buttonText}</a>
+                </div>
+            </div>
+        </isif>
+    </div>
+</div>

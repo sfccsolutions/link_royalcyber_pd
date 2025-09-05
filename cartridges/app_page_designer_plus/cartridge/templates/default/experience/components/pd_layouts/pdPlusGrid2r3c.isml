@@ -4,7 +4,7 @@
     assets.addCss('/css/experience/components/pd_layouts/pdPlusGridLayout.css');
 </isscript>
 
-<div class="pdplus-component pdplus-2r-3c ${pdict.bgImageParallax} ${pdict.customCss}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
+<div class="pdplus-component pdplus-2r-3c  ${pdict.bgImageParallax} ${pdict.customCss}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
     
     <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
     <div class="${pdict.isContainer}">

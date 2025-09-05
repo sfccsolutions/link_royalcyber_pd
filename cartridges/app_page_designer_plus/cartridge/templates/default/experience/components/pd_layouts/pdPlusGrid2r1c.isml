@@ -4,8 +4,7 @@
     assets.addCss('/css/experience/components/pd_layouts/pdPlusGrid.css');
 </isscript>
 
-<div class="pdplus-component pdplus-2r-1c" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
-    
+<div class="pdplus-component pdplus-2r-1c">
     <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
     <div class="${pdict.isContainer}">
 
@@ -20,7 +19,7 @@
                 </isif>
             </div>
         </isif>
-      
+
         <div class="row">
             <isif condition="${pdict.removeGutter === true}">
                 <isprint value="${pdict.regions.pdPlusColumn1.setClassName("region col-12 col-sm-6 px-0").render()}" encoding="off" />
@@ -28,7 +27,7 @@
             <iselse/>
                 <isprint value="${pdict.regions.pdPlusColumn1.setClassName("region col-12 col-sm-6").render()}" encoding="off" />
                 <isprint value="${pdict.regions.pdPlusColumn2.setClassName("region col-12 col-sm-6").render()}" encoding="off" /> 
-            </isif>        
+            </isif>
         </div>
     </div>
 </div>

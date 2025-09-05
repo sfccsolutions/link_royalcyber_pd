@@ -2,9 +2,10 @@
 
 $(document).ready(function () {
    let firstTabDescription = $('.tab-container .experience-pd_assets-pdPlusTabs:first-child').find('.tab-description').html();
-   $('.tabs-wrapper .tab-content').find('.tab-pane').html(firstTabDescription);
-   $('.tabs-wrapper .tab-content').find('.tab-pane').addClass('active in show');
-   $('.tab-container .experience-pd_assets-pdPlusTabs:first-child').find('[data-bs-toggle="tab"]').addClass('active');
+
+$('.tabs-wrapper .tab-content').find('.tab-pane').html(firstTabDescription);
+$('.tabs-wrapper .tab-content').find('.tab-pane').addClass('active in show');
+$('.tab-container .experience-pd_assets-pdPlusTabs:first-child').find('[data-bs-toggle="tab"]').addClass('active');
 
    $('.experience-pd_assets-pdPlusTabs').find('[data-bs-toggle="tab"]').click(function(){
       let tabId = $(this).attr('data-bs-target');

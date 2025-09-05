@@ -51,8 +51,8 @@
                 },
                 {
                     "id": "imgBannerCaptionBgColor",
-                    "name": "Tile Card Caption background color",
-                    "description": "Set the background color of Caption.",
+                    "name": "Tile Card Caption Background Color",
+                    "description": "Background Color of Caption.",
                     "type": "custom",
                     "required": false,
                     "editor_definition": {
@@ -61,8 +61,8 @@
                 },
                 {
                     "id": "imgBannerCaptionColorBgAlpha",
-                    "name": "Specify Background Color Alpha between 10 and 100",
-                    "description": "Set Background Color alpha between 0 and 1",
+                    "name": "Background Color Transparency between 10 and 100",
+                    "description": "Set Background Color Transparency between 10 and 100",
                     "type": "enum",
                     "default_value": 100,
                     "values": [
@@ -117,7 +117,7 @@
                 },
                 {
                     "id": "btnsize",
-                    "name": "Please select button Size",
+                    "name": "Select Button Size",
                     "description": "Button Size e.g (Small/Medium/Large(Full width))",
                     "type": "enum",
                     "values": [
@@ -130,8 +130,8 @@
                 },
                 {
                     "id": "buttontext",
-                    "name": "Button text on card",
-                    "description": "Button text for card",
+                    "name": "Button Text on Card",
+                    "description": "Button Text for Card",
                     "type": "string",
                     "required": false
                 },
@@ -151,8 +151,8 @@
                 },
                 {
                     "id": "btnBgColor",
-                    "name": "Button background color",
-                    "description": "Set the background color of button.",
+                    "name": "Button Background color",
+                    "description": "Set the Background Color of Button.",
                     "type": "custom",
                     "required": false,
                     "editor_definition": {
@@ -161,8 +161,8 @@
                 },
                 {
                     "id": "buttonBorderColor",
-                    "name": "Button border color",
-                    "description": "Set the background color of banner.",
+                    "name": "Button Border Color",
+                    "description": "Set the Background Color of Banner.",
                     "type": "custom",
                     "required": false,
                     "editor_definition": {
@@ -172,7 +172,7 @@
                 {
                     "id": "btnTextColor",
                     "name": "Button Text color",
-                    "description": "Set the background color of button.",
+                    "description": "Set the Background Color of Button.",
                     "type": "custom",
                     "required": false,
                     "editor_definition": {
@@ -181,7 +181,7 @@
                 },
                 {
                     "id": "btnBorderRadius",
-                    "name": "Please select the border of button",
+                    "name": "Select the Border Radius of Button",
                     "description": "Border radius type e.g (Square/Rounded/circled)",
                     "type": "enum",
                     "values": [

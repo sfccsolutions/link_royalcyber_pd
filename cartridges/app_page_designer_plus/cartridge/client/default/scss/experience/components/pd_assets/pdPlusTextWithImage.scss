@@ -13,6 +13,7 @@
 .text-image-container {
     background-color: $white;
     color: $black;
+    padding: 20px 0;
 
     &.order-text-left {
         .text-column {
@@ -35,8 +36,6 @@
     }
 
     .text-container {
-        padding: 40px;
-
         .btn-wrapper {
             .btn {
                 background-color: $white;
@@ -45,6 +44,7 @@
 
                 .tile-link {
                     color: inherit !important;
+                    text-decoration: none;
                 }
             }
         }

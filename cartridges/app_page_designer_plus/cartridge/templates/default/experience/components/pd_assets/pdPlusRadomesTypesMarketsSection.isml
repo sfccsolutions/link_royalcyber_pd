@@ -1,0 +1,68 @@
+
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/rwc/pdPlusRadomesTypesMarketsSection.css');
+</isscript>
+
+
+<div class="RTY-block__${pdict.customClass}"  <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>>
+    <div class="RadomesTMContentSection " <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
+        <div >
+            <div class="${pdict.isContainer}">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="TextSection ${pdict.textAlignment}">
+                                <div class="RadomesTMContent ${pdict.shadowOnText}" 
+                                    <isif condition="${pdict.textContentColor}">
+                                        <isprint value="${pdict.textContentColor}" encoding="off" />
+                                    </isif>>
+                                        <isprint value="${pdict.radomesTypesMarkets}" encoding="off" />
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="row mt-5" 
+                    <isif condition="${pdict.imgtextContentColor}">
+                        <isprint value="${pdict.imgtextContentColor}" encoding="off" />
+                    </isif>>
+                    
+                    <div class="col-md-3 mb-3">
+                        <a class="image-detail" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
+                            <isif condition="${pdict.rTMImage1}">
+                                <img class="" src="${pdict.rTMImage1}" />
+                            </isif>
+                            <h3><isprint value="${pdict.rTMImage1Detail}" encoding="off" /></h3>
+                        </a>
+                       
+                    </div>
+                   <div class="col-md-3 mb-3">
+                        <a class="image-detail" href="${pdict.tileLink2}" <isif condition="${pdict.tileNewtab2 === true}">target="_blank"</isif>>
+                             <isif condition="${pdict.rTMImage2}">
+                                <img class="" src="${pdict.rTMImage2}" />
+                            </isif>
+                            <h3><isprint value="${pdict.rTMImage2Detail}" encoding="off" /></h3>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <a class="image-detail" href="${pdict.tileLink3}" <isif condition="${pdict.tileNewtab3 === true}">target="_blank"</isif>>
+                            <isif condition="${pdict.rTMImage3}">
+                                <img class="" src="${pdict.rTMImage3}" />
+                            </isif>
+                            <h3><isprint value="${pdict.rTMImage3Detail}" encoding="off" /></h3>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <isif condition="${pdict.rTMImage4}">
+                            <a class="image-detail" href="${pdict.tileLink4}" <isif condition="${pdict.tileNewtab4 === true}">target="_blank"</isif>>
+                                <img class="" src="${pdict.rTMImage4}" />
+                                <h3><isprint value="${pdict.rTMImage4Detail}" encoding="off" /></h3>
+                            </a>
+                        </isif>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

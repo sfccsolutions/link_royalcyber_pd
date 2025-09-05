@@ -10,7 +10,7 @@
             "attribute_definitions": [
                 {
                     "id": "videoSelect",
-                    "name": "Select Video",
+                    "name": "Choose Video Type",
                     "description": "Select Video",
                     "type": "enum",
                     "values": [
@@ -33,7 +33,7 @@
                 {
                     "id": "vidContentAsset",
                     "name": "Content Asset ID of Smart Slider",
-                    "description": "Enter content asset id",
+                    "description": "Content Asset ID",
                     "type": "string",
                     "required": false
                 }
@@ -46,22 +46,22 @@
             "attribute_definitions": [
                 {
                     "id": "classNameVideo",
-                    "name": "CSS Class name for Video background",
-                    "description": "Provide the class name of Video Component.",
+                    "name": "CSS Class Name for Video background",
+                    "description": "Provide the Class Name of Video Component.",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "classNameSmartText",
-                    "name": "Custom Class name of Content Asset",
-                    "description": "Provide the class name of Content Asset.",
+                    "name": "Custom Class Name of Content Asset",
+                    "description": "Provide the Class Name of Content Asset.",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "isContainer",
-                    "name": "Layout Fluid",
-                    "description": "Set layout fluid or at center",
+                    "name": "Enable Layout Fluid",
+                    "description": "Enable Layout Fluid OR Layout fixed",
                     "type": "boolean",
                     "required": false
                 },

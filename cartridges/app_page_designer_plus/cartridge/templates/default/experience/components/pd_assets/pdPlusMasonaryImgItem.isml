@@ -1,0 +1,18 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+</isscript>
+
+
+<div class="mas-grid-item">
+    <figure>
+        <a href="${pdict.masonaryTileLink}">
+            <img src="${pdict.masonaryImgFile}" alt="${pdict.masonaryImgAlt}" title="${pdict.masonaryImgAlt}">
+
+            <isif condition="${pdict.masonaryImageText}">
+                <div class="mas-img-txt">
+                    <isprint value="${pdict.masonaryImageText}" encoding="off"/>
+                </div>
+            </isif>
+        </a>
+    </figure>
+</div>

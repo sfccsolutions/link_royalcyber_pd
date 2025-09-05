@@ -66,19 +66,8 @@ module.exports.render = function (context) {
     if (content.backgroundColorAlpha) {
         model.BGImageProperties += 'opacity: ' + content.backgroundColorAlpha + '%' + ';';
     }
-    model.BGImageProperties += '"';
 
-    /* Margin | Padding Settings */
-    model.UILayout = 'style="';
-    model.UILayout += 'padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
-    model.UILayout += '; padding-right: ' + (content.setPaddingRight ? content.setPaddingRight : '0');
-    model.UILayout += '; padding-bottom: ' + (content.setPaddingBottom ? content.setPaddingBottom : '0');
-    model.UILayout += '; padding-left: ' + (content.setPaddingLeft ? content.setPaddingLeft : '0');
-    model.UILayout += '; margin-top: ' + (content.setMarginTop ? content.setMarginTop : '0');
-    model.UILayout += '; margin-right: ' + (content.setMarginRight ? content.setMarginRight : '0');
-    model.UILayout += '; margin-bottom: ' + (content.setMarginBottom ? content.setMarginBottom : '0');
-    model.UILayout += '; margin-left: ' + (content.setMarginLeft ? content.setMarginLeft : '0');
-    model.UILayout += ';"';
+    model.BGImageProperties += '"';
 
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 

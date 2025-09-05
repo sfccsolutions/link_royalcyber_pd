@@ -30,13 +30,6 @@
             "description": "The visual display of the container.",
             "attribute_definitions": [
                 {
-                    "id": "customCss",
-                    "name": "Add class name for custom styles",
-                    "description": "Please add class name for custom styles",
-                    "type": "string",
-                    "required": false
-                },
-                {
                     "id": "isContainer",
                     "name": "Layout Fluid",
                     "description": "Set layout fluid or at center",
@@ -61,7 +54,6 @@
                     "type": "string",
                     "required": false
                 },
-                
                 {
                     "id": "bgOverlay",
                     "name": "Background Image Overlay Color in (RGBA)",
@@ -81,8 +73,8 @@
                 },
                 {
                     "id": "backgroundColorAlpha",
-                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
-                    "description": "Set Background Color alpha between 0 and 1",
+                    "name": "Specify Background Color opacity between 0 and 1 i.e 0.2",
+                    "description": "Set Background Color opacity between 0 and 1",
                     "type": "enum",
                     "default_value": 100,
                     "values": [
@@ -118,10 +110,10 @@
                     "required": false
                 },
                 {
-                  "id": "ParallaxScrimg",
-                  "name": " Parallax Scrolling Section background Image",
-                  "type": "image",
-                  "required": false
+                    "id": "ParallaxScrimg",
+                    "name": " Parallax Scrolling Section background Image",
+                    "type": "image",
+                    "required": false
                 },
                 {
                     "id": "ParallaxScrHdSectionR1C1",
@@ -169,22 +161,22 @@
                     "name": "Column1 Text on Anchor Button",
                     "type": "string",
                     "required": false
-                  },
-                  {
-                      "id": "tileLink",
-                      "name": "Column1 Link the Anchor Button",
-                      "description": "Provide the Link URL of Anchor Button",
-                      "type": "url",
-                      "required": false
-                  },
-                  {
-                      "id": "tileNewtab",
-                      "name": "New Tab",
-                      "description": "Open Link in New Tab",
-                      "type": "boolean",
-                      "required": false
-                  },
-                  {
+                },
+                {
+                    "id": "tileLink",
+                    "name": "Column1 Link the Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
                     "id": "btnbgColor",
                     "name": "Column1 Specify Button background Color",
                     "description": "Set Button background Color",
@@ -324,7 +316,6 @@
                     "type": "string",
                     "required": false
                 },
-
                 {
                     "id": "textAlignmentR1C3C3",
                     "name": "Column3 Please select text alignment",
@@ -352,22 +343,22 @@
                     "name": "Column3 Text on Anchor Button",
                     "type": "string",
                     "required": false
-                  },
-                  {
-                      "id": "tileLinkR1C3C3",
-                      "name": "Column3 Link the Anchor Button",
-                      "description": "Provide the Link URL of Anchor Button",
-                      "type": "url",
-                      "required": false
-                  },
-                  {
-                      "id": "tileNewtabR1C3C3",
-                      "name": "Column3 New Tab",
-                      "description": "Open Link in New Tab",
-                      "type": "boolean",
-                      "required": false
-                  },
-                  {
+                },
+                {
+                    "id": "tileLinkR1C3C3",
+                    "name": "Column3 Link the Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtabR1C3C3",
+                    "name": "Column3 New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
                     "id": "btnbgColorR1C3C3",
                     "name": "Column3 Specify Button background Color",
                     "description": "Set Button background Color",
@@ -396,70 +387,6 @@
                     "editor_definition": {
                         "type": "themer.colorpicker"
                     }
-                }
-            ]
-        },
-        
-        {
-            "id": "layoutSettings",
-            "name": "UI Layout Settings",
-            "description": "The visual display of the container.",
-            "attribute_definitions": [
-                {
-                    "id": "setPaddingTop",
-                    "name": "Padding Top i.e. 20px / 1.25rem",
-                    "description": "Provide padding-top value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setPaddingRight",
-                    "name": "Padding Right i.e. 5px / 0.3125rem",
-                    "description": "Provide padding-right value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setPaddingBottom",
-                    "name": "Padding Bottom i.e. 15px / 0.9375rem",
-                    "description": "Provide padding-bottom value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setPaddingLeft",
-                    "name": "Padding Left i.e. 10px / 0.625rem",
-                    "description": "Provide padding-left value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginTop",
-                    "name": "Margin Top i.e. 20px / 1.25rem",
-                    "description": "Provide margin-top value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginRight",
-                    "name": "Margin Right i.e. 15px / 0.9375rem",
-                    "description": "Provide margin-right value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginBottom",
-                    "name": "Margin Bottom i.e. 30px / 1.875rem",
-                    "description": "Provide margin-bottom value applied outside the container",
-                    "type": "string",
-                    "required": false
-                },
-                {
-                    "id": "setMarginLeft",
-                    "name": "Margin Left i.e. -15px / -0.9375rem",
-                    "description": "Provide margin-left value applied outside the container",
-                    "type": "string",
-                    "required": false
                 }
             ]
         }

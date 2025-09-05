@@ -6,12 +6,12 @@
     {
       "id": "textContent",
       "name": "Text Content",
-      "description": "The content to show in this component",
+      "description": "Content to display in this component",
       "attribute_definitions": [
         {
           "id": "richText",
-          "name": "content",
-          "description": "This is the rich text content area",
+          "name": "Rich Text Editor",
+          "description": "Rich Text Content Area",
           "type": "markup",
           "required": true
         }

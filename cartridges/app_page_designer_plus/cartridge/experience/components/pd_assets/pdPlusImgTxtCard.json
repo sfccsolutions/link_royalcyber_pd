@@ -1,0 +1,63 @@
+{
+  "name": "PD Plus Image with Text Card",
+  "description": "Select a image and write a text for this card",
+  "group": "pd_assets",
+  "attribute_definition_groups": [
+        {
+          "id": "imageCardComponent",
+          "name": "Custom Tile Configurations",
+          "description": "This component will display card image.",
+          "attribute_definitions": [
+                {
+                    "id": "animationType",
+                    "name": "Animation Type e.g (fade-in, fade-up, fade-down)",
+                    "description": "Please select type of animation",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "animationDuration",
+                    "name": "Animation Duration e.g (1000 is equal 1s)",
+                    "description": "Please select duration of animation",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "cardImgFile",
+                    "name": "Card Image",
+                    "description": "Select a photo to be displayed",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "cardImgAlt",
+                    "name": "Alternate Text of Image",
+                    "description": "The image alt text shown by the component.",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "cardRichText",
+                    "name": "Card Heading and Paragraph content area",
+                    "description": "This is the heading and Paragraph content area",
+                    "type": "markup",
+                    "required": true
+                }
+                ,
+                {
+                    "id": "cardTextColor",
+                    "name": "Card Text color",
+                    "description": "This is the Card text color selection",
+                    "type": "enum",
+                    "values": [
+                        "White",
+                        "Black"
+                    ],
+                    "default_value": "Black",
+                    "required": true
+                }
+            ]
+        }
+    ],
+  "region_definitions": []
+}

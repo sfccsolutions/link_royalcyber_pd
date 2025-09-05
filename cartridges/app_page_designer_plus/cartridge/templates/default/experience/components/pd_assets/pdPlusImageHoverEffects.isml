@@ -25,11 +25,11 @@
                 <isif condition="${pdict.imgTitle || pdict.imgParagraph}">
                     <isif condition="${pdict.imgTitle}">
                         <div class="img-title">
-                            <h3 style="font-size:${pdict.h1Configurations.fontSize}; letter-spacing:${pdict.h1Configurations.fontSpacing}; line-height:${pdict.h1Configurations.fontHeight}; margin:${pdict.h1Configurations.marginHeading}; padding:${pdict.h1Configurations.paddingHeading}; font-family: ${pdict.h1Configurations.font}; color:${pdict.h1Configurations.fontColor}; font-weight:${pdict.h1Configurations.fontWeight}; text-shadow: ${pdict.h1Configurations.fontShadow};">${pdict.imgTitle}</h3>
+                            <h3>${pdict.imgTitle}</h3>
                         </div>
                     </isif>
                     <isif condition="${pdict.imgParagraph}">
-                        <div class="img-content" style="font-size:${pdict.para1Configurations.fontSize}; letter-spacing:${pdict.para1Configurations.paraFontSpacing}; line-height:${pdict.para1Configurations.paraFontHeight}; margin:${pdict.para1Configurations.marginHeading}; padding:${pdict.para1Configurations.paddingHeading}; font-family: ${pdict.para1Configurations.font}; color:${pdict.para1Configurations.fontColor}; font-weight:${pdict.para1Configurations.fontWeight}; text-shadow: ${pdict.para1Configurations.para1Shadow};">
+                        <div class="img-content">
                             <isprint value="${pdict.imgParagraph}" encoding="off" />
                         </div>
                     </isif>

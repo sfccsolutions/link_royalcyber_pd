@@ -10,14 +10,14 @@
             "attribute_definitions": [
                 {
                     "id": "contentassetID",
-                    "name": "Specify the content asset ID",
-                    "description": "Provide the content asset ID.",
+                    "name": "Content Asset ID",
+                    "description": "Provide the Content Asset ID.",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "cssClassName",
-                    "name": "Specify the Class Name",
+                    "name": "Class Name",
                     "description": "Provide the Class Name on Content Asset Component.",
                     "type": "string",
                     "required": false

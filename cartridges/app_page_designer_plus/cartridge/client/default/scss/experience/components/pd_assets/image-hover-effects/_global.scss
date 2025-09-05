@@ -16,6 +16,11 @@
     &-none { object-fit: none; }
 }
 
+a.box-image-tile {
+    text-decoration: none;
+    color: #000;
+}
+
 [class^="imghvr-"],
 [class*=" imghvr-"] {
     @include size(100%);
@@ -40,18 +45,27 @@
         }
     }
 
-    figcaption { @include fill(0); }
+    figcaption {
+        @include fill(0);
+        padding: 15px;
+    }
 
     .img-title {
         h3 {
             font-size: 1.125rem;
+            letter-spacing: normal;
             line-height: 1.625;
-            font-weight: 700;
             margin: 0 0 0.25rem;
+            font-family: inherit;
+            font-weight: 700;
         }
     }
 
-    .img-content p { font-size: 0.9375rem; }
+    .img-content {
+        font-family: inherit;
+
+        p { font-size: 0.9375rem; }
+    }
 }
 
 .tiles-links {

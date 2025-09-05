@@ -1,0 +1,251 @@
+@import "../../../variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.flexiable-row {
+    position: relative;
+    display: flex;
+    background-repeat: no-repeat;
+
+    &.section-background {
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    &.section-parallax {
+        background-attachment: scroll;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    .bgcolor-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &__wrapper {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        flex-grow: 1;
+        flex-direction: column;
+        .container,
+        .container-fluid,
+        .module-grid {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+        }
+
+        &.horizontal-center {
+            .module-grid{
+                justify-content: center;
+            }
+        }
+    
+        &.horizontal-left {
+            .module-grid{
+                justify-content: flex-start;
+            }
+        }
+    
+        &.horizontal-right {
+            .module-grid{
+                justify-content: flex-end;
+            }
+        }
+    
+        &.vertical-center {
+            align-items: center;
+            .module-grid{
+                align-items: center;
+            }
+        }
+    
+        &.vertical-top {
+            align-items: flex-start;
+            .module-grid{
+                align-items: flex-start;
+            }
+        }
+    
+        &.vertical-bottom {
+            align-items: flex-end;
+            .module-grid{
+                align-items: flex-end;
+            }
+        }
+        &.order-right-to-left {
+            .module-grid{
+                flex-direction: row;
+            }
+        }
+        &.order-left-to-right {
+            .module-grid{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 991px) {
+
+        &__motorsports-half-grid {
+            .bgcolor-overlay {
+                left: 50%;
+            }
+        }
+
+        &__motorsports-half-grid-left {
+            .bgcolor-overlay {
+                right: 50%;
+                left: 0;
+            }
+        }
+    }
+}
+
+.flexiable-row__contact-us-icons {
+    p {
+        img {
+            width: auto !important;
+        }
+
+        a {
+            color: $black !important;
+            &:hover {
+                color: #ee2e23 !important;
+            }
+        }
+    }
+}
+.component-figure {
+    
+    .component-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        // transform: scale(1);
+        // transition: all ease-in-out .2s;
+    }
+
+    &:hover {
+        // .component-image {
+        //     transform: scale(1.1);
+        // }
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .category-text_heading {
+        span {
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 500;
+            color: #000;
+            text-transform: uppercase;
+        }
+    }
+
+}
+
+.product-tile-component-figure {
+    .product-tile-image {
+       .product-tile-component-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+       }
+       
+       .quick-shop {
+        display: none;
+       }
+       
+    }
+    .product-tile-body {
+        .color-swatches {
+            display: none;
+        }
+        .product-name-link a {
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 500;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #000 !important;
+            text-decoration: none;
+            font-family: "oswald", sans-serif;
+        }
+
+        .product-name-link a:hover {
+            color: #000 !important;
+            text-decoration: none;
+        }
+
+        .product-price {
+            font-size: 1em;
+            margin-bottom: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            .strike-through,
+            .sales {
+                color: #000 !important;
+                font-size: 0.875em;
+                font-weight: 600;
+            }
+
+            del,
+            .strike-through {
+                color: #e66208 !important;
+                margin-right: 2px;
+            }
+
+        }
+
+        .ratings {
+            font-size: 0.9em;
+        }
+
+    }
+
+}
+
+.flexiable-row {
+    &__offices {
+        .module-grid {
+            justify-content: center !important;
+        }
+        .module-grid__item {
+            margin-bottom: 15px;
+        }
+        .module-feature {
+            &__contact-card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #fff;
+                min-height: 328px;
+                border-top: 8px solid #003963;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 1px 20px rgba(0, 0, 0, .1);
+                .module-icon {
+                    margin: 0 auto 58px;
+                }
+                .module-icon img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+            }
+        }
+    }
+}

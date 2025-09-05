@@ -1,0 +1,51 @@
+{
+    "name": "PD Plus Masonry Image Item",
+    "description": "Select a Image that you want to insert into your layout component",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+          {
+            "id": "masonaryTextImageComponent",
+            "name": "Custom Tile Configurations",
+            "description": "This component will display image with subtitle positions.",
+            "attribute_definitions": [
+                    {
+                        "id": "masonaryImgFile",
+                        "name": "Tile Image",
+                        "description": "Select a photo to be displayed",
+                        "type": "image",
+                        "required": true
+                    },
+                    {
+                        "id": "masonaryImgAlt",
+                        "name": "Alternate Text of Image",
+                        "description": "The image alt text shown by the component.",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "id": "masonaryImageText",
+                        "name": "Image Text",
+                        "description": "This is the Image Text",
+                        "type": "string",
+                        "required": false
+                    },
+                    {
+                        "id": "masonaryTileLink",
+                        "name": "Link on Anchor Button",
+                        "description": "Provide the Link URL of Image Tile.",
+                        "type": "url",
+                        "required": false
+                    },
+                    {
+                        "id": "masonaryTileNewtab",
+                        "name": "New Tab",
+                        "description": "Open Link in New Tab",
+                        "type": "boolean",
+                        "required": false
+                    }
+                ]
+            }
+        ],
+    "region_definitions": []
+}
+  

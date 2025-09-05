@@ -1,0 +1,15 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusTwoColBox.css');
+</isscript>
+
+<div class="pdplus-component pdPlusTwoColbox ${pdict.bgImageParallax} ${pdict.customCss}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
+    <div class="wrapper-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+    <div class="pdPlusTwoColboxWrapper">
+        <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
+        <div class="${pdict.isContainer}">
+            <iscomment> Region Created for media and content </iscomment>
+            <isprint value="${pdict.regions.pdPlusTwoColBox.setClassName('box-col-wrapper').render()}" encoding="off" />
+        </div>
+    </div>
+</div>

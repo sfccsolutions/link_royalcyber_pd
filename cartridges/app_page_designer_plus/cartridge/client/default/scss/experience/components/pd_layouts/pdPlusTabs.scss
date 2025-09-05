@@ -1,6 +1,10 @@
 @import "../../../variables";
 @import "~bootstrap/scss/mixins/breakpoints";
 
+.pdplus-tabs-outer {
+    padding: 20px 15px;
+}
+
 .tabs-wrapper {
     .tab-container {
         border-bottom: 2px solid #d5d5d5;

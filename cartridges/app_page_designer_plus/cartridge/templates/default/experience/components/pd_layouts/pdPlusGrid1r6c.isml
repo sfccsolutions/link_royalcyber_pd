@@ -5,15 +5,14 @@
     assets.addCss('/css/experience/components/pd_layouts/pdPlusGrid.css');
 </isscript>
 
-<div class="pdplus-component pdplus-1r-6c position-relative ${pdict.customCss}" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
-    
+<div class="pdplus-component pdplus-1r-6c position-relative">
     <iscomment> Background Image and Overlay Color Settings </iscomment>
     <div class="background-img">
         <isif condition="${pdict.backgroundImage !== null}">
             <img src="${pdict.backgroundImage.src.mobile}" alt="${pdict.imageAlt}" />
         </isif>        
         <isif condition="${pdict.bgComponentColor}">
-            <span <isprint value="${pdict.bgComponentColor}" encoding="off" />  ></span>
+            <span <isprint value="${pdict.bgComponentColor}" encoding="off" />></span>
         <iselse/>
             <span></span>
         </isif>

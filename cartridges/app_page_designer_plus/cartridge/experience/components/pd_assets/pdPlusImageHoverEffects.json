@@ -38,15 +38,15 @@
                 },
                 {
                     "id": "tilesBgColor",
-                    "name": "Tiles background Color with opacity e.g rgba(0,0,0,0.1)",
-                    "description": "Specify the background color with Opacity",
+                    "name": "Background Color Transparency e.g rgba(0,0,0,0.1)",
+                    "description": "Enter the background-color with transparency",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "tilesTextColor",
                     "name": "Tiles Text Color e.g #000000 or rgba(0,0,0,1)",
-                    "description": "Specify the text color",
+                    "description": "Specify the Text Color",
                     "type": "string",
                     "required": false
                 },
@@ -114,7 +114,7 @@
                 {
                     "id": "imgObjectFit",
                     "name": "Object Fit",
-                    "description": "Object fit specify how an <img> or <video> should be resized to fit its container.",
+                    "description": "Object Fit specify how an <img> or <video> should be resized to fit its container.",
                     "type": "enum",
                     "values": [
                         "fill",
@@ -129,21 +129,21 @@
                 {
                     "id": "imgAlt",
                     "name": "Image Alt Text",
-                    "description": "The image alt text shown by the component.",
+                    "description": "The Image Alt text shown by the component.",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "minWidthImage",
                     "name": "Image Min. Width",
-                    "description": "Please add minimum width of image container",
+                    "description": "Add Minimum Width of Image Container",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "imageRadius",
                     "name": "Image Container Border Radius",
-                    "description": "Border radius of image container",
+                    "description": "Border Radius of Image Container",
                     "type": "string",
                     "required": false
                 },
@@ -162,7 +162,7 @@
                 {
                     "id": "flexWrap",
                     "name": "Flex Wrap",
-                    "description": "Specify the wrap text of content",
+                    "description": "Wrap Text of Content",
                     "type": "enum",
                     "values": [
                         "wrap",
@@ -174,7 +174,7 @@
                 {
                     "id": "posX",
                     "name": "Position of Text Horizontally",
-                    "description": "Specify the position of Text Horizontally",
+                    "description": "Horizontal Text Position",
                     "type": "enum",
                     "values": [
                         "start",
@@ -189,7 +189,7 @@
                 {
                     "id": "posY",
                     "name": "Position of Text Vertically",
-                    "description": "Specify the position of Text Vertically",
+                    "description": "Vertical Position Text",
                     "type": "enum",
                     "values": [
                         "start",
@@ -210,79 +210,9 @@
                 {
                     "id": "imgTitle",
                     "name": "Title of Image",
-                    "description": "Title on overlay image",
+                    "description": "Title on Overlay Image",
                     "type": "string",
                     "required": true
-                },
-                {
-                    "id":"h1Font",
-                    "name":"Heading Font Family",
-                    "description":"Controls the font family for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"fontTextSize",
-                    "name":"Heading Font Size",
-                    "description":"Controls the font size for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"h1LetterSpacing",
-                    "name":"Heading Font letter Spacing",
-                    "description":"Controls the letter spacing for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"h1LineHeight",
-                    "name":"Heading Font Line-Height",
-                    "description":"Controls the font Line-Height for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"fontMargin",
-                    "name":"Set Heading Marging",
-                    "description":"Controls marging for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"fontPadding",
-                    "name":"Set Heading Padding",
-                    "description":"Controls Parging for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"h1FontColor",
-                    "name":"Heading Font Color",
-                    "description":"Controls the font color for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"h1FontShadow",
-                    "name":"Heading Font Shadow Color (2px 2px 2px #000)",
-                    "description":"Controls the font Shadow color for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"h1FontWeight",
-                    "name":"Heading Font Weight",
-                    "description":"Controls the font weight for heading",
-                    "type":"enum",
-                    "values":[
-                       "300",
-                       "400",
-                       "500",
-                       "600",
-                       "700"
-                    ],
-                    "required":false
                 }
             ]
         },
@@ -296,76 +226,6 @@
                     "description": "Paragraph on overlay image",
                     "type": "markup",
                     "required": false
-                },
-                {
-                    "id":"para1Font",
-                    "name":"Description Font Family",
-                    "description":"Controls the font family for description",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1TextSize",
-                    "name":"Description Font Size",
-                    "description":"Controls the font size for description",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1LetterSpacing",
-                    "name":"Heading Font letter Spacing",
-                    "description":"Controls the letter spacing for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1LineHeight",
-                    "name":"Heading Font Line-Height",
-                    "description":"Controls the font Line-Height for heading",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1Margin",
-                    "name":"Set Description Marging",
-                    "description":"Controls marging for description",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1Padding",
-                    "name":"Set Description Padding",
-                    "description":"Controls Parging for description",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1Color",
-                    "name":"Description Font Color",
-                    "description":"Controls the font color for description",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1FontShadow",
-                    "name":"Description Font Shadow Color (2px 2px 2px #000)",
-                    "description":"Controls the font Shadow color for description",
-                    "type":"string",
-                    "required":false
-                },
-                {
-                    "id":"para1Weight",
-                    "name":"Description Font Weight",
-                    "description":"Controls the font weight for description",
-                    "type":"enum",
-                    "values":[
-                        "300",
-                        "400",
-                        "500",
-                        "600",
-                        "700"
-                    ],
-                    "required":false
                 }
             ]
         },
@@ -393,7 +253,7 @@
         {
             "id": "imgHoverComponentFilters",
             "name": "Image Hover Component Filters",
-            "description": "This component have CSS filter effects like grayscale, blur, brightness, contrast, drop-shadow, hue-rotate, invert, opacity, saturate, sepia.",
+            "description": "CSS filter Effects",
             "attribute_definitions": [
                 {
                     "id": "imgBlur",
@@ -440,7 +300,7 @@
                 {
                     "id": "imgOpacity",
                     "name": "Opacity",
-                    "description": "Image opacity is 30%",
+                    "description": "Image transparency is 30%",
                     "type": "boolean",
                     "required": false
                 },

@@ -10,14 +10,14 @@
             "attribute_definitions": [
                 {
                     "id": "className",
-                    "name": "CSS Class name for Video background i.e. bg-dark",
-                    "description": "Provide the class name of Video Component.",
+                    "name": "CSS Class Name for Video background i.e. bg-dark",
+                    "description": "Class Name of Video Component.",
                     "type": "string",
                     "required": false
                 },
                 {
                     "id": "videoSelect",
-                    "name": "Select Video",
+                    "name": "Select Video Type",
                     "description": "Select Video",
                     "type": "enum",
                     "values": [
@@ -53,35 +53,35 @@
             "attribute_definitions": [
                 {
                     "id": "videoAutoPlay",
-                    "name": "AutoPlay",
-                    "description": "Autoplay Video on Page Load",
+                    "name": "Enable AutoPlay",
+                    "description": "Enable Autoplay Video on Page Load",
                     "type": "boolean",
                     "required": false
                 },
                 {
                     "id": "videoMute",
-                    "name": "Mute Video",
-                    "description": "Mute Video when playing",
+                    "name": "Enable Mute Video",
+                    "description": "Enable Mute Video when playing",
                     "type": "boolean",
                     "required": false
                 },
                 {
                     "id": "videoLoop",
-                    "name": "Loop Video",
-                    "description": "Loop Video after play",
+                    "name": "Enable Loop Video",
+                    "description": "Enable Loop Video after play",
                     "type": "boolean",
                     "required": false
                 },
                 {
                     "id": "videoFullScreen",
-                    "name": "Allow Full Screen",
-                    "description": "Allow Full Screen",
+                    "name": "Enable Allow Full Screen",
+                    "description": "Enable Allow Full Screen",
                     "type": "boolean",
                     "required": false
                 },
                 {
                     "id": "videoResolution",
-                    "name": "Video Resolution",
+                    "name": "Select Video Resolution",
                     "description": "Select Video Resolution",
                     "type": "enum",
                     "values": [
@@ -109,15 +109,15 @@
                 },
                 {
                     "id": "videoModalPopup",
-                    "name": "Open Video in Modal Popup",
+                    "name": "Display Video in Modal Popup",
                     "description": "Open Video in Modal Popup",
                     "type": "boolean",
                     "required": false
                 },
                 {
                     "id": "videoPlayIcon",
-                    "name": "Play Icon",
-                    "description": "Display Play Icon",
+                    "name": "Enable Play Icon",
+                    "description": "Enable Display Play Icon",
                     "type": "boolean",
                     "required": false
                 }

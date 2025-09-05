@@ -1,0 +1,43 @@
+@import "../../../variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.imageTextSection {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    &.parallax-bg {
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    &.normal-bg {
+        background-attachment: inherit;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .bgcolor-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.textWithImageWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .experience-pd_assets-pdPlusTextWithImage {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

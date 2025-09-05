@@ -1,0 +1,76 @@
+@import "../../variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.image-hover-scale {
+    img {
+        transition: all .5s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.ff-oswald {
+    font-family: $oswald;
+}
+
+.f-100 {
+    font-size: 100%;
+
+    @include media-breakpoint-down(md) { 
+        font-size: 100%;
+    }
+}
+
+.f-200 {
+    font-size: 200%;
+
+    @include media-breakpoint-down(md) { 
+        font-size: 100%;
+    }
+}
+
+.f-300 {
+    font-size: 300%;
+
+    @include media-breakpoint-down(md) { 
+        font-size: 150%;
+    }
+}
+
+.theme-typo {
+    h1,h2,h3,h4,h5,h6 {
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 300%;
+    }
+    
+    h2 {
+        font-size: 250%;
+    }
+    
+    h3 {
+        font-size: 200%;
+    }
+    
+    h4 {
+        font-size: 150%;
+    }
+    
+    h5 {
+        font-size: 125%;
+    }
+
+    h6 {
+        font-size: 100%;
+    }
+    
+    p {
+        font-size: 100%;
+        font-weight: normal;
+    }
+}
+

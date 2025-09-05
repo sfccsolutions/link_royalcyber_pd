@@ -1,0 +1,142 @@
+@import "variables";
+@import "mixins";
+@import "bootstrap/scss/mixins/breakpoints";
+
+.photo-slick-slider {
+    .slick-next, .slick-prev {
+        position: absolute;
+        z-index: 1;
+        height: 60px;
+        width: 60px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 40px;
+            width: 30px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    .slick-prev {
+        left: 55px;
+        &::before {
+            /* Use the data URI of your SVG with the desired fill color */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-icon' style='width: 1em; height: 1em; vertical-align: middle; overflow: hidden;' viewBox='0 0 1024 1024' version='1.1'%3E%3Cpath d='M674.891852 133.404444 322.275556 498.536296c-1.137778 1.232593-2.085926 2.56-2.939259 3.982222-4.361481 7.205926-3.508148 16.592593 2.56 22.945185l352.616296 365.131852c7.395556 7.68 19.816296 7.774815 27.306667 0 7.205926-7.395556 6.826667-19.342222-0.379259-26.737778l-339.626667-351.762963c0 0 0 0 0-0.094815l340.005926-352.047407c7.205926-7.395556 7.49037-19.342222 0.379259-26.737778C694.708148 125.62963 682.287407 125.724444 674.891852 133.404444z' fill='white' /%3E%3C/svg%3E");
+        }
+    }
+    
+    .slick-next {
+        right: 55px;
+        &::before {
+            /* Use the data URI of your SVG with the desired fill color */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='svg-icon' style='width: 1em; height: 1em; vertical-align: middle; overflow: hidden;' viewBox='0 0 1024 1024' version='1.1'%3E%3Cpath d='M261.743306 947.106726 240.124939 921.16796 731.123626 512 240.124939 102.83204 261.743306 76.893274 783.874037 512Z' fill='white' /%3E%3C/svg%3E");
+        }
+    }
+    .slick-dots {
+        bottom: 88px;
+        width: max-content;
+        left: 50%;
+        transform: translateX(-50%);
+        li {
+            margin: 0 -6.4px 0 0;
+            button {
+                &::before {
+                    font-size: 24px;
+                    top: 0px;
+                    color: #fff;
+                    opacity: 1;
+                }
+            }
+            &.slick-active {
+                button {
+                    &::before {
+                        color: #3D84FB;
+                    }
+                }
+            }
+
+        }
+        @include media-breakpoint-down(md) {
+            bottom: 60px;
+        }
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+}
+
+.rectangles-wrapper {
+    .slick-list {
+        max-width: remCalc(1620);
+        margin: 0 auto remCalc(104);
+
+        .slick-slide {
+            margin: 0 remCalc(29);
+        }
+    }
+
+    .slick-next {
+        &::before {
+            background: url(../images/chevron-right.png);
+            width: remCalc(60);
+            height: remCalc(120);
+            left: remCalc(-370);
+            background-repeat: no-repeat;
+        }
+
+        @include media-breakpoint-down(md) {
+            &::before{
+                left: 90%;
+            }
+        }
+    }
+
+    .slick-prev {
+        display: none !important;
+    }
+}
+
+.square-wrapper {
+    .slick-list {
+        max-width: remCalc(1470);
+        margin: 0 auto remCalc(304);
+
+        .slick-slide {
+            margin: 0 remCalc(40);
+            @include media-breakpoint-down(md) {
+                margin: 0;
+            }
+        }
+    }
+
+    .slick-next {
+        &::before {
+            background: url(../images/chevron-right.png);
+            width: remCalc(60);
+            height: remCalc(120);
+            left: remCalc(-370);
+            background-repeat: no-repeat;
+        }
+
+        @include media-breakpoint-down(md) {
+            &::before{
+                left: 90%;
+            }
+        }
+    }
+
+    .slick-prev {
+        display: none !important;
+    }
+}
+
+.photo-slick-slider .slick-arrow {
+    &.menu-opened {
+        @include media-breakpoint-down(xl) {
+            z-index: 0;
+        }
+    }
+}

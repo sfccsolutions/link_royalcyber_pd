@@ -1,0 +1,38 @@
+@import "../../variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.pdPlusDesignBoxWrapper { padding: 20px 0; }
+
+.design-content-item {
+    text-align: center;
+    padding: 10px;
+    display: block;
+    color: inherit !important;
+    position: relative;
+    z-index: 1;
+
+    .photo-tile-container {
+        max-width: 75px;
+        margin: 0 auto 8px;
+    }
+
+    .text-editor {
+        text-align: center;
+        color: inherit !important;
+
+        h1,h2,h3,h4,h5,h6 {
+            font-size: 1.1em;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -.02em;
+            font-family: $oswald;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-family: "Arial", "Helvetica", sans-serif;
+            color: #000;
+            font-size: 14px;
+        }
+    }
+}

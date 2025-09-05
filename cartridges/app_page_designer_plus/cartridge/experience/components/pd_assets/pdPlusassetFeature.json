@@ -1,0 +1,205 @@
+{
+    "name": "PD Plus Asset Feature",
+    "description": "Asset Feature",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "boxAlignment",
+            "name": "Asset Alignment",
+            "description": "Align Asset left, center or right horizontally",
+            "attribute_definitions": [
+                {
+                    "id": "horizontalAlignment",
+                    "name": "Asset Horizontal Alignment",
+                    "description":"Align Asset left, center or right horizontally",
+                    "type": "enum",
+                    "values": ["horizontal-left","horizontal-center", "horizontal-right"],
+                    "required": false
+                },
+                {
+                    "id": "verticalAlignment",
+                    "name": "Asset Vertical Alignment",
+                    "description":"Align Asset top, center or bottom vertically",
+                    "type": "enum",
+                    "values": ["vertical-top","vertical-center", "vertical-bottom"],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "animationSetting",
+            "name": "Asset Animation Setting",
+            "description": "Set Animation Setting (type, speed, duration)",
+            "attribute_definitions": [
+                {
+                    "id": "AnimationLax",
+                    "name": "Select Class for animation on scroll",
+                    "description": "Please select a class for animation on scroll",
+                    "type": "enum",
+                    "values": [
+                        "Animate Image",
+                        "Column Animate Up",
+                        "Column Animate Down"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "animationType",
+                    "name": "Animation Type e.g (fade-in, fade-up, fade-down)",
+                    "description": "Please select type of animation",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "animationDuration",
+                    "name": "Animation Duration e.g (1000 is equal 1s)",
+                    "description": "Please select duration of animation",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "h1Configurations",
+            "name": "Asset Heading Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "featureHeading",
+                    "name": "Heading Text",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "featureHeadingColor",
+                    "name": "Heading Text Color",
+                    "type": "enum",
+                    "values": [
+                        "black",
+                        "white"
+                    ],
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "para1Configurations",
+            "name": "Asset Description Configurations",
+            "attribute_definitions": [
+                {
+                    "id": "featureDesc",
+                    "name": "Asset Description Text",
+                    "type": "markup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "feature",
+            "name": "Asset Content",
+            "attribute_definitions": [
+                {
+                    "id": "featureIcon",
+                    "name": "Asset Icon (icon size 32px by 32px)",
+                    "type": "image",
+                    "description":"Asset Icon 32px by 32px",
+                    "required": false
+                },
+                {
+                    "id": "iconAlt",
+                    "name": "Asset Icon ALT",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "featureImgWidth",
+                    "name": "Asset Image Width",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "featureImage",
+                    "name": "Asset Image",
+                    "type": "image",
+                    "description":"Asset Image",
+                    "required": false
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Asset Image ALT",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "featureImgDesc",
+                    "name": "Asset Image Description Text",
+                    "type": "markup",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "assetCTAConfigurations",
+            "name": "CTA Configurations",
+            "description": "CTA configurations for this component.",
+            "attribute_definitions": [
+                {
+                    "id": "assetCTALabel",
+                    "name": "Link Label",
+                    "description": "Label to display as the link/CTA.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTATitle",
+                    "name": "Link Title",
+                    "description": "Title attribute to attach to the asset's Link.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTAURL",
+                    "name": "Link",
+                    "description": "Link/CTA URL reference to add to the asset.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "assetCTABgColor",
+                    "name": "Background color for CTA",
+                    "description": "Background color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTATextColor",
+                    "name": "Text color for CTA",
+                    "description": "Text color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTAHoverBgColor",
+                    "name": "Background hover color for CTA",
+                    "description": "Background hover color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTAHoverTextColor",
+                    "name": "Text hover color for CTA",
+                    "description": "Text hover color for CTA",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "assetCTABorderRadius",
+                    "name": "Set border radius for CTA",
+                    "description": "Border radius for CTA",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

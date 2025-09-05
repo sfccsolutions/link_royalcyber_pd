@@ -1,0 +1,22 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addJs('/js/slick.js');
+    assets.addCss('/css/slick.css');
+</isscript>
+<iscomment> add rectangles-wrapper or square-wrapper for styling </iscomment>
+<div class="${pdict.customClassName ? pdict.customClassName : ''}">
+    <isif condition="${pdict.title}">
+        <div class = "container">
+            <div class="slick-heading">
+                <h1 class="slick-heading__heading">${pdict.title}</h1> 
+            </div>
+        </div>
+    </isif>
+    <div id="${pdict.id}" class="rwc-pd-slick-slider ${pdict.slickScrollClass} ${pdict.slickArrowAdjustClass}" data-config="${pdict.slickConfiguration}">
+        <isprint value="${pdict.regions.slides.render()}" encoding="off" />
+        <isif condition="${!pdict.link == ''}">
+            <a class = "rwc-btn-primary slickButton" tabindex="0" href="${pdict.link}">${pdict.buttonText}</a>
+        </isif>
+    </div>
+</div>
+    

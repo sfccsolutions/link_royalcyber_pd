@@ -1,0 +1,56 @@
+{
+    "name": "PD Plus Masonry Gallery Layout",
+    "group": "pd_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "componentSettings",
+            "name": "Component Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "containerClass",
+                    "name": "Custom Class Name",
+                    "description": "Please Enter Custom Class Name",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "isContainer",
+                    "name": "Layout Container Fluid",
+                    "description": "Set layout fluid or at center",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "buttonText",
+                    "name": "Button for Text Editor",
+                    "description": "This is the button for text content area",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "tileLink",
+                    "name": "Link on Anchor Button",
+                    "description": "Provide the Link URL of Anchor Button.",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "tileNewtab",
+                    "name": "New Tab",
+                    "description": "Open Link in New Tab",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
+        }
+    ],
+
+    "region_definitions": [
+        {
+            "id": "pdPlusMasonaryContent",
+            "name": "PD Plus Masonry Gallery layout",
+            "component_type_exclusions": []
+        }
+    ]
+}

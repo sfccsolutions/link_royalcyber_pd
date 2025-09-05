@@ -1,0 +1,26 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusBGWithHeading.css');
+</isscript>
+
+<div class="pdplus-component pd-section-bg-layout ${pdict.bgImageParallax} ${pdict.customCss}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
+    <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+    <div class="section-bg-wrapper">
+        <div class="${pdict.isContainer} ${pdict.customizeSpaces}">
+            <isif condition="${pdict.sectionTopHeading ||  pdict.sectionTopText}">
+                <div class="pd-section-bg-top text-center mb-4">
+                    <isif condition="${pdict.sectionTopHeading}">
+                        <h2 style="color: ${pdict.sectionTextColor}">${pdict.sectionTopHeading}</h2>
+                    </isif>
+                    <isif condition="${pdict.sectionTopText}">
+                        <div class="pd-section-top-text">
+                            <p style="color: ${pdict.sectionTextColor}">${pdict.sectionTopText}</p>
+                        </div>
+                    </isif>
+                </div>
+            </isif>
+            <iscomment> Region Created for media and content </iscomment>
+            <isprint value="${pdict.regions.pdPlusBGWithHeading.setClassName('pd-section-content comp-inner-content').render()}" encoding="off" />
+        </div>
+    </div>
+</div>  

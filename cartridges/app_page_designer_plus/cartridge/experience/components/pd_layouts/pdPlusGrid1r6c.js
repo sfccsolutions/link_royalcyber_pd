@@ -20,23 +20,23 @@ module.exports.render = function (context) {
     var content = context.content;
     model.isContainer = content.isContainer ? 'container-fluid' : 'container';
     model.sectionHeight = content.sectionHeight ? content.sectionHeight : '';
-
-    model.customCss = content.customCss ? content.customCss : '';
-
     model.bgComponentColor = 'style="';
+
     if (content.backgroundColor) {
         model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
     }
+
     if (content.gradiantBackgroundColor) {
         model.bgComponentColor += 'background-image: ' + content.gradiantBackgroundColor + '; ';
     }
+
     if (content.backgroundColorAlpha) {
         model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
     }
+
     model.bgComponentColor += '"';
 
     if (content.backgroundImage) {
-        /* Image File Alt Text */
         model.imageAlt = content.imageAlt ? content.imageAlt : '';
 
         model.backgroundImage = {
@@ -50,20 +50,6 @@ module.exports.render = function (context) {
         };
     }
 
-    /* Margin | Padding Settings */
-    model.UILayout = 'style="';
-    model.UILayout += 'padding-top: ' + (content.setPaddingTop ? content.setPaddingTop : '0');
-    model.UILayout += '; padding-right: ' + (content.setPaddingRight ? content.setPaddingRight : '0');
-    model.UILayout += '; padding-bottom: ' + (content.setPaddingBottom ? content.setPaddingBottom : '0');
-    model.UILayout += '; padding-left: ' + (content.setPaddingLeft ? content.setPaddingLeft : '0');
-    model.UILayout += '; margin-top: ' + (content.setMarginTop ? content.setMarginTop : '0');
-    model.UILayout += '; margin-right: ' + (content.setMarginRight ? content.setMarginRight : '0');
-    model.UILayout += '; margin-bottom: ' + (content.setMarginBottom ? content.setMarginBottom : '0');
-    model.UILayout += '; margin-left: ' + (content.setMarginLeft ? content.setMarginLeft : '0');
-    model.UILayout += '; min-height: ' + (content.sectionHeight ? content.sectionHeight : '1px');
-    model.UILayout += ';"';
-
-    /* Automatically register configured regions*/
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 
     return new Template('experience/components/pd_layouts/pdPlusGrid1r6c').render(model).text;

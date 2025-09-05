@@ -6,13 +6,15 @@
     assets.addCss('/css/experience/rwc/pdPlusParallaxScrollingExtend.css');
 </isscript>
 <div class="parallax-container">
-    <div class="opacity test" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>></div>
-    <div class="parallaxScrollingSction ${pdict.parallaxSection} ${pdict.customCss}" style="background-image: url(${pdict.ParallaxScrimg});  min-height : ${pdict.sectionHeight}">
-    <div class="parallax-wrapper" <isif condition="${pdict.UILayout}"><isprint value="${pdict.UILayout}" encoding="off" /></isif>>
-        <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
+    <div class="opacity" <isif condition="${pdict.bgComponentColor}"><isprint value="${pdict.bgComponentColor}" encoding="off" /></isif>></div>
+
+    <div class="parallaxScrollingSction ${pdict.parallaxSection}" style="background-image: url(${pdict.ParallaxScrimg});  min-height : ${pdict.sectionHeight}">
+
+    <div class="parallax-wrapper">
+        <div class="bgcolor-overlay" style="background-color:${pdict.bgOverlay}"></div>
         <div class="parallax-innercontainer">
             <div class="${pdict.isContainer}">
-                <div class="row"> 
+                <div class="row">
                         <div class="col-md-4 col-12 ${pdict.textAlignment} ${pdict.textShadow}" <isif condition="${pdict.textContentColor}"><isprint value="${pdict.textContentColor}" encoding="off" /></isif>>
                             <div class="text-padding" style="padding: ${pdict.TextSectionPaddingR1C1}">
                                 <div data-aos="fade-right">

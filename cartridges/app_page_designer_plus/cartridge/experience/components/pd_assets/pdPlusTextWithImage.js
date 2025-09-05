@@ -52,27 +52,12 @@ module.exports.render = function (context, modelIn) {
     }
     /* Container Area color Scheme styles */
     model.bgComponentColor = 'style="';
+
     if (content.backgroundColor) {
         model.bgComponentColor += 'background-color: ' + content.backgroundColor.value + '; ';
     }
-    if (content.backgroundColorAlpha) {
-        model.bgComponentColor += 'opacity: ' + content.backgroundColorAlpha + '%;';
-    }
 
     model.bgComponentColor += '"';
-
-    /* button color styles */
-    model.btnBgComponentColor = 'style="';
-    if (content.buttonBgColor) {
-        model.btnBgComponentColor += 'background-color: ' + content.buttonBgColor.value + '; ';
-    }
-    if (content.buttonTextColor) {
-        model.btnBgComponentColor += 'color: ' + content.buttonTextColor.value + '; ';
-    }
-    if (content.buttonBorderColor) {
-        model.btnBgComponentColor += 'border-color: ' + content.buttonBorderColor.value + '; ';
-    }
-    model.btnBgComponentColor += '"';
 
     /* text with Image layout if found then concatenate its class name */
     if (content.textXaxisAlignment === 'text on left') {
@@ -81,14 +66,31 @@ module.exports.render = function (context, modelIn) {
         model.textXaxisAlignment = 'order-text-right';
     }
 
-    /* Horizontal Position of text Container if found then concatenate its Class Name */
-
+    /* Vertical Position of text Container if found then concatenate its Class Name */
     if (content.textAlignmentVertical === 'top') {
         model.textAlignmentVertical = 'start';
     } else if (content.textAlignmentVertical === 'center') {
         model.textAlignmentVertical = 'center';
     } else if (content.textAlignmentVertical === 'bottom') {
         model.textAlignmentVertical = 'end';
+    }
+
+    /* Horizontal Position of text Container if found then concatenate its Class Name */
+    if (content.textAlignmentHorizontal === 'left') {
+        model.textAlignmentHorizontal = 'text-start';  // Corrected
+    } else if (content.textAlignmentHorizontal === 'right') {
+        model.textAlignmentHorizontal = 'text-end';    // Corrected
+    } else if (content.textAlignmentHorizontal === 'center') {
+        model.textAlignmentHorizontal = 'text-center'; // Corrected
+    }
+
+    /* Horizontal Position of Button Container */
+    if (content.buttonAlignmentHorizontal === 'left') {
+        model.buttonAlignmentHorizontal = 'text-start';  // Corrected
+    } else if (content.buttonAlignmentHorizontal === 'right') {
+        model.buttonAlignmentHorizontal = 'text-end';    // Corrected
+    } else if (content.buttonAlignmentHorizontal === 'center') {
+        model.buttonAlignmentHorizontal = 'text-center'; // Corrected
     }
 
     return new Template('experience/components/pd_assets/pdPlusTextWithImage').render(model).text;

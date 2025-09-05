@@ -1,0 +1,140 @@
+{
+    "name": "PD Plus Slide With Image",
+    "group": "pd_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "componentSettings",
+            "name": "Component Settings",
+            "description": "The visual display of the container.",
+            "attribute_definitions": [
+                {
+                    "id": "customCss",
+                    "name": "Add class name for custom styles",
+                    "description": "Please add class name for custom styles",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "isContainer",
+                    "name": "Layout Container Fluid",
+                    "description": "Set layout fluid or at center",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "customizeSpaces",
+                    "name": "Cutomize the spaces of text with image container",
+                    "description": "Set the columns spaces and inner contnet",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "textXaxisAlignment",
+                    "name": "Position of text along x-axis w.r.t Image",
+                    "description": "Position of text container with respect to Image",
+                    "type": "enum",
+                    "values": [
+                        "text on left",
+                        "text on right"
+                    ],
+                    "default_value": "text on left",
+                    "required": true
+                },
+                {
+                    "id": "textAlignmentVertical",
+                    "name": "Position of text container along y-axis",
+                    "description": "Position of text container along vertical direction",
+                    "type": "enum",
+                    "values": [
+                        "top",
+                        "center",
+                        "bottom"
+                    ],
+                    "default_value": "center",
+                    "required": false
+                },
+                {
+                    "id": "bgImageParallax",
+                    "name": "Please select the background type ",
+                    "description": "Background type e.g (Parallax/Fixed)",
+                    "type": "enum",
+                    "values": [
+                        "Parallax",
+                        "Normal"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "backgroundImage",
+                    "name": "Add background Image in Section",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "bgOverlay",
+                    "name": "Background Image Overlay Color in (RGBA)",
+                    "description": "Provide overlay color of background",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "bgGradiant",
+                    "name": "Background Gradiant Color ",
+                    "description": "Provide gradiant color of background",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "sectionHeight",
+                    "name": "Background Image Section Height i.e. px/rem/vh",
+                    "description": "Provide height value applied Background Image Height",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "backgroundColor",
+                    "name": "Specify Background Color",
+                    "description": "Set Background Color",
+                    "required": false,
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "backgroundColorAlpha",
+                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
+                    "description": "Set Background Color alpha between 0 and 1",
+                    "type": "enum",
+                    "default_value": 100,
+                    "values": [
+                        10,
+                        20,
+                        30,
+                        40,
+                        50,
+                        60,
+                        70,
+                        80,
+                        90,
+                        100
+                    ],
+                    "required": false
+                }
+            ]
+        }
+    ],
+
+    "region_definitions": [
+        {
+            "id": "pdPlusColumn1",
+            "name": "PD Plus Column 1",
+            "component_type_exclusions": []
+        },
+        {
+            "id": "pdPlusColumn2",
+            "name": "PD Plus Column 2",
+            "component_type_exclusions": []
+        }
+    ]
+}

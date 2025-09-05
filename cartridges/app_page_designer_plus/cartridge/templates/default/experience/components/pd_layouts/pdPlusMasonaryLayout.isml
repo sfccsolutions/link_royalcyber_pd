@@ -1,0 +1,25 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusMasonaryLayout.css');
+</isscript>
+
+<div class="masonary-gallery-section">
+    <div class="${pdict.isContainer}">
+
+        <isif condition="${pdict.buttonText}">
+            <div class="mas-top-btn mb-3">
+                <a class="btn" href="${pdict.tileLink}" <isif condition="${pdict.tileNewtab === true}">target="_blank"</isif>>
+                    <isprint value="${pdict.buttonText}" encoding="off" />
+                </a>
+            </div>
+        </isif>
+        
+        <div class="mas-grid-container">
+            <div class="mas-grid-inner">
+                <div class="mas-grid-layout">
+                    <isprint value="${pdict.regions.pdPlusMasonaryContent.setClassName('mas-grid').render()}" encoding="off" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

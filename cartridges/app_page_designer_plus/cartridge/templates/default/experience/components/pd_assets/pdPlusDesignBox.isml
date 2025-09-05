@@ -1,0 +1,31 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_assets/pdPlusDesignBox.css');
+</isscript>
+
+<iscomment> Design Box Item </iscomment>
+<a href="${pdict.linkBoxItem}" class="design-content-item" <isif condition="${pdict.boxNewtab === true}">target="_blank"</isif>>
+    <div class="photo-tile-container">
+        <figure class="bnr mb-0 photo-tile-figure <isif condition=" ${pdict.imgFile == null}">nulled-image-container</isif>
+            <isif condition="${pdict.imgScaleHover === true}">image-hover-scale</isif> ${pdict.imageYPos} ${pdict.imageXPos}">
+            <isif condition="${pdict.imgFile == null}">
+                <iscomment> If image not selected from BM then default image will be shown. </iscomment>
+                <picture class="bnr-img image-container">
+                    <source srcset="${URLUtils.staticURL('/images/nulled-image.jpg')}" media="(min-width: 768px)" />
+                    <img class="photo-tile-image img-fluid" src="${URLUtils.staticURL('/images/nulled-image.jpg')}" alt="${pdict.imgAlt}"
+                    title="${pdict.imgAlt}" />
+                </picture>
+            <iselse/>
+                <iscomment> Image coming from BM </iscomment>
+                <picture class="bnr-img image-container">
+                    <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 768px)" />
+                    <img class="photo-tile-image img-fluid" src="${pdict.imgFile.src.mobile}" alt="${pdict.imgAlt}" title="${pdict.imgAlt}" />
+                </picture>
+            </isif>
+        </figure>
+    </div>
+    
+    <div class="text-editor">
+        <isprint value="${pdict.richText}" encoding="off"/>
+    </div>
+</a>

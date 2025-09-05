@@ -32,8 +32,8 @@
                 },
                 {
                     "id": "backgroundColorAlpha",
-                    "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
-                    "description": "Set Background Color alpha between 0 and 1",
+                    "name": "Background Color transparency between 10 and 100",
+                    "description": "Background Color transparency between 10 and 100",
                     "type": "enum",
                     "default_value": 100,
                     "values": [
@@ -52,18 +52,8 @@
                 },
                 {
                     "id": "tabTextColor",
-                    "name": "Specify tab text color",
-                    "description": "Set tab text color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
-                },
-                {
-                    "id": "tabBorderColor",
-                    "name": "Specify tab border bottom color",
-                    "description": "Set active tab border bottom color",
+                    "name": "Tab Text Color",
+                    "description": "Set Tab Text Color",
                     "required": false,
                     "type": "custom",
                     "editor_definition": {

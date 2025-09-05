@@ -49,7 +49,7 @@
       },
       {
         "id": "backgroundColor",
-        "name": "Specify Background Color",
+        "name": "Background Color",
         "description": "Set Background Color",
         "required": false,
         "type": "custom",
@@ -59,8 +59,8 @@
     },
     {
         "id": "backgroundColorAlpha",
-        "name": "Specify Background Color Alpha between 0 and 1 i.e 0.2",
-        "description": "Set Background Color alpha between 0 and 1",
+        "name": "Background Color Transparency between 10 and 100",
+        "description": "Set Background Color Transparency between 10 and 100",
         "type": "enum",
         "default_value": 100,
         "values": [

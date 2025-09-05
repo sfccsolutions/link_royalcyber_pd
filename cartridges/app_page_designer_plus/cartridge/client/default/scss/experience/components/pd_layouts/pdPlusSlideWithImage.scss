@@ -1,0 +1,363 @@
+@import "../../variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.text-image-container {
+    position: relative;
+    z-index: 5;
+
+    .text-column {
+        width: 50%;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+
+    .photo-column {
+        width: 50%;
+        overflow-x: hidden;
+
+        .slick-list {
+            .slick-track {
+                display: flex;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+
+    &.order-text-left {
+        .text-column {
+            order: 0;
+        }
+
+        .photo-column {
+            order: 1;
+        }
+    }
+
+    &.order-text-right {
+        .text-column {
+            order: 1;
+        }
+
+        .photo-column {
+            order: 0;
+        }
+    }
+}
+
+.pdplus-slideWithImage {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .bgcolor-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-container {
+        padding: 20px;
+
+        @include media-breakpoint-down(md) {
+            padding: 20px 15px;
+        }
+
+        .text-editor {
+            h1 {
+                font-size: 300%;
+            }
+
+            h2 {
+                font-size: 250%;
+            }
+
+            h3 {
+                font-size: 200%;
+            }
+            
+            p {
+                font-family: "Arial","Helvetica",sans-serif;
+                text-shadow: none;
+                font-size: 1rem;
+                line-height: 1.5;
+
+                > strong {
+                    font-family: "Arial","Helvetica",sans-serif;
+                    text-shadow: none;
+                }
+            }
+
+            h1,h2,h3,h4,h5,h6 {
+                font-family:'FranklinGothicURWCon-Me';
+                font-size: 2rem !important;
+                line-height: 1.2;
+                text-shadow: none;
+                font-weight: normal;
+
+                > strong {
+                    font-family: inherit;
+                    font-size: inherit;
+                    text-shadow: none;
+                }
+            }
+        }
+
+        .btn-wrapper {
+            margin-top: 30px;
+
+            .btn {
+                padding: 0;
+                display: inline-block;
+                border-radius: 30px;
+                padding: 0.625em 1.25em;
+                background-image: none;
+
+                .tile-link {
+                    color: $white;
+                    font-family: $oswald;
+                    line-height: 1.3;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .photo-tile-container {
+        padding: 20px;
+        margin: 0 auto;
+
+        @include media-breakpoint-down(sm) {
+            padding: 20px 15px;
+        }
+
+        .photo-tile-image {
+            width: 100%;
+        }
+    }
+}
+
+.parallax-bg {
+    .pdplus-slideWithImage {
+        background-attachment: fixed;
+    }
+}
+
+.normal-bg {
+    .pdplus-slideWithImage {
+        background-attachment: inherit;
+    }
+}
+
+.pdplus-slideWithImage {
+    .customize-true {
+        .text-image-container {
+            .inner-content {
+                min-height: 100vh;
+                flex-wrap: nowrap;
+                max-width: 1160px;
+                margin: 0 auto;
+    
+                @include media-breakpoint-down(sm) {
+                    flex-wrap: wrap;
+                }
+    
+                .text-column {
+                    width: auto;
+                    flex-shrink: 0;
+    
+                    @include media-breakpoint-down(sm) {
+                        order: 1 !important;
+                        width: 100%;
+                    }
+                }
+    
+    
+                .photo-column {
+                    width: 50% !important;
+            
+                    @include media-breakpoint-down(sm) {
+                        width: 100%;
+                        order: 0 !important;
+                    }
+                }
+    
+                .text-container {
+                    max-width: 361px;
+                    padding: 20px;
+        
+                    .text-editor {    
+                        &.txt-white-shadow {
+                            h1,h2,h3,h4,h5,h6 {
+                                text-shadow: 1px 1px 1px #fff !important;
+                                color: #000 !important;
+        
+                                > strong {
+                                    text-shadow: inherit;
+                                    color: inherit;
+                                }
+                            }
+            
+                            h1 {
+                                text-shadow: 2px 2px 2px #fff !important;
+                                color: #000 !important;
+        
+                                > strong {
+                                    text-shadow: inherit !important;
+                                    color: inherit !important;
+                                }
+                            }
+        
+                            p {
+                                text-shadow: 1px 1px 1px #fff !important;
+                                color: #000 !important;
+        
+                                > strong {
+                                    text-shadow: inherit;
+                                    color: inherit;
+                                }
+                            }
+    
+                            .custom-shadow {
+                                text-shadow: none !important;
+                            }
+                        }
+        
+                        &.txt-black-shadow {
+                            h1,h2,h3,h4,h5,h6 {
+                                text-shadow: 1px 1px 1px #000 !important;
+                                color: #fff !important;
+        
+                                > strong {
+                                    text-shadow: inherit !important;
+                                    color: inherit !important;
+                                }
+                            }
+            
+                            h1 {
+                                text-shadow: 2px 2px 2px #000 !important;
+                                color: #fff !important;
+        
+                                > strong {
+                                    text-shadow: inherit !important;
+                                    color: inherit !important;
+                                }
+                            }
+    
+                            p {
+                                color: #fff !important;
+                                text-shadow: 1px 1px 1px #000 !important;
+        
+                                > strong {
+                                    font-family: inherit !important;
+                                    text-shadow: inherit !important;
+                                    color: inherit !important;
+                                }
+                            }
+    
+                            .custom-shadow {
+                                text-shadow: none !important;
+                            }
+                        }
+    
+                        h1,h2,h3,h4,h5,h6 {
+                            font-family: $oswald;
+                            margin-bottom: 20px;
+                            color: inherit !important;
+        
+                            > strong {
+                                font-family: $oswald;
+                                text-shadow: inherit;
+                            }
+                        }
+        
+                        h1 {
+                            font-size: 300% !important;
+                            font-weight: 600;
+                            text-transform: uppercase;
+        
+                            > strong {
+                                text-transform: uppercase;
+                                text-shadow: inherit !important;
+                            }
+                        }
+            
+                        h2 {
+                            font-size: 250% !important;
+                        }
+            
+                        h3 {
+                            font-size: 200% !important;
+                        }
+        
+                        p, strong {
+                            font-family: "Arial","Helvetica",sans-serif !important;
+                            text-shadow: inherit !important;
+                            color: inherit !important;
+            
+                            > strong {
+                                font-family: "Arial","Helvetica",sans-serif !important;
+                                text-shadow: inherit;
+                                color: inherit !important;
+                            }
+                        }
+                        
+                        strong {
+                            font: 700 1em/1.65em Public Sans,Arial,sans-serif!important;
+                        }
+                    }
+                }
+        
+                .photo-tile-container {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }    
+}
+
+.f-300 {
+    font-size: 300%;
+
+    @include media-breakpoint-down(md) { 
+        font-size: 150%;
+    }
+}
+
+.f-200 {
+    font-size: 200%;
+
+    @include media-breakpoint-down(md) { 
+        font-size: 100%;
+    }
+}
+
+.slide-content-holder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    .experience-pd_assets-pdPlusTextWithImage {
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .slide-content-wrapper {
+        min-height: 100vh;
+    }    
+}

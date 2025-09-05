@@ -10,15 +10,15 @@
             "attribute_definitions": [
                 {
                     "id": "promoTextItem",
-                    "name": "Please enter content for promo message",
-                    "description": "Please enter content for promo message",
+                    "name": "Promo Message Content",
+                    "description": "Please Enter Content for Promo Message",
                     "type": "markup",
                     "required": true
                 },
                 {
                     "id": "isHideCloseBtn",
-                    "name": "Click checkbox to hide the promo banner",
-                    "description": "Click checkbox to hide the promo banner",
+                    "name": "Hide the Promo Banner",
+                    "description": "Click and Hide the Promo Banner",
                     "type": "boolean",
                     "default_value": true,
                     "required": false
