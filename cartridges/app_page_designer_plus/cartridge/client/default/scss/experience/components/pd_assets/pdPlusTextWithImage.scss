@@ -53,8 +53,12 @@
     }
 
     .photo-tile-container {
-        .photo-tile-image {
-            width: 100%;
+        .image-container {
+            display: block;
+
+            @include media-breakpoint-up(md) {
+                text-align: right;
+            }
         }
     }
 }

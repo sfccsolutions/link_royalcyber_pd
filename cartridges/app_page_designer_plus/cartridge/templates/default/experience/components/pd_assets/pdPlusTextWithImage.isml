@@ -23,7 +23,7 @@
             <div class="col-12 col-md-6 photo-column ">
                 <div class="photo-tile-container">
                     <figure class="bnr mb-0 photo-tile-figure <isif condition=" ${pdict.imgFile == null}">nulled-image-container</isif>
-                        <isif condition="${pdict.imgScaleHover === true}">image-hover-scale</isif> ${pdict.imageYPos} ${pdict.imageXPos}">
+                        <isif condition="${pdict.imgScaleHover === true}">image-hover-scale</isif> ${pdict.imageYPos !== null ? pdict.imageYPos : ''} ${pdict.imageXPos !== null ? pdict.imageXPos : ''}">
 
                         <isif condition="${pdict.imgFile == null}">
                             <iscomment> If image not selected from BM then default image will be shown. </iscomment>
