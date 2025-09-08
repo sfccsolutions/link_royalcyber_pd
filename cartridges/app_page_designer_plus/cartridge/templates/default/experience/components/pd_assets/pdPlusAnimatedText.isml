@@ -1,8 +1,0 @@
-<isscript>
-    var assets = require('*/cartridge/scripts/assets.js');
-</isscript>
-
-
-<div class="comp-content-txt text-left ${pdict.animatedTextClass}">
-    <h3 style="color: ${pdict.animatedTextFieldColor}"><isprint value="${pdict.animatedTextField}" encoding="off"/></h3>
-</div>

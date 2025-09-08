@@ -38,16 +38,22 @@
                 },
                 {
                     "id": "tilesBgColor",
-                    "name": "Background Color Transparency e.g rgba(0,0,0,0.1)",
+                    "name": "Background Color",
                     "description": "Enter the background-color with transparency",
-                    "type": "string",
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    },
                     "required": false
                 },
                 {
                     "id": "tilesTextColor",
-                    "name": "Tiles Text Color e.g #000000 or rgba(0,0,0,1)",
+                    "name": "Tiles Text Color",
                     "description": "Specify the Text Color",
-                    "type": "string",
+                    "type": "custom",
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    },
                     "required": false
                 },
                 {

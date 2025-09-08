@@ -16,11 +16,6 @@
     &-none { object-fit: none; }
 }
 
-a.box-image-tile {
-    text-decoration: none;
-    color: #000;
-}
-
 [class^="imghvr-"],
 [class*=" imghvr-"] {
     @include size(100%);
@@ -47,7 +42,6 @@ a.box-image-tile {
 
     figcaption {
         @include fill(0);
-        padding: 15px;
     }
 
     .img-title {
