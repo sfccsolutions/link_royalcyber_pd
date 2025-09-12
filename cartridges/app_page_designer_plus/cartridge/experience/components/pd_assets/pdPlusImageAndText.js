@@ -22,7 +22,8 @@ module.exports.render = function (context) {
     model.image = ImageTransformation.getScaledImage(content.image);
     model.link = content.ITCLink ? content.ITCLink : '#';
     model.alt = content.alt ? content.alt : null;
-        /* Product hover text color */
+
+    /* Product hover text color */
     model.styletileTextColor = 'style="';
     if (content.tileTextColor) {
         model.styletileTextColor += 'color: ' + content.tileTextColor.value + '; ';  

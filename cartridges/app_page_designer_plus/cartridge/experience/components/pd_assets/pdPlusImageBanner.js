@@ -33,7 +33,6 @@ module.exports.render = function (context) {
 
 
     /* Image Scale on Hover Checkbox */
-    // model.imgScaleHover = content.imgScaleHover;
 
     /* Vertical Position of Image if found then concatenate its class name */ 
     if (content.imageYPos === 'top') {

@@ -18,5 +18,5 @@ module.exports.render = function (context, modelIn) {
         model.richText = content.richText;
     }
 
-    return new Template('experience/components/commerce_assets/pdPludEditorialRichText').render(model).text;
+    return new Template('experience/components/commerce_assets/pdPlusEditorialRichText').render(model).text;
 };

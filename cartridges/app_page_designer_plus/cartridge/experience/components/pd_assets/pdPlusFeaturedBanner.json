@@ -1,0 +1,123 @@
+{
+    "name": "PD Plus Featured Banner",
+    "description": "Featured Banner at top of the page",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "customImageAttributes",
+            "name": "Custom Tile Configurations",
+            "description": "This component will display image with subtitle positions.",
+            "attribute_definitions": [
+                {
+                    "id": "imgFile",
+                    "name": "Featured Image",
+                    "description": "Featured image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "imgAlt",
+                    "name": "Alternate Text of Image",
+                    "description": "The image alt text shown by the component.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "imgBannerDetail",
+                    "name": "Image Banner Detail",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "bannerContentPosition",
+                    "name": "Position of Banner Content",
+                    "type": "enum",
+                    "default_value": "center left",
+                    "values": [
+                        "left top",
+                        "center top",
+                        "right top",
+                        "center left",
+                        "center",
+                        "center right",
+                        "bottom left",
+                        "bottom center",
+                        "bottom right"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "brandText",
+                    "name": "Brand Text",
+                    "description": "Enter the Brand Text.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "styleBlock",
+                    "name": "Style Block",
+                    "type": "text",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "id": "hotSpotAttributes",
+            "name": "Product Hotspot Configurations",
+            "description": "Configurations of Product hotspot.",
+            "attribute_definitions": [
+                {
+                    "id": "hotspotImg",
+                    "name": "Hotspot Image",
+                    "description": "Hotspot image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "hotspotImgAlt",
+                    "name": "Alternate Text of Hotspot Image",
+                    "description": "The image alt text shown of Hotspot.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "hotspotContent",
+                    "name": "Hotspot Content",
+                    "type": "markup",
+                    "required": false
+                },
+                {
+                    "id": "hotspotContentYPos",
+                    "name": "Position of Hotspot Content along Y-axis",
+                    "type": "enum",
+                    "default_value": "bottom",
+                    "values": [
+                        "top",
+                        "center",
+                        "bottom"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "hotspotLink",
+                    "name": "HotSpot Link",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "hotspotPro",
+                    "name": "HotSpot Product Item",
+                    "type": "product",
+                    "required": false
+                },
+                {
+                    "id": "hotspotLinkNewTab",
+                    "name": "Open in New Tab",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

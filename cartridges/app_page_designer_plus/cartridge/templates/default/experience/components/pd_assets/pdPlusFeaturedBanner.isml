@@ -1,0 +1,69 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_assets/pdPlusFeaturedBanner.css');
+</isscript>
+
+<isif condition="${pdict.styleBlock !== undefinded}">
+    <style>
+        ${pdict.styleBlock}
+    </style>
+</isif>
+
+<div class="featured-banner ${pdict.bannerContentPosition + ' ' + pdict.hotSpotContentYPos}">
+    <isif condition="${pdict.imgFile == null}">
+        <picture class="bnr-img image-container">
+            <source srcset="${URLUtils.staticURL('/images/nulled-image.jpg')}" media="(min-width: 768px)" />
+            <img src="${URLUtils.staticURL('/images/nulled-image.jpg')}" alt="${pdict.imgAlt}"
+                title="${pdict.imgAlt}" />
+        </picture>
+    <iselse/>
+        <picture class="bnr-img image-container">
+            <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 768px)" />
+            <img src="${pdict.imgFile.src.mobile}" alt="${pdict.imgAlt}" title="${pdict.imgAlt}" />
+        </picture>
+    </isif>
+
+    <isif condition="${pdict.brandText !== ''}">
+        <div class="bnrContent-logo">
+            ${pdict.brandText}
+        </div>
+    </isif>
+
+    <div class="banner-content">
+        <isprint value="${pdict.imgBannerDetail}" encoding="off" />
+    </div>
+
+    <div class="expanding-thumbnail">
+        <div class="expanding-box">
+            <div class="expanding-content">
+                <div class="thumbnail-image">
+                    <a href="${pdict.hotspotLink}" target="_blank">
+                        <isif condition="${pdict.hotspotImg == null}">
+                            <picture class="bnr-img image-container">
+                                <source srcset="${URLUtils.staticURL('/images/nulled-image.jpg')}" media="(min-width: 768px)" />
+                                <img src="${URLUtils.staticURL('/images/nulled-image.jpg')}" alt="${pdict.hotspotImgAlt}"
+                                    title="${pdict.hotspotImgAlt}" />
+                            </picture>
+                        <iselse/>
+                            <picture class="bnr-img image-container">
+                                <source srcset="${pdict.hotspotImg.src.desktop}" media="(min-width: 768px)" />
+                                <img src="${pdict.hotspotImg.src.mobile}" alt="${pdict.hotspotImgAlt}" title="${pdict.hotspotImgAlt}" />
+                            </picture>
+                        </isif>
+                    </a>
+                </div>
+
+                <div class="product-details">
+                    <isprint value="${pdict.hotspotContent}" encoding="off" />
+                </div>
+            </div>
+
+            <div class="add-button">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        fill="none"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>

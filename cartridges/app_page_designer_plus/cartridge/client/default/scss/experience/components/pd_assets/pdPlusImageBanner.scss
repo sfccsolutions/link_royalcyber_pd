@@ -1,9 +1,13 @@
 @import "../../../variables";
 @import "./mixins";
 
-.experience-pd_assets-customImageBanner { height: 100%; }
+.experience-pd_assets-customImageBanner {
+    height: 100%;
+}
 
-.tile-link { text-decoration: none; }
+.tile-link {
+    text-decoration: none;
+}
 
 .bnr {
     position: relative;
@@ -11,35 +15,35 @@
     margin-bottom: 0;
     overflow: hidden;
 
-         .image-container {
+    .image-container {
+        display: block;
+
+        img {
             display: block;
+            width: 100%;
+        }
 
-            img {
-                display: block;
-                width: 100%;
-            }
+        .auto {
+            aspect-ratio: 1/1;
+        }
 
-            .auto {
-                aspect-ratio: 1/1;
-            }
+        .hd-images-and-videos {
+            aspect-ratio: 16/9;
+        }
 
-            .hd-images-and-videos {
-                aspect-ratio: 16/9; 
-            }
+        .standard-monitors {
+            aspect-ratio: 3/2;
+        }
 
-            .standard-monitors {
-                aspect-ratio: 3/2;
-            }
+        .classic-films {
+            aspect-ratio: 3/2;
+        }
 
-            .classic-films {
-                aspect-ratio: 3/2;
-            }
+        .cenimascope {
+            aspect-ratio: 21/9;
+        }
+    }
 
-            .cenimascope {
-                aspect-ratio: 21/9;
-            }
-         }
-        
 
 
     /* Nulled Image Container */
@@ -49,7 +53,9 @@
         picture {
             @include size(100%);
 
-            img { @include size(100%); }
+            img {
+                @include size(100%);
+            }
         }
     }
 
@@ -63,23 +69,29 @@
         padding: 4%;
         width: 100%;
 
-        @include media-breakpoint-down(sm) { 
+        @include media-breakpoint-down(sm) {
             padding: 0;
             position: relative;
         }
     }
 
-    &.bnr--xstart .bnr-caption { justify-content: flex-start; }
+    &.bnr--xstart .bnr-caption {
+        justify-content: flex-start;
+    }
 
-    &.bnr--xcenter .bnr-caption { justify-content: center; }
+    &.bnr--xcenter .bnr-caption {
+        justify-content: center;
+    }
 
-    &.bnr--xbottom .bnr-caption { justify-content: flex-end; }
+    &.bnr--xbottom .bnr-caption {
+        justify-content: flex-end;
+    }
 
     &.bnr--ystart .bnr-caption-bg {
         margin-left: auto;
         max-width: 50%;
 
-        @include media-breakpoint-down(sm) { 
+        @include media-breakpoint-down(sm) {
             max-width: 100%;
             width: 100%;
         }
@@ -92,17 +104,17 @@
         margin-left: auto;
         max-width: 50%;
 
-        @include media-breakpoint-down(sm) { 
+        @include media-breakpoint-down(sm) {
             max-width: 100%;
         }
     }
 
-    &.bnr--yright .bnr-caption-bg { 
-        margin-right: auto; 
+    &.bnr--yright .bnr-caption-bg {
+        margin-right: auto;
         max-width: 50%;
 
-        @include media-breakpoint-down(sm) { 
-            max-width: 100%;  
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
         }
     }
 }
@@ -115,9 +127,13 @@
         }
     }
 
-    .bnr-caption [class*="bnr-text"] { transition: 0.2s; }
+    .bnr-caption [class*="bnr-text"] {
+        transition: 0.2s;
+    }
 
-    > * { backface-visibility: hidden; }
+    >* {
+        backface-visibility: hidden;
+    }
 
     .bnr-img img {
         backface-visibility: hidden;
@@ -126,7 +142,9 @@
         max-width: 100%;
         vertical-align: middle;
 
-        .product-tiles-outer & { height: 100%; }
+        .product-tiles-outer & {
+            height: 100%;
+        }
     }
 }
 
@@ -136,7 +154,7 @@
     flex-direction: column;
     padding: 60px;
     width: fit-content;
-    
+
     @include media-breakpoint-down(sm) {
         padding: 20px;
         margin: 0;
@@ -147,7 +165,9 @@
         font-weight: 700;
         line-height: 1em;
 
-        &.bnr-text3 { margin-top: 5%; }
+        &.bnr-text3 {
+            margin-top: 5%;
+        }
     }
 
     .heading-font {
@@ -167,17 +187,17 @@
         left: 0;
 
         &.square {
-                border-radius: 0;
+            border-radius: 0;
         }
 
         &.rounded-bordered {
-                border-radius: 8px;
-                display: inline-block;
+            border-radius: 8px;
+            display: inline-block;
         }
 
         &.circled-bordered {
-                border-radius: 30px;
-                display: inline-block;
+            border-radius: 30px;
+            display: inline-block;
         }
     }
 }
@@ -195,13 +215,13 @@
     }
 
     &.rounded-bordered {
-            border-radius: 8px;
-            display: inline-block;
+        border-radius: 8px;
+        display: inline-block;
     }
 
     &.circled-bordered {
-            border-radius: 30px;
-            display: inline-block;
+        border-radius: 30px;
+        display: inline-block;
     }
 
 }
