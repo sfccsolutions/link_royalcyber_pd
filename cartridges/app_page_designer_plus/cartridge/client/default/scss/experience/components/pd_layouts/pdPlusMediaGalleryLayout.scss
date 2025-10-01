@@ -1,0 +1,123 @@
+.collection-container {
+    position: relative;
+    width: 100%;
+    height: 100vh !important;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+
+    .collection-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.40) 88.8%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.20) 81.73%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0) 82.51%, rgba(0, 0, 0, 0.20) 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .prev {
+        z-index: 1;
+    }
+
+    .current {
+        z-index: 2;
+        animation: none;
+    }
+
+    .collection-content {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        color: white;
+        z-index: 3;
+        max-width: 500px;
+    }
+
+    .category {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-family: "Playfair Display", serif;
+        font-size: 60px;
+        line-height: 1.1;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+
+    .fancy-btn {
+        background: white;
+        color: black;
+        border: none;
+        border-radius: 100px;
+        padding: 12px 28px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background: #E1C16E;
+            color: black;
+        }
+    }
+
+    .thumbnails {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        gap: 8px;
+        z-index: 5;
+        background: rgba(246, 242, 237, 0.95);
+        padding: 12px;
+        backdrop-filter: blur(10px);
+
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &.active {
+                border: 2px solid white;
+            }
+        }
+    }
+}
+
+
+@keyframes curtainRevealFromLeft {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes curtainRevealFromRight {
+    0% {
+        clip-path: inset(0 0 0 100%);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}

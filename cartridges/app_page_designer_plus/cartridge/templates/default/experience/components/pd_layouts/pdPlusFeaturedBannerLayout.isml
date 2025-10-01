@@ -1,17 +1,61 @@
 <isscript>
     var assets = require('*/cartridge/scripts/assets.js');
-    assets.addCss('/css/experience/components/commerceLayouts/layout.css');
-    assets.addCss('/css/experience/components/pd_layouts/pdPlusGridLayout.css');
+    assets.addCss('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusFeaturedBanner.css');
+    assets.addJs('/js/pdPlusFeaturedBannerLayout.js');
+    assets.addJs('/js/custom-dropdown.js');
 </isscript>
 
-<div class="pdplus-component pdplus-grid-1r-1c ${pdict.bgImageParallax}" <isif condition="${pdict.BGImageProperties}"><isprint value="${pdict.BGImageProperties}" encoding="off" /></isif>>
-    <div class="bgcolor-overlay" style= "background-color:${pdict.bgOverlay}"></div>
-    <div class="pdplus-grid-wrapper">
-        <iscomment> If checkbox is clicked className Container will be added here else container-fluid className will be added </iscomment>
-        <div class="${pdict.isContainer}" style="max-width: ${pdict.maxWidth};">
-            <div class="row align-items-${pdict.verticalAlignment} justify-content-${pdict.horizontalAlginment}">
-                <isprint value="${pdict.regions.column1.setClassName("region col-12 mb-0").render()}" encoding="off" />
-            </div>
+<isif condition="${pdict.styleBlock !== undefinded}">
+${"<style>" + pdict.styleBlock + "</style>"}
+</isif>
+
+<div class="pdplus-component pdplus-featured-banner ${pdict.isContentSticky + ' ' + pdict.bannerContentPosition + ' ' + pdict.hotspotContentXPos + ' ' + pdict.hotspotContentYPos}">
+    <isif condition="${pdict.assetSrc === 'image' && pdict.bgImage !== ''}">
+        <div class="bgcolor-overlay" style='background: url(${pdict.bgImage}) no-repeat top center / cover'></div>
+    </isif>
+
+    <isif condition="${pdict.assetSrc == 'video'}">
+        <div class="responsive-video">
+            <iframe width="1440" height="315"
+                src="https://www.youtube.com/embed/${pdict.bgVideo}?rel=0&autoplay=1&loop=1&mute=1&controls=0&modestbranding=0&showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
+    </isif>
+
+    <isif condition="${pdict.brandText !== ''}">
+        <div class="brands-logo">
+            <h1>${pdict.brandText}</h1>
+        </div>
+    </isif>
+
+    <div class="pdplus-grid-wrapper">
+        <isloop items="${pdict.tilesDisplay}" var="tileDisplay">
+            <isprint value="${pdict.regions[tileDisplay].setClassName("pdplus-grid-items").render()}" encoding="off" />
+        </isloop>
+    </div>
+
+    <div class="banner-content">
+        <isif condition="${pdict.productTitle !== ''}">
+            <h3>${pdict.productTitle}</h3>
+        </isif>
+
+        <isif condition="${pdict.productSubTitle !== ''}">
+            <h1>${pdict.productSubTitle}</h1>
+        </isif>
+
+        <isif condition="${pdict.productDescription !== ''}">
+            <p>${pdict.productDescription}</p>
+        </isif>
+
+        <isif condition="${pdict.productLink !== ''}">
+            <a class="featured-brands__button" href="${pdict.productLink}" ${pdict.productLinkNewTab === true ? '"+target="_blank"+"' : ''}>
+                <span class="text-wrapper">
+                    <span class="text">Shop Now</span>
+                    <span class="text">Shop Now</span>
+                </span>
+            </a>
+        </isif>
+
     </div>
 </div>

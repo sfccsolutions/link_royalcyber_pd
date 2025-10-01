@@ -1,0 +1,12 @@
+<div class="collection-content">
+    <p class="category">${pdict.category}</p>
+    <h1 class="title">
+        <span class="title-text">${pdict.title}</span>
+        <span class="subtitle">${pdict.subTitle}</span>
+    </h1>
+    <a class="fancy-btn" href="${pdict.btnLink}" ${pdict.btnLink === true ? '"+target="_blank"+"' : ''}>Explore Now</a>
+</div>
+
+<div class="thumbnail" data-title="${pdict.title}" data-subtitle="${pdict.subTitle}" data-category="${pdict.category}"
+    data-bg="${pdict.thumbImage}"
+    style="background-image:url(${pdict.thumbImage})"></div>

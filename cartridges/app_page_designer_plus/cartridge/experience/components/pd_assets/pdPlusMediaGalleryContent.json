@@ -1,0 +1,64 @@
+{
+    "name": "PD Plus Media Gallery Content",
+    "description": "Content of Media Gallery",
+    "group": "pd_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "mediaGalleryAttributes",
+            "name": "Media Gallery Configurations",
+            "description": "Configurations of Media Gallery",
+            "attribute_definitions": [
+                {
+                    "id": "title",
+                    "name": "Title Item",
+                    "description": "The Title.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "subTitle",
+                    "name": "Sub Title Item",
+                    "description": "The Sub Title.",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "category",
+                    "name": "Category Item",
+                    "description": "The Category item",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "thumbImage",
+                    "name": "thumb image",
+                    "description": "The thumb Image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "largeImage",
+                    "name": "large image",
+                    "description": "The large Image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "btnLink",
+                    "name": "btn link",
+                    "description": "Button URL",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "isNewTab",
+                    "name": "Open in New Tab",
+                    "description": "Is Open in new tab",
+                    "type": "boolean",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

@@ -1,113 +1,89 @@
 'use strict';
 
 /**
- * Script file for rendering an pd_assets.pdPlusImageBanner component
+ * Script file for rendering an pd_assets.pdPlusFeaturedBanner component
  */
 
 /* Initialize constants */
 var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
-var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
+var URLUtils = require('dw/web/URLUtils');
+var ProductSearchModel = require('dw/catalog/ProductSearchModel');
 
 /**
- * Render logic for pdPlusImageBanner component.
+ * Render logic for pdPlusFeaturedBanner component.
  * @param {dw.experience.ComponentScriptContext} context The component script context object.
  * @returns {string} The template to be displayed
  */
-
-module.exports.render = function (context) {
+module.exports.render = function (context, modelIn) {
+    var model = modelIn || new HashMap();
     var content = context.content;
-    var model = new HashMap();
 
-    /* Image File Uploader */
-    if (content.imgFile) {
-        model.imgAlt = content.imgAlt ? content.imgAlt : null;
+    var productID = content.product && (content.product.ID || content.product.id || content.product);
+    var product = null;
 
-        model.imgFile = {
-            src: {
-                mobile: ImageTransformation.url(content.imgFile, { device: 'mobile' }),
-                desktop: ImageTransformation.url(content.imgFile, { device: 'desktop' })
-            },
-            alt: content.imgAlt,
-            focalPointX: (content.imgFile.focalPoint.x * 100) + '%',
-            focalPointY: (content.imgFile.focalPoint.y * 100) + '%'
+    if (productID) {
+        var searchModel = new ProductSearchModel();
+        searchModel.setSearchPhrase(productID);
+        searchModel.setCategoryID('root'); // fallback category
+        searchModel.search();
+
+        var searchHits = searchModel.getProductSearchHits();
+        if (searchHits && searchHits.hasNext()) {
+            var hit = searchHits.next();
+            var apiProduct = hit.getProduct();
+
+            if (apiProduct) {
+                var priceModel = apiProduct.getPriceModel();
+                var price = null;
+
+                if (priceModel) {
+                    if (priceModel.getMinPrice() && priceModel.getMaxPrice() &&
+                        !priceModel.getMinPrice().equals(priceModel.getMaxPrice())) {
+                        price = priceModel.getMinPrice().toFormattedString() + ' - ' +
+                            priceModel.getMaxPrice().toFormattedString();
+                    } else if (priceModel.getPrice()) {
+                        price = priceModel.getPrice().toFormattedString();
+                    }
+                }
+
+                // 🔹 Get Availability Info
+                var availabilityModel = apiProduct.getAvailabilityModel();
+                var availabilityStatus = availabilityModel.isInStock() ? 'In Stock' : 'Out of Stock';
+                var stockLevel = availabilityModel.getInventoryRecord() ?
+                    availabilityModel.getInventoryRecord().getATS().getValue() : null;
+
+                product = {
+                    id: apiProduct.getID(),
+                    url: URLUtils.url('Product-Show', 'pid', apiProduct.getID()).toString(),
+                    name: apiProduct.getName(),
+                    price: price,
+                    image: apiProduct.getImage('small', 0) ?
+                        apiProduct.getImage('small', 0).getAbsURL().toString() : '',
+                    category: apiProduct.getPrimaryCategory() ?
+                        apiProduct.getPrimaryCategory().getDisplayName() : '',
+                    brand: apiProduct.getBrand(),
+                    availability: availabilityStatus,
+                    stock: stockLevel !== null ? stockLevel : 'N/A'
+                };
+            }
+        }
+    }
+
+    if (product) {
+        model.product = product;
+        model.display = {
+            swatches: true,
+            ratings: content.displayRatings || false
         };
-    }
-
-    model.imgBannerDetail = content.imgBannerDetail ? content.imgBannerDetail : '';
-
-    /* Banner Content Position */
-    // if (content.bannerContentPosition === 'top left') {
-    //     model.bannerContentPosition = 'bnrContent--topLeft';
-    // } else if (content.bannerContentPosition === 'left center') {
-    //     model.bannerContentPosition = 'bnrContent--leftcenter';
-    // } else if (content.bannerContentPosition === 'bottom left') {
-    //     model.bannerContentPosition = 'bnrContent--bottomleft';
-    // } else if (content.bannerContentPosition === 'top center') {
-    //     model.bannerContentPosition = 'bnrContent--topCenter';
-    // } else if (content.bannerContentPosition === 'center') {
-    //     model.bannerContentPosition = 'bnrContent--center';
-    // } else if (content.bannerContentPosition === 'top right') {
-    //     model.bannerContentPosition = 'bnrContent--topRight';
-    // }
-
-    if (content.bannerContentPosition === 'left top') {
-        model.bannerContentPosition = 'bnrContent--leftTop';
-    } else if (content.bannerContentPosition === 'center top') {
-        model.bannerContentPosition = 'bnrContent--centerTop';
-    } else if (content.bannerContentPosition === 'right top') {
-        model.bannerContentPosition = 'bnrContent--rightTop';
-    } else if (content.bannerContentPosition === 'center left') {
-        model.bannerContentPosition = 'bnrContent--centerLeft';
-    } else if (content.bannerContentPosition === 'center') {
-        model.bannerContentPosition = 'bnrContent--center';
-    } else if (content.bannerContentPosition === 'center right') {
-        model.bannerContentPosition = 'bnrContent--centerRight';
-    } else if (content.bannerContentPosition === 'bottom left') {
-        model.bannerContentPosition = 'bnrContent--bottomLeft';
-    } else if (content.bannerContentPosition === 'bottom center') {
-        model.bannerContentPosition = 'bnrContent--bottomCenter';
-    } else if (content.bannerContentPosition === 'bottom right') {
-        model.bannerContentPosition = 'bnrContent--bottomRight';
-    }
-
-    model.brandText = content.brandText !== undefined ? content.brandText : '';
-
-    model.styleBlock = content.styleBlock !== null ? content.styleBlock : '';
-
-    model.hotspotPro = content.hotspotPro !== null ? content.hotspotPro : '';
-
-
-
-    /* Product Hotspot */
-    if (content.hotspotImg) {
-        model.hotspotImgAlt = content.hotspotImgAlt ? content.hotspotImgAlt : null;
-
-        model.hotspotImg = {
-            src: {
-                mobile: ImageTransformation.url(content.hotspotImg, { device: 'mobile' }),
-                desktop: ImageTransformation.url(content.hotspotImg, { device: 'desktop' })
-            },
-            alt: content.hotspotImgAlt,
-            focalPointX: (content.hotspotImg.focalPoint.x * 100) + '%',
-            focalPointY: (content.hotspotImg.focalPoint.y * 100) + '%'
+        model.urls = {
+            product: URLUtils.url('Product-Show', 'pid', product.id).toString()
         };
+    } else {
+        model.product = null;
+        model.urls = {};
     }
 
-    model.hotspotContent = content.hotspotContent !== null ? content.hotspotContent : '';
-
-    /* Vertical Position of Hotspot Content */
-    if (content.hotspotContentYPos === 'top') {
-        model.hotspotContentYPos = 'hotspotContent--ytop';
-    } else if (content.hotspotContentYPos === 'center') {
-        model.hotspotContentYPos = 'hotspotContent--ycenter';
-    } else if (content.hotspotContentYPos === 'bottom') {
-        model.hotspotContentYPos = 'hotspotContent--ybottom';
-    }
-
-    model.hotspotLink = content.hotspotLink !== null ? content.hotspotLink : '#';
-
-    model.hotspotLinkNewTab = content.hotspotLinkNewTab !== null ? 'target="_blank"' : '';
 
     return new Template('experience/components/pd_assets/pdPlusFeaturedBanner').render(model).text;
 };

@@ -1,0 +1,16 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/pd_layouts/pdPlusMediaGalleryLayout.css');
+    assets.addJs('/js/pdPlusMediaGalleryLayout.js');
+</isscript>
+
+<div class="collection-container">
+    <div class="collection-image prev"></div>
+    <div class="collection-image current"></div>
+
+    <isloop items="${pdict.tilesDisplay}" var="tileDisplay">
+        <isprint value="${pdict.regions[tileDisplay].setClassName("pdplus-grid-items").render()}" encoding="off" />
+    </isloop>
+
+    <a class="item-link" href="${pdict.btnLink}">Collections</a>
+</div>

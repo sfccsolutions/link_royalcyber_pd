@@ -4,6 +4,7 @@ var Template = require('dw/util/Template');
 var HashMap = require('dw/util/HashMap');
 var PageRenderHelper = require('*/cartridge/experience/utilities/PageRenderHelper.js');
 var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransformation.js');
+var ArrayList = require('dw/util/ArrayList');
 
 
 /**
@@ -16,58 +17,79 @@ var ImageTransformation = require('*/cartridge/experience/utilities/ImageTransfo
 module.exports.render = function (context) {
     var model = new HashMap();
     var component = context.component;
-
     var content = context.content;
-    model.isContainer = content.isContainer ? 'container-fluid' : 'container';
-    model.bgOverlay = content.bgOverlay ? content.bgOverlay : '';
-    model.customCss = content.customCss ? content.customCss : '';
-    model.maxWidth = content.maxWidth ? content.maxWidth : '';
 
-    /* Vertical Position of text Container if found then concatenate its Class Name */
-    if (content.verticalAlignment === 'top') {
-        model.verticalAlignment = 'start';
-    } else if (content.verticalAlignment === 'center') {
-        model.verticalAlignment = 'center';
-    } else if (content.verticalAlignment === 'bottom') {
-        model.verticalAlignment = 'end';
+    model.imgBannerDetail = content.imgBannerDetail ? content.imgBannerDetail : '';
+
+    model.brandText = content.brandText !== undefined ? content.brandText : '';
+
+    model.assetSrc = content.assetSrc ? content.assetSrc : 'image';
+
+    if (content.bgImage) {
+        model.bgImage = content.bgImage.file.url;
     }
 
-    /* Horizontal Position of text Container if found then concatenate its Class Name */
-    if (content.horizontalAlginment === 'left') {
-        model.horizontalAlginment = 'start';
-    } else if (content.horizontalAlginment === 'center') {
-        model.horizontalAlginment = 'center';
-    } else if (content.horizontalAlginment === 'right') {
-        model.horizontalAlginment = 'end';
+    if (content.bgVideo) {
+        model.bgVideo = content.bgVideo;
     }
 
-    if (content.bgImageParallax === 'Parallax') {
-        model.bgImageParallax = 'parallax-bg';
-    } else if (content.bgImageParallax === 'Normal') {
-        model.bgImageParallax = 'normal-bg';
+    model.isContentSticky = content.isContentSticky ? 'is-sticky' : '';
+    model.productTitle = content.productTitle ? content.productTitle : '';
+    model.productSubTitle = content.productSubTitle ? content.productSubTitle : '';
+    model.productDescription = content.productDescription ? content.productDescription : '';
+    model.productLink = content.productLink ? content.productLink : '';
+    model.productLinkNewTab = content.productLinkNewTab ? 'active' : '';
+
+
+    if (content.bannerContentPosition === 'left top') {
+        model.bannerContentPosition = 'bnrContent--leftTop';
+    } else if (content.bannerContentPosition === 'center top') {
+        model.bannerContentPosition = 'bnrContent--centerTop';
+    } else if (content.bannerContentPosition === 'right top') {
+        model.bannerContentPosition = 'bnrContent--rightTop';
+    } else if (content.bannerContentPosition === 'center left') {
+        model.bannerContentPosition = 'bnrContent--centerLeft';
+    } else if (content.bannerContentPosition === 'center') {
+        model.bannerContentPosition = 'bnrContent--center';
+    } else if (content.bannerContentPosition === 'center right') {
+        model.bannerContentPosition = 'bnrContent--centerRight';
+    } else if (content.bannerContentPosition === 'bottom left') {
+        model.bannerContentPosition = 'bnrContent--bottomLeft';
+    } else if (content.bannerContentPosition === 'bottom center') {
+        model.bannerContentPosition = 'bnrContent--bottomCenter';
+    } else if (content.bannerContentPosition === 'bottom right') {
+        model.bannerContentPosition = 'bnrContent--bottomRight';
     }
 
-    model.BGImageProperties = 'style="';
-    if (content.backgroundImage) {
-        model.BGImageProperties += 'background-image: url(' + content.backgroundImage.file.url + ');';
+    model.styleBlock = content.styleBlock !== null ? content.styleBlock : '';
+
+    /* Horizontal Position of Hotspot Content */
+    if (content.hotspotContentXPos === 'left') {
+        model.hotspotContentXPos = 'hotspotContent--xleft';
+    } else if (content.hotspotContentXPos === 'center') {
+        model.hotspotContentXPos = 'hotspotContent--xcenter';
+    } else if (content.hotspotContentXPos === 'right') {
+        model.hotspotContentXPos = 'hotspotContent--xright';
     }
 
-    if (content.bgGradiant) {
-        model.BGImageProperties += 'background-image: ' + content.bgGradiant + '; ';
+    /* Vertical Position of Hotspot Content */
+    if (content.hotspotContentYPos === 'top') {
+        model.hotspotContentYPos = 'hotspotContent--ytop';
+    } else if (content.hotspotContentYPos === 'center') {
+        model.hotspotContentYPos = 'hotspotContent--ycenter';
+    } else if (content.hotspotContentYPos === 'bottom') {
+        model.hotspotContentYPos = 'hotspotContent--ybottom';
     }
 
-    if (content.sectionHeight) {
-        model.BGImageProperties += 'min-height: ' + content.sectionHeight + '; ';
-    }
-    
-    if (content.backgroundColor) {
-        model.BGImageProperties += 'background-color: ' + content.backgroundColor.value + '; ';
-    }
-    if (content.backgroundColorAlpha) {
-        model.BGImageProperties += 'opacity: ' + content.backgroundColorAlpha + '%' + ';';
-    }
+    if (content.noOfTiles) {
+        let tilesDisplay = ArrayList();
 
-    model.BGImageProperties += '"';
+        for (let i = 0; i < content.noOfTiles; i++) {
+            tilesDisplay.add("PDPlusFeatureBanner" + i);
+        }
+
+        model.tilesDisplay = tilesDisplay;
+    }
 
     model.regions = PageRenderHelper.getRegionModelRegistry(component);
 

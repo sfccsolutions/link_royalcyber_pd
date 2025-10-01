@@ -64,12 +64,14 @@ module.exports.render = function (context) {
     model.assetCTAHoverBgColor = content.assetCTAHoverBgColor ? content.assetCTAHoverBgColor : '#ee2e23';
     model.assetCTAHoverTextColor = content.assetCTAHoverTextColor ? content.assetCTAHoverTextColor : '#ffffff';
 
-    if (content.tilesBgColor || content.tilesTextColor) {
-        model.figCaptionStyle = 'style="';
-        model.figCaptionStyle += 'background-color: ' + content.tilesBgColor + ';';
-        model.figCaptionStyle += 'color: ' + content.tilesTextColor + ';';
-        model.figCaptionStyle += '"';
-    }
+    model.tilesTextColor = content.tilesTextColor ? content.tilesTextColor.value : '';
+
+    // if (content.tilesBgColor || content.tilesTextColor) {
+    //     model.figCaptionStyle = 'style="';
+    //     model.figCaptionStyle += 'background-color: ' + content.tilesBgColor + ';';
+    //     model.figCaptionStyle += 'color: ' + content.tilesTextColor + ';';
+    //     model.figCaptionStyle += '"';
+    // }
 
     if (content.imgBlur || content.imgBrightness || content.imgContrast || content.imgShadow || content.imgHue || content.imgInvert || content.imgOpacity || content.imgSaturate || content.imgSepia) {
         model.styleCSSFilters = 'style="filter: ';

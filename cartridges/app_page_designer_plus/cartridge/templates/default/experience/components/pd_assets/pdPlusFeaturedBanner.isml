@@ -1,68 +1,93 @@
-<isscript>
-    var assets = require('*/cartridge/scripts/assets.js');
-    assets.addCss('/css/experience/components/pd_assets/pdPlusFeaturedBanner.css');
-</isscript>
+<div class="expanding-thumbnail">
+    <div class="expanding-box">
+        <div class="expanding-content">
+            <div class="thumbnail-image">
+                <a href="${pdict.product.url}">
+                    <isif condition="${pdict.product.image == null}">
+                        <picture class="bnr-img image-container">
+                            <img src="${URLUtils.staticURL('/images/nulled-image.jpg')}" alt="${pdict.product.name}"
+                                title="${pdict.product.name}" />
+                        </picture>
+                    <iselse/>
+                        <picture class="bnr-img image-container">
+                            <img src="${pdict.product.image}" alt="${pdict.product.name}"
+                                title="${pdict.product.name}" />
+                        </picture>
+                    </isif>
+                </a>
+            </div>
 
-<isif condition="${pdict.styleBlock !== undefinded}">
-    <style>
-        ${pdict.styleBlock}
-    </style>
-</isif>
+            <div class="product-details">
+                <h2>${pdict.product.name}</h2>
+                <h3>${pdict.product.category}</h3>
 
-<div class="featured-banner ${pdict.bannerContentPosition + ' ' + pdict.hotSpotContentYPos}">
-    <isif condition="${pdict.imgFile == null}">
-        <picture class="bnr-img image-container">
-            <source srcset="${URLUtils.staticURL('/images/nulled-image.jpg')}" media="(min-width: 768px)" />
-            <img src="${URLUtils.staticURL('/images/nulled-image.jpg')}" alt="${pdict.imgAlt}"
-                title="${pdict.imgAlt}" />
-        </picture>
-    <iselse/>
-        <picture class="bnr-img image-container">
-            <source srcset="${pdict.imgFile.src.desktop}" media="(min-width: 768px)" />
-            <img src="${pdict.imgFile.src.mobile}" alt="${pdict.imgAlt}" title="${pdict.imgAlt}" />
-        </picture>
-    </isif>
+                <p>${pdict.product.price}</p>
 
-    <isif condition="${pdict.brandText !== ''}">
-        <div class="bnrContent-logo">
-            ${pdict.brandText}
+                <isif condition="${pdict.product.stock !== 'N/A'}">
+                    <p class="quantity">Available Quantity: ${pdict.product.stock}</p>
+                </isif>
+
+                <span class="availability ${pdict.product.availability == 'In Stock' ? 'in-stock' : 'out-of-stock'}">
+                    ${pdict.product.availability == 'In Stock' ? 'In Stock' : 'Out Of Stock'}
+                </span>
+            </div>
         </div>
-    </isif>
 
-    <div class="banner-content">
-        <isprint value="${pdict.imgBannerDetail}" encoding="off" />
+        <div class="add-button openBtn">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none">
+                </path>
+            </svg>
+        </div>
     </div>
+</div>
 
-    <div class="expanding-thumbnail">
-        <div class="expanding-box">
-            <div class="expanding-content">
-                <div class="thumbnail-image">
-                    <a href="${pdict.hotspotLink}" target="_blank">
-                        <isif condition="${pdict.hotspotImg == null}">
-                            <picture class="bnr-img image-container">
-                                <source srcset="${URLUtils.staticURL('/images/nulled-image.jpg')}" media="(min-width: 768px)" />
-                                <img src="${URLUtils.staticURL('/images/nulled-image.jpg')}" alt="${pdict.hotspotImgAlt}"
-                                    title="${pdict.hotspotImgAlt}" />
-                            </picture>
-                        <iselse/>
-                            <picture class="bnr-img image-container">
-                                <source srcset="${pdict.hotspotImg.src.desktop}" media="(min-width: 768px)" />
-                                <img src="${pdict.hotspotImg.src.mobile}" alt="${pdict.hotspotImgAlt}" title="${pdict.hotspotImgAlt}" />
-                            </picture>
-                        </isif>
-                    </a>
-                </div>
+<div class="overlay-modal">
+    <div class="overlay-banner"></div>
 
-                <div class="product-details">
-                    <isprint value="${pdict.hotspotContent}" encoding="off" />
+    <div class="modal-banner">
+        <div class="modal-header">
+            <h4>At a glance</h4>
+            <a href="${'#'}">x</a>
+        </div>
+        <div class="modal-slider-outer">
+            <div class="badges"><span class="badge badge-new"></span></div>
+            <div class="modal-slider-content">
+
+            </div>
+        </div>
+        <div class="">
+            <h2>Middlebury Large Pendant</h2>
+            <h3>Arteriors Home</h3>
+
+            <div class="price">2,110 USD</div>
+
+            <div class="rating">
+                <span>
+                    <span></span>
+                </span>
+                <div class="">
+                    4.5 (120 Reviews)
                 </div>
             </div>
 
-            <div class="add-button">
-                <svg viewBox="0 0 24 24">
-                    <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        fill="none"></path>
-                </svg>
+            <div class="sku-id">
+                <span>Bellacor ID: BC7542255</span>
+                <span>MFR SKU: 339091ML</span>
+            </div>
+
+            <div class="">
+                <div class="custom-dropdown">
+                    <button id="dropdown-button" class="select-button" role="combobox" aria-label="select button"
+                        aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                        <span class="selected-value">Finish: <i class="swatch swatch-beige"></i> Swatches</span>
+                        <span class="arrow"></span>
+                    </button>
+                    <ul class="select-dropdown hidden" role="listbox" id="select-dropdown" aria-labelledby="dropdown-button">
+                        <li role="option">Finish: <i class="swatch swatch-beige"></i> <span>Natural</span></li>
+                        <li role="option">Finish: <i class="swatch swatch-green"></i> <span>Lights</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

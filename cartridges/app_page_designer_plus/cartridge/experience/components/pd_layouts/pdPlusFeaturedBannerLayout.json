@@ -8,27 +8,133 @@
             "description": "The visual display of the Featured Banner Container.",
             "attribute_definitions": [
                 {
-                    "id": "bgOverlay",
-                    "name": "Background Image Overlay Color in (RGBA)",
-                    "description": "Provide overlay color of background",
+                    "id": "brandText",
+                    "name": "Brand Text",
+                    "description": "Enter the Brand Text.",
                     "type": "string",
                     "required": false
                 },
                 {
-                    "id": "backgroundColor",
-                    "name": "Specify Background Color",
-                    "description": "Set Background Color",
-                    "required": false,
-                    "type": "custom",
-                    "editor_definition": {
-                        "type": "themer.colorpicker"
-                    }
+                    "id": "assetSrc",
+                    "name": "Choose background image or video",
+                    "description": "Select video of video to be placed in the featured banner",
+                    "type": "enum",
+                    "values": [
+                        "image",
+                        "video"
+                    ],
+                    "default_value": "image",
+                    "required": true
                 },
                 {
-                    "id": "backgroundImage",
-                    "name": "Specify Background Image",
-                    "description": "Set background Image",
+                    "id": "bgImage",
+                    "name": "Choose Featured Banner",
+                    "description": "Select Featured Banner",
                     "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "bgVideo",
+                    "name": "Choose youtube Video URL on featured banner",
+                    "description": "Select video url",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "isContentSticky",
+                    "name": "Is Content Sticky",
+                    "description": "Choose Content Sticky",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "productTitle",
+                    "name": "Banner Title",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "productSubTitle",
+                    "name": "Banner Sub Title",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "productDescription",
+                    "name": "Product Description",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "productLink",
+                    "name": "Banner Product Link",
+                    "type": "url",
+                    "required": false
+                },
+                {
+                    "id": "productLinkNewTab",
+                    "name": "Open in New Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "bannerContentPosition",
+                    "name": "Position of Banner Content",
+                    "type": "enum",
+                    "default_value": "center left",
+                    "values": [
+                        "left top",
+                        "center top",
+                        "right top",
+                        "center left",
+                        "center",
+                        "center right",
+                        "bottom left",
+                        "bottom center",
+                        "bottom right"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "styleBlock",
+                    "name": "Style Block",
+                    "type": "text",
+                    "required": false
+                },
+                {
+                    "id": "hotspotContentXPos",
+                    "name": "Position of Hotspot Content along X-axis",
+                    "type": "enum",
+                    "default_value": "right",
+                    "values": [
+                        "left",
+                        "center",
+                        "right"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "hotspotContentYPos",
+                    "name": "Position of Hotspot Content along Y-axis",
+                    "type": "enum",
+                    "default_value": "bottom",
+                    "values": [
+                        "top",
+                        "center",
+                        "bottom"
+                    ],
+                    "required": false
+                },
+                {
+                    "id": "noOfTiles",
+                    "name": "Number of tiles",
+                    "description": "Add no. of Product Tiles",
+                    "type": "enum",
+                    "values": [
+                        1,
+                        2,
+                        3
+                    ],
                     "required": false
                 }
             ]
@@ -36,12 +142,619 @@
     ],
     "region_definitions": [
         {
-            "id": "column1",
-            "name": "PD Plus Column 1"
+            "id": "PDPlusFeatureBanner0",
+            "name": "PD Plus Feature Banner Content",
+            "max_components": 1,
+            "default_component_constructors": [
+                {
+                    "type_id": "pd_assets.pdPlusFeaturedBanner",
+                    "name": "PD Plus Feature Banner Content"
+                }
+            ],
+            "component_type_exclusions": [
+                {
+                    "type_id": "pd_assets.pdPlusMediaGalleryContent"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusAccordion"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusCampaignItem"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusContentAsset"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusEditorialRichText"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusHtmlMarkup"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageAndText"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageBanner"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageHoverEffects"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusMasonaryImgItem"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusParallaxScrolling"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusSmartSlider"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTabs"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTextWithImage"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTwoColBox"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusVideoComponent"
+                },
+                {
+                    "type_id": "commerce_layouts.carousel"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid1r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r3c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGridLookBook"
+                },
+                {
+                    "type_id": "commerce_layouts.popularCategories"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMediaGalleryLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusAccordionLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusCampaignPromo"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusCarousel"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFlexibleBlock"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFlexibleRow"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r4c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r6c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid2r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid3r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMasonaryLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMobileGrid3r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusParallaxScrollingR1C2"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusParallaxScrollingR1C3"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusSlideWithImage"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTabsLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTextWithImageLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTwoColBoxLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFeaturedBannerLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid2r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTextImageLayout"
+                },
+                {
+                    "type_id": "commerce_assets.campaignBanner"
+                },
+                {
+                    "type_id": "commerce_assets.productTile"
+                },
+                {
+                    "type_id": "commerce_assets.category"
+                },
+                {
+                    "type_id": "commerce_assets.editorialRichText"
+                },
+                {
+                    "type_id": "commerce_assets.imageAndText"
+                },
+                {
+                    "type_id": "commerce_assets.mainBanner"
+                },
+                {
+                    "type_id": "commerce_assets.photoTile"
+                },
+                {
+                    "type_id": "commerce_assets.popularCategory"
+                },
+                {
+                    "type_id": "commerce_assets.productListTile"
+                },
+                {
+                    "type_id": "commerce_assets.shopTheLook"
+                },
+                {
+                    "type_id": "dynamic.dynamicCategoryBanner"
+                },
+                {
+                    "type_id": "dynamic.productDetail"
+                },
+                {
+                    "type_id": "dynamic.productList"
+                },
+                {
+                    "type_id": "einstein.einsteinCarousel"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselCategory"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselProduct"
+                }
+            ]
         },
         {
-            "id": "column2",
-            "name": "PD Plus Column 2"
+            "id": "PDPlusFeatureBanner1",
+            "name": "PD Plus Feature Banner Content",
+            "max_components": 1,
+            "default_component_constructors": [
+                {
+                    "type_id": "pd_assets.pdPlusFeaturedBanner",
+                    "name": "PD Plus Feature Banner Content"
+                }
+            ],
+            "component_type_exclusions": [
+                {
+                    "type_id": "pd_assets.pdPlusMediaGalleryContent"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusAccordion"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusCampaignItem"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusContentAsset"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusEditorialRichText"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusHtmlMarkup"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageAndText"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageBanner"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageHoverEffects"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusMasonaryImgItem"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusParallaxScrolling"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusSmartSlider"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTabs"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTextWithImage"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTwoColBox"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusVideoComponent"
+                },
+                {
+                    "type_id": "commerce_layouts.carousel"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid1r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r3c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGridLookBook"
+                },
+                {
+                    "type_id": "commerce_layouts.popularCategories"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMediaGalleryLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusAccordionLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusCampaignPromo"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusCarousel"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFlexibleBlock"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFlexibleRow"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r4c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r6c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid2r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid3r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMasonaryLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMobileGrid3r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusParallaxScrollingR1C2"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusParallaxScrollingR1C3"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusSlideWithImage"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTabsLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTextWithImageLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTwoColBoxLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFeaturedBannerLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid2r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTextImageLayout"
+                },
+                {
+                    "type_id": "commerce_assets.campaignBanner"
+                },
+                {
+                    "type_id": "commerce_assets.productTile"
+                },
+                {
+                    "type_id": "commerce_assets.category"
+                },
+                {
+                    "type_id": "commerce_assets.editorialRichText"
+                },
+                {
+                    "type_id": "commerce_assets.imageAndText"
+                },
+                {
+                    "type_id": "commerce_assets.mainBanner"
+                },
+                {
+                    "type_id": "commerce_assets.photoTile"
+                },
+                {
+                    "type_id": "commerce_assets.popularCategory"
+                },
+                {
+                    "type_id": "commerce_assets.productListTile"
+                },
+                {
+                    "type_id": "commerce_assets.shopTheLook"
+                },
+                {
+                    "type_id": "dynamic.dynamicCategoryBanner"
+                },
+                {
+                    "type_id": "dynamic.productDetail"
+                },
+                {
+                    "type_id": "dynamic.productList"
+                },
+                {
+                    "type_id": "einstein.einsteinCarousel"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselCategory"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselProduct"
+                }
+            ]
+        },
+        {
+            "id": "PDPlusFeatureBanner2",
+            "name": "PD Plus Feature Banner Content",
+            "max_components": 1,
+            "default_component_constructors": [
+                {
+                    "type_id": "pd_assets.pdPlusFeaturedBanner",
+                    "name": "PD Plus Feature Banner Content"
+                }
+            ],
+            "component_type_exclusions": [
+                {
+                    "type_id": "pd_assets.pdPlusMediaGalleryContent"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusAccordion"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusCampaignItem"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusContentAsset"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusEditorialRichText"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusHtmlMarkup"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageAndText"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageBanner"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusImageHoverEffects"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusMasonaryImgItem"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusParallaxScrolling"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusSmartSlider"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTabs"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTextWithImage"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusTwoColBox"
+                },
+                {
+                    "type_id": "pd_assets.pdPlusVideoComponent"
+                },
+                {
+                    "type_id": "commerce_layouts.carousel"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid1r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid2r3c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r1c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGrid3r2c"
+                },
+                {
+                    "type_id": "commerce_layouts.mobileGridLookBook"
+                },
+                {
+                    "type_id": "commerce_layouts.popularCategories"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMediaGalleryLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusAccordionLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusCampaignPromo"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusCarousel"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFlexibleBlock"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFlexibleRow"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r4c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid1r6c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid2r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid3r1c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMasonaryLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusMobileGrid3r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusParallaxScrollingR1C2"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusParallaxScrollingR1C3"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusSlideWithImage"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTabsLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTextWithImageLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTwoColBoxLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusFeaturedBannerLayout"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusGrid2r2c"
+                },
+                {
+                    "type_id": "pd_layouts.pdPlusTextImageLayout"
+                },
+                {
+                    "type_id": "commerce_assets.campaignBanner"
+                },
+                {
+                    "type_id": "commerce_assets.productTile"
+                },
+                {
+                    "type_id": "commerce_assets.category"
+                },
+                {
+                    "type_id": "commerce_assets.editorialRichText"
+                },
+                {
+                    "type_id": "commerce_assets.imageAndText"
+                },
+                {
+                    "type_id": "commerce_assets.mainBanner"
+                },
+                {
+                    "type_id": "commerce_assets.photoTile"
+                },
+                {
+                    "type_id": "commerce_assets.popularCategory"
+                },
+                {
+                    "type_id": "commerce_assets.productListTile"
+                },
+                {
+                    "type_id": "commerce_assets.shopTheLook"
+                },
+                {
+                    "type_id": "dynamic.dynamicCategoryBanner"
+                },
+                {
+                    "type_id": "dynamic.productDetail"
+                },
+                {
+                    "type_id": "dynamic.productList"
+                },
+                {
+                    "type_id": "einstein.einsteinCarousel"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselCategory"
+                },
+                {
+                    "type_id": "einstein.einsteinCarouselProduct"
+                }
+            ]
         }
     ]
 }

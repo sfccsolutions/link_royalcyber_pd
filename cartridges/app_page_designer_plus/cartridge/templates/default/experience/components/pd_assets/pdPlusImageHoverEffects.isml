@@ -19,13 +19,12 @@
 
         <isif condition="${pdict.imgTitle !== null || pdict.imgParagraph !== null}">
             <figcaption
-            class="image-details justify-content-${pdict.posX} align-items-${pdict.posY} flex-${pdict.flexDirection} flex-${pdict.flexWrap}" 
-            <isif condition="${pdict.figCaptionStyle}"> <isprint value="${pdict.figCaptionStyle}" encoding="off" /></isif>>
+            class="image-details justify-content-${pdict.posX} align-items-${pdict.posY} flex-${pdict.flexDirection} flex-${pdict.flexWrap}">
 
                 <isif condition="${pdict.imgTitle || pdict.imgParagraph}">
                     <isif condition="${pdict.imgTitle}">
                         <div class="img-title">
-                            <h3>${pdict.imgTitle}</h3>
+                            <h3 style="color: ${pdict.tilesTextColor}">${pdict.imgTitle}</h3>
                         </div>
                     </isif>
                     <isif condition="${pdict.imgParagraph}">
